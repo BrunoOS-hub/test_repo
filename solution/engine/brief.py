@@ -8,7 +8,7 @@ import re
 
 import pandas as pd
 
-from .config import HORIZON_DAYS
+from .config import APP_URL, HORIZON_DAYS
 
 NO_ACCOUNT = "conta não cadastrada"
 REPLY_LINE = "Responda com o número + código. Ex.: *1 {c}* = avancei · *2 {c}* = perdi · *3 {c}* = adiar"
@@ -121,6 +121,23 @@ def build_brief(agent: str, sc: pd.DataFrame, top: int = 5) -> str:
     return text
 
 
+def build_manager_digest(manager: str, sc: pd.DataFrame, top: int = 3) -> str:
+    """Digest semanal do gestor: recomendação do time + top vendedores por valor esperado."""
+    team = sc[sc["manager"] == manager]
+    as_of = pd.Timestamp(sc.attrs["as_of"]).strftime("%d/%m/%Y")
+    agents = agent_summary(team).sort_values(["expected_value_sum", "sales_agent"], ascending=[False, True]).head(top)
+    lines = [f"Bom dia, {manager.split()[0]}! Seu time na semana (base {as_of}):", team_headline(_aggregate(team)),
+             f"Top {len(agents)} por valor esperado:"]
+    for i, (_, a) in enumerate(agents.iterrows(), 1):
+        lines.append(f"{i}. {a['sales_agent']} · {money(a['expected_value_sum'])} esperados · {_num(a['decide_count'])} parados")
+    lines.append(f"Detalhes no app: {APP_URL}")
+    text = "\n".join(lines)
+    extra = validate_numbers(text, manager_numbers(manager, sc, top))
+    if extra:
+        raise ValueError(f"Digest de {manager} cita números que o motor não produziu: {extra}")
+    return text
+
+
 # ---- validação de números -------------------------------------------------
 
 _CODE = re.compile(r"cód [A-Z0-9]+|(?<=\*\d )[A-Z0-9]{8}(?=\*)")  # códigos de deal misturam letras e dígitos
@@ -154,4 +171,16 @@ def engine_numbers(me: pd.DataFrame, sc: pd.DataFrame, top: int = 5) -> set[str]
         for k in ("product", "account"):  # "GTK 500" etc.
             if isinstance(r[k], str):
                 allowed.update(re.findall(r"\d+", r[k]))
+    return allowed
+
+
+def manager_numbers(manager: str, sc: pd.DataFrame, top: int = 3) -> set[str]:
+    """Todo número que o motor produziu para o digest deste gestor, formatado como aparece no texto."""
+    team = sc[sc["manager"] == manager]
+    scope = _aggregate(team)
+    allowed = {str(i) for i in range(1, top + 1)}
+    allowed.add(pd.Timestamp(sc.attrs["as_of"]).strftime("%d/%m/%Y"))
+    allowed.update(_num(scope[k]) for k in ("decide_count", "decide_value", "missing_account_count"))
+    for _, a in agent_summary(team).iterrows():
+        allowed.update([_num(a["expected_value_sum"]), _num(a["decide_count"])])
     return allowed

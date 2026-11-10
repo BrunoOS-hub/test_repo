@@ -24,3 +24,6 @@ PRIOR_STRENGTH = 10
 
 # Snapshots usados para estimar a curva: segundas-feiras, espaçamento semanal.
 SNAPSHOT_FREQ = "W-MON"
+
+# Página pública do app (GitHub Pages). Vai no rodapé do digest do gestor.
+APP_URL = "https://brunoos-hub.github.io/test_repo/"

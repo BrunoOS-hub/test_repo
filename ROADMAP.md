@@ -10,8 +10,8 @@
 ## Estado atual
 
 - **Fase:** F3 (pauta via WhatsApp)
-- **Último marco:** app web estático revisado (ações por fase do deal, faixa de decisão do gestor) e brief de WhatsApp sem placeholder (30/30 testes). Falta ativar o GitHub Pages (Settings → Pages → Source: GitHub Actions).
-- **Próxima ação:** F3, a partir do T3.2 (redação opcional com Claude Haiku, validada por `validate_numbers`) e do T3.3 (workflow n8n + Whapi).
+- **Último marco:** `briefs.json` + digest do gestor + workflow n8n versionado (37/37 testes). App web estático revisado (ações por fase do deal, faixa de decisão do gestor) e brief de WhatsApp sem placeholder (30/30 testes). Falta ativar o GitHub Pages (Settings → Pages → Source: GitHub Actions).
+- **Próxima ação:** importar `automation/n8n-pauta-segunda.json` no n8n, criar a credencial Whapi, trocar os telefones e testar (T3.3). Depois T3.2 (Haiku) e T3.5 (vídeo).
 - **Bloqueios:** nenhum.
 
 ---
@@ -70,8 +70,8 @@ Stack: **HTML + JS puro, sem build.** Abre com duplo clique e publica no GitHub 
 - [ ] T3.2 Redação opcional com Claude Haiku:
   - **regra:** todo número no texto do LLM precisa existir no JSON; se não existir, usa o texto determinístico;
   - registrar custo em tokens por vendedor.
-- [ ] T3.3 Workflow n8n: Cron (seg 8h) → brief → Whapi `POST /messages/text` → log. Exportar o JSON para `automation/`.
-- [ ] T3.4 Digest do gestor (1 mensagem por manager)
+- [~] T3.3 Workflow n8n: Cron (seg 8h) → brief → Whapi `POST /messages/text` → log. **Workflow pronto em `automation/n8n-pauta-segunda.json`; falta importar e testar com credenciais** (Whapi + telefones).
+- [x] T3.4 Digest do gestor (1 mensagem por manager): `build_manager_digest` + `outputs/briefs.json`
 - [ ] T3.5 Gravar a demonstração (vídeo curto) com 1 a 2 números reais
 
 **Restrição:** o sandbox gratuito do Whapi tem 5 conversas/mês, 150 mensagens/dia e 1.000 requisições/mês. Basta para o desenvolvimento e o vídeo. O plano pago (US$ 35/mês por canal, US$ 29 no anual) só se justifica se decidirmos deixar um número aberto para o avaliador.
@@ -111,6 +111,7 @@ Stack: **HTML + JS puro, sem build.** Abre com duplo clique e publica no GitHub 
 | D9 | Reaproveitar ideias de concorrentes, nunca código; citar o benchmark no registro do processo | Transparência; os avaliadores têm os 109 PRs | Bruno + Claude |
 | D10 | Desempate determinístico por opportunity_id no backtest | +10,6% era artefato de ordenação instável; o número reproduzível é +7,2% | Claude Code (detectou) + Bruno |
 | D11 | Brief gerado no motor e reutilizado no app e no WhatsApp | Um só texto, um só lugar de validação; o app não calcula nada | Bruno + Claude |
+| D12 | n8n lê `briefs.json` do GitHub raw; o motor continua sendo a única fonte de números; telefones só dentro do n8n | O workflow não precisa de servidor nem de segredo no repo; o n8n só entrega texto já validado | Bruno + Claude |
 
 ---
 

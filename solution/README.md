@@ -12,9 +12,9 @@ python run.py audit              # qualidade dos dados
 python run.py curve              # chance de ganhar em 90 dias por idade do deal
 python run.py agent "Zane Levy"  # pauta de segunda de um vendedor
 python run.py backtest           # score vs. alternativas em segundas passadas
-python run.py export             # outputs/scores.json + app/data.js (app e WhatsApp)
+python run.py export             # outputs/scores.json, app/data.js e outputs/briefs.json (app e n8n)
 open app/index.html              # app web: duplo clique, sem servidor e sem chave de API
-pytest -q                        # 30 testes
+pytest -q                        # 37 testes
 ```
 
 ## Lógica

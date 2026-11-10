@@ -1,0 +1,233 @@
+{
+  "name": "Pauta de segunda (Lead Scorer)",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "5a1f0c52-0b6e-4c1a-9d10-000000000001",
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 8 * * 1"
+            }
+          ]
+        }
+      },
+      "id": "5a1f0c52-0b6e-4c1a-9d10-000000000002",
+      "name": "Toda segunda 8h",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        200
+      ],
+      "notes": "Segunda-feira 08:00 no fuso America/Sao_Paulo (definido em Settings do workflow)."
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "https://raw.githubusercontent.com/BrunoOS-hub/test_repo/main/solution/outputs/briefs.json",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "id": "5a1f0c52-0b6e-4c1a-9d10-000000000003",
+      "name": "Buscar briefs.json",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        260,
+        100
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Destinatários da demo. Troque os telefones (só dígitos: 55 + DDD + número).\n// Os telefones ficam só aqui, dentro do n8n: nunca no repositório.\nconst DEMO_RECIPIENTS = [\n  { type: 'agent', name: 'Zane Levy', phone: '55XXXXXXXXXXX' },\n  { type: 'manager', name: 'Summer Sewald', phone: '55XXXXXXXXXXX' },\n];\n\nconst data = $input.first().json;\nif (!Array.isArray(data.agents) || !Array.isArray(data.managers)) {\n  throw new Error('briefs.json em formato inesperado: faltam \"agents\" ou \"managers\". Confira a URL do nó \"Buscar briefs.json\".');\n}\n\nconst out = [];\nfor (const r of DEMO_RECIPIENTS) {\n  if (r.type !== 'agent' && r.type !== 'manager') {\n    throw new Error(`Tipo inválido para ${r.name}: use 'agent' ou 'manager'.`);\n  }\n  if (!/^\\d{10,15}$/.test(r.phone)) {\n    throw new Error(`Telefone inválido para ${r.name}: troque o placeholder em DEMO_RECIPIENTS (só dígitos: 55 + DDD + número).`);\n  }\n  const isManager = r.type === 'manager';\n  const list = isManager ? data.managers : data.agents;\n  const key = isManager ? 'manager' : 'agent';\n  const item = list.find((x) => x[key] === r.name);\n  if (!item) {\n    throw new Error(`\"${r.name}\" (${r.type}) não existe no briefs.json. Disponíveis: ${list.map((x) => x[key]).join(', ')}`);\n  }\n  out.push({ json: { to: r.phone, body: isManager ? item.digest : item.brief, name: r.name, type: r.type } });\n}\nreturn out;\n"
+      },
+      "id": "5a1f0c52-0b6e-4c1a-9d10-000000000004",
+      "name": "Destinatários",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        520,
+        100
+      ]
+    },
+    {
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      },
+      "id": "5a1f0c52-0b6e-4c1a-9d10-000000000005",
+      "name": "Loop Over Items",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        780,
+        100
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://gate.whapi.cloud/messages/text",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "contentType": "json",
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ to: $json.to, body: $json.body }) }}",
+        "options": {}
+      },
+      "id": "5a1f0c52-0b6e-4c1a-9d10-000000000006",
+      "name": "Enviar via Whapi",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1040,
+        200
+      ],
+      "onError": "continueRegularOutput",
+      "credentials": {
+        "httpHeaderAuth": {
+          "name": "Whapi"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resume": "timeInterval",
+        "amount": 5,
+        "unit": "seconds"
+      },
+      "id": "5a1f0c52-0b6e-4c1a-9d10-000000000007",
+      "name": "Aguardar 5s",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        1300,
+        200
+      ],
+      "webhookId": "5a1f0c52-0b6e-4c1a-9d10-0000000000a7"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Cada item que volta do loop é a resposta do Whapi. Sucesso = { sent: true }.\nconst items = $input.all();\nconst ok = (i) => i.json.sent === true && !i.json.error;\nconst falhas = items.filter((i) => !ok(i));\nreturn [{\n  json: {\n    total: items.length,\n    enviadas: items.length - falhas.length,\n    falhas: falhas.length,\n    erros: falhas.map((i) => (i.json.error && (i.json.error.message || i.json.error)) || JSON.stringify(i.json).slice(0, 200)),\n  },\n}];\n"
+      },
+      "id": "5a1f0c52-0b6e-4c1a-9d10-000000000008",
+      "name": "Resumo",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1040,
+        0
+      ]
+    }
+  ],
+  "connections": {
+    "Manual Trigger": {
+      "main": [
+        [
+          {
+            "node": "Buscar briefs.json",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Toda segunda 8h": {
+      "main": [
+        [
+          {
+            "node": "Buscar briefs.json",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Buscar briefs.json": {
+      "main": [
+        [
+          {
+            "node": "Destinatários",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Destinatários": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [
+          {
+            "node": "Resumo",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Enviar via Whapi",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Enviar via Whapi": {
+      "main": [
+        [
+          {
+            "node": "Aguardar 5s",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Aguardar 5s": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "America/Sao_Paulo"
+  },
+  "pinData": {}
+}

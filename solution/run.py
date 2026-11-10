@@ -4,10 +4,12 @@
   python run.py curve                 # curva de chance por idade
   python run.py agent "Zane Levy"     # pauta de segunda de um vendedor
   python run.py backtest              # score vs. 4 alternativas em segundas passadas
-  python run.py export                # gera outputs/scores.json e app/data.js (app e WhatsApp)
+  python run.py export                # gera outputs/scores.json, app/data.js e outputs/briefs.json (n8n)
 """
 import json
+import subprocess
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 import pandas as pd
@@ -59,9 +61,9 @@ def cmd_backtest(df, _):
     summary.to_csv(OUT / "backtest_summary.csv")
 
 
-def build_payload(df):
+def build_payload(df, sc=None):
     """Tudo que o app e o WhatsApp consomem. Nenhum número nasce fora do motor."""
-    sc = score_open(df)
+    sc = score_open(df) if sc is None else sc
     cols = ["opportunity_id", "sales_agent", "manager", "regional_office", "product", "account", "sector",
             "deal_stage", "queue", "rank_in_agent", "age", "days_to_wall", "sales_price", "chance_90d",
             "expected_value", "missing_account", "reason", "action"]
@@ -101,15 +103,43 @@ def build_payload(df):
     }
 
 
+def _engine_commit():
+    try:
+        r = subprocess.run(["git", "rev-parse", "--short", "HEAD"], cwd=Path(__file__).resolve().parent,
+                           capture_output=True, text=True, timeout=10)
+        return r.stdout.strip() or None if r.returncode == 0 else None
+    except (OSError, subprocess.SubprocessError):
+        return None
+
+
+def build_briefs(sc):
+    """Só o que o n8n precisa: texto pronto + os números que o motor produziu para cada texto."""
+    me = lambda a: sc[sc["sales_agent"] == a]  # noqa: E731
+    agents = []
+    for a in BR.agent_summary(sc).to_dict("records"):
+        name = a["sales_agent"]
+        agents.append({"agent": name, "manager": a["manager"], "region": a["regional_office"],
+                       "brief": BR.build_brief(name, sc),
+                       "allowed_numbers": sorted(BR.engine_numbers(me(name), sc))})
+    managers = [{"manager": m, "digest": BR.build_manager_digest(m, sc),
+                 "allowed_numbers": sorted(BR.manager_numbers(m, sc))}
+                for m in sorted(sc["manager"].unique())]
+    return {"as_of": sc.attrs["as_of"], "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+            "engine_commit": _engine_commit(), "agents": agents, "managers": managers}
+
+
 def cmd_export(df, _):
-    payload = build_payload(df)
+    sc = score_open(df)
+    payload = build_payload(df, sc)
     OUT.mkdir(exist_ok=True)
     (OUT / "scores.json").write_text(json.dumps(payload, ensure_ascii=False, indent=1, default=str))
     APP.mkdir(exist_ok=True)
     # data.js em vez de fetch: fetch não funciona em file:// (o app abre com duplo clique).
     compact = json.dumps(payload, ensure_ascii=False, separators=(",", ":"), default=str)
     (APP / "data.js").write_text(f"window.SCORES = {compact};\n")
-    print(f"{len(payload['deals'])} deals → {OUT / 'scores.json'} e {APP / 'data.js'}")
+    briefs = json.dumps(build_briefs(sc), ensure_ascii=False, separators=(",", ":"))
+    (OUT / "briefs.json").write_text(briefs)
+    print(f"{len(payload['deals'])} deals → {OUT / 'scores.json'}, {APP / 'data.js'} e {OUT / 'briefs.json'} ({len(briefs.encode()) / 1024:.0f} KB)")
 
 
 COMMANDS = {"audit": cmd_audit, "curve": cmd_curve, "agent": cmd_agent, "backtest": cmd_backtest, "export": cmd_export}

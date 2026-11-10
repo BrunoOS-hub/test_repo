@@ -55,11 +55,13 @@ def test_agent_summary_alive_matches_agir_queue(sc):
     assert BR.manager_summary(sc)["alive"].sum() == s["alive"].sum()
 
 
-def test_export_writes_parseable_data_js(df):
+def test_export_writes_parseable_data_js(df, tmp_path, monkeypatch):
     import run
 
+    monkeypatch.setattr(run, "OUT", tmp_path)  # não suja os arquivos versionados
+    monkeypatch.setattr(run, "APP", tmp_path)
     run.cmd_export(df, [])
-    text = (Path(run.APP) / "data.js").read_text()
+    text = (tmp_path / "data.js").read_text()
     prefix = "window.SCORES = "
     assert text.startswith(prefix)
     data = json.loads(text[len(prefix):].rstrip().rstrip(";"))
@@ -109,3 +111,27 @@ def test_export_has_headline_per_scope(df):
     for scope in p["agents"] + p["managers"] + p["regions"] + [p["totals"]]:
         assert scope["headline"].startswith(("Antes de cobrar", "Base em ordem"))
         assert scope["open_count"] == scope["alive"] + scope["decide_count"] + scope["qualify_count"]
+
+
+def test_briefs_json_numbers_validate_and_file_is_small(df, tmp_path, monkeypatch):
+    import run
+
+    monkeypatch.setattr(run, "OUT", tmp_path)
+    monkeypatch.setattr(run, "APP", tmp_path)
+    run.cmd_export(df, [])
+    raw = (tmp_path / "briefs.json").read_bytes()
+    assert len(raw) < 200 * 1024
+    b = json.loads(raw)
+    assert {"as_of", "generated_at", "engine_commit", "agents", "managers"} <= set(b)
+    assert len(b["agents"]) == 27 and len(b["managers"]) == 6
+    for a in b["agents"]:
+        assert BR.validate_numbers(a["brief"], set(a["allowed_numbers"])) == [], a["agent"]
+    for m in b["managers"]:
+        assert BR.validate_numbers(m["digest"], set(m["allowed_numbers"])) == [], m["manager"]
+        assert m["digest"].startswith("Bom dia, ") and "Detalhes no app: https://" in m["digest"]
+
+
+def test_manager_digest_numbers_are_checked(sc):
+    m = sorted(sc["manager"].unique())[0]
+    text = BR.build_manager_digest(m, sc) + "\nMeta: US$ 8.888"
+    assert BR.validate_numbers(text, BR.manager_numbers(m, sc)) == ["8.888"]
