@@ -10,8 +10,8 @@
 ## Estado atual
 
 - **Fase:** F2 (app web)
-- **Último marco:** motor + backtest prontos e testados em nuvem (8/8 testes). Falta validar localmente no Mac.
-- **Próxima ação:** validar o motor localmente (prompt T1.6) → construir o app web (F2).
+- **Último marco:** motor + backtest prontos, validados localmente (9/9 testes). Backtest corrigido: +7,3% vs valor, reproduzível (D10).
+- **Próxima ação:** construir o app web (F2), começando por T2.1.
 - **Bloqueios:** nenhum.
 
 ---
@@ -46,9 +46,9 @@ Legenda: ✅ feito · 🔄 em andamento · ⬜ a fazer
 - [x] T1.1 Carga e limpeza (`GTXPro` → `GTX Pro`, auditoria de dados)
 - [x] T1.2 Curva P(ganhar em 90 dias | idade), estimada por snapshots semanais e sem vazamento
 - [x] T1.3 Score = preço × chance; filas Agir / Qualificar / Decidir; razão e ação em PT-BR
-- [x] T1.4 Backtest em 18 segundas contra valor, "óbvia", mais novo e sorteio: **+10,6% vs valor (IC 90%: +3% a +18%)**
+- [x] T1.4 Backtest em 18 segundas contra valor, "óbvia", mais novo e sorteio: **+7,3% vs valor (IC 90%: +1,6% a +13,1%)**, após corrigir o desempate (D10)
 - [x] T1.5 8 testes (pytest)
-- [ ] T1.6 Validar localmente no Mac (venv, pytest, run.py)
+- [x] T1.6 Validar localmente no Mac (venv, pytest, run.py) + backtest determinístico (9 testes)
 
 ### F2: App web ⬜ (~1,5h)
 Stack: **HTML + JS puro, sem build.** Abre com duplo clique e publica no GitHub Pages.
@@ -109,6 +109,7 @@ Stack: **HTML + JS puro, sem build.** Abre com duplo clique e publica no GitHub 
 | D7 | App em HTML + JS puro | Avaliador abre sem instalar nada; menos risco | Claude |
 | D8 | Whapi (nunca Z-API) + n8n | Stack do Bruno; canal real do vendedor brasileiro | Bruno |
 | D9 | Reaproveitar ideias de concorrentes, nunca código; citar o benchmark no registro do processo | Transparência; os avaliadores têm os 109 PRs | Bruno + Claude |
+| D10 | Desempate determinístico por opportunity_id no backtest | +10,6% era artefato de ordenação instável; o número reproduzível é +7,3% | Claude Code (detectou) + Bruno |
 
 ---
 
@@ -118,7 +119,7 @@ Stack: **HTML + JS puro, sem build.** Abre com duplo clique e publica no GitHub 
 - Parede: 138 dias. Engaging além dela: 1.291 (81%), cerca de US$ 3,2 mi a preço de lista.
 - Abertos sem conta: 1.425 de 2.089 (68%). Prospecting sem `engage_date`: 500 de 500.
 - Curva de chance em 90 dias por idade: 0-14 38% · 15-30 41% · 31-60 45% · 61-90 45% · 91-120 30% · 121-138 6% · 139+ 0%.
-- Backtest (top 5 por vendedor, 18 segundas): score 25,7% · óbvia 23,9% · valor 23,3% · mais novo 9,7% · sorteio 8,2%.
+- Backtest (top 5 por vendedor, 18 segundas): score 25,2% · valor 23,5% · óbvia 23,5% · mais novo 9,8% · sorteio 8,2%. Ganho do score: +7,3% vs valor (IC 90%: +1,6% a +13,1%).
 
 ---
 

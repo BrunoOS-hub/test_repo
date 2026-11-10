@@ -15,6 +15,7 @@
 
 - **Classificação dos PRs.** A primeira regex contava "roc" dentro de "process" como evidência de AUC. Apertei os padrões.
 - **Ordenação da fila "Decidir".** Na primeira versão, deals com o mesmo preço ficavam em ordem arbitrária. Mudei para "passou da parede há menos tempo primeiro", porque esses são os mais recuperáveis.
+- **Backtest não reproduzível.** O número original (+10,6% na nuvem) não bateu na execução local (+7,3%). Detectado comparando execuções. Causa: muitos deals empatados em preço por vendedor e `sort_values` instável, então o top-k mudava entre versões de pandas/numpy. Correção: desempate determinístico por `opportunity_id` (mergesort) e teste de determinismo (inclusive com a base embaralhada). Número reproduzível: +7,3% (D10).
 - **"Faltam 0 dias".** A ação sugerida saía com esse texto sem sentido. Criei um caso próprio para o deal que está exatamente no limite.
 
 ## Decisões minhas (não da IA)

@@ -36,7 +36,10 @@ def rank_lists(df, s, k, rng):
     sc["k_sorteio"] = rng.random(len(sc))
     picks = {}
     for st in STRATEGIES:
-        top = sc.sort_values(f"k_{st}", ascending=False).groupby("sales_agent").head(k)
+        # Desempate determinístico: muitos deals têm o mesmo preço; sem isso o top-k
+        # depende do algoritmo de ordenação (varia entre versões de pandas/numpy).
+        top = (sc.sort_values([f"k_{st}", "opportunity_id"], ascending=[False, True], kind="mergesort")
+               .groupby("sales_agent").head(k))
         picks[st] = set(top["opportunity_id"])
     return sc, picks
 

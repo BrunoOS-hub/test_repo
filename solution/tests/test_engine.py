@@ -67,3 +67,15 @@ def test_rank_is_sorted_within_agent(sc):
     agir = sc[sc["queue"] == "Agir"]
     for _, g in agir.groupby("sales_agent"):
         assert g.sort_values("rank_in_agent")["expected_value"].is_monotonic_decreasing
+
+
+def test_backtest_is_deterministic(df):
+    from engine import backtest
+
+    kw = dict(start="2017-06-05", end="2017-07-03")
+    _, s1 = backtest.run(df, **kw)
+    _, s2 = backtest.run(df, **kw)
+    pd.testing.assert_frame_equal(s1, s2)
+    # Mesma resposta com as linhas embaralhadas: o resultado não depende da ordem da base.
+    _, s3 = backtest.run(df.sample(frac=1, random_state=1), **kw)
+    pd.testing.assert_frame_equal(s1, s3)
