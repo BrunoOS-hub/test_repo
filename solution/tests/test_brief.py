@@ -35,8 +35,8 @@ def test_validate_numbers_flags_invented_number(sc):
     assert "9.999" in BR.validate_numbers(text, BR.engine_numbers(me, sc))
 
 
-def test_deal_codes_are_not_read_as_numbers():
-    assert BR.extract_numbers("cód 4D0K5T7T e cód 01XZ9CRY") == []
+def test_extract_numbers_reads_positions_money_and_percent():
+    assert BR.extract_numbers("*1) GTX Pro · X*\nUS$ 2.239 esperados · 41% em 90 dias\n*avancei 1*") == ["1", "2.239", "41%", "90", "1"]
 
 
 def test_brief_omits_empty_sections(sc):
@@ -70,27 +70,83 @@ def test_export_writes_parseable_data_js(df, tmp_path, monkeypatch):
     assert data["totals"]["alive"] == sum(a["alive"] for a in data["agents"])
 
 
-def test_brief_has_no_placeholder_and_uses_real_code(sc):
+def test_brief_has_no_placeholder_and_no_deal_code_in_text(sc):
     for agent in sc["sales_agent"].unique():
-        me = sc[sc["sales_agent"] == agent]
         text = BR.build_brief(agent, sc)
         assert "{" not in text and "}" not in text, agent
-        first = next(q for q in ("Agir", "Decidir", "Qualificar") if (me["queue"] == q).any())
-        code = me[me["queue"] == first].sort_values("rank_in_agent").iloc[0]["opportunity_id"]
-        assert f"*1 {code}* = avancei · *2 {code}* = perdi · *3 {code}* = adiar" in text
+        for oid in sc[sc["sales_agent"] == agent]["opportunity_id"]:
+            assert oid not in text, (agent, oid)  # I/1 e O/0 confundem na digitação
 
 
-def test_brief_example_uses_decidir_when_agir_is_empty(sc):
-    only_decidir = [a for a in sc["sales_agent"].unique()
-                    if not ((sc["sales_agent"] == a) & (sc["queue"] == "Agir")).any()]
-    if not only_decidir:  # na base atual todo vendedor tem Agir: testa com a fila Agir removida
-        a = "Zane Levy"
-        sub = sc[(sc["sales_agent"] == a) & (sc["queue"] != "Agir")]
-        sub.attrs.update(sc.attrs)
-        code = sub[sub["queue"] == "Decidir"].sort_values("rank_in_agent").iloc[0]["opportunity_id"]
-        assert f"*1 {code}*" in BR.build_brief(a, sub)
-    else:
-        assert "*1 " in BR.build_brief(only_decidir[0], sc)
+def test_whatsapp_format_has_no_leading_space_or_auto_list(sc):
+    import re
+
+    texts = [BR.build_brief(a, sc) for a in sc["sales_agent"].unique()]
+    texts += [BR.build_manager_digest(m, sc) for m in sc["manager"].unique()]
+    for text in texts:
+        for line in text.split("\n"):
+            assert not line.startswith(" "), repr(line)
+            assert not re.match(r"\d+\. ", line), repr(line)  # "1. " vira lista automática no WhatsApp
+        assert "\n\n\n" not in text and not text.endswith("\n")
+
+
+def test_brief_blocks_are_separated_by_blank_lines(sc):
+    text = BR.build_brief("Zane Levy", sc)
+    blocks = text.split("\n\n")
+    assert blocks[0].startswith("Bom dia, Zane!") and "(base 31/12/2017)" in blocks[0]
+    assert blocks[1].startswith("🎯 *Agir*: 5 de ")
+    assert [b.split(")")[0] for b in blocks[2:7]] == [f"*{i}" for i in range(1, 6)]
+    assert all(len(b.split("\n")) == 3 and b.split("\n")[2].startswith("→ ") for b in blocks[2:7])
+    assert blocks[7].startswith("🧹 *Decidir*")
+    assert blocks[-1] == "Responda com a ação + o número do deal:\n*avancei 1* · *perdi 1* · *adiar 1*"
+
+
+def test_brief_last_line_quotes_avancei_1(sc):
+    for agent in sc["sales_agent"].unique():
+        assert BR.build_brief(agent, sc).split("\n")[-1] == "*avancei 1* · *perdi 1* · *adiar 1*", agent
+
+
+def test_agent_without_agir_numbers_the_decidir_deal(sc):
+    sem_agir = [a for a in sc["sales_agent"].unique() if not ((sc["sales_agent"] == a) & (sc["queue"] == "Agir")).any()]
+    assert sem_agir  # na base atual há 6
+    for agent in sem_agir:
+        deals = BR.brief_deals(agent, sc)
+        r = sc[sc["opportunity_id"] == deals[0]["opportunity_id"]].iloc[0]
+        assert len(deals) == 1 and r["queue"] == "Decidir"
+        assert f"Comece por: *1) {r['product']} · {BR._account(r)}*." in BR.build_brief(agent, sc)
+
+
+def test_brief_deals_map_positions_to_real_ids(sc):
+    ids = set(sc["opportunity_id"])
+    for agent in sc["sales_agent"].unique():
+        deals = BR.brief_deals(agent, sc)
+        n = min(5, int(((sc["sales_agent"] == agent) & (sc["queue"] == "Agir")).sum())) or 1
+        assert [d["pos"] for d in deals] == list(range(1, n + 1)), agent
+        assert all(d["opportunity_id"] in ids for d in deals)
+        # a posição N do texto é o deal N de "deals": produto e conta batem
+        text = BR.build_brief(agent, sc)
+        for d in deals:
+            r = sc[sc["opportunity_id"] == d["opportunity_id"]].iloc[0]
+            assert f"*{d['pos']}) {r['product']} · {BR._account(r)}*" in text
+
+
+def test_brief_qualify_section_follows_block_pattern(sc):
+    agent = sc[sc["queue"] == "Qualificar"]["sales_agent"].iloc[0]
+    blocks = BR.build_brief(agent, sc).split("\n\n")
+    assert any(b.startswith("🔎 *Qualificar*: ") and "\n" not in b for b in blocks)
+
+
+def test_manager_digest_format(sc):
+    m = sorted(sc["manager"].unique())[0]
+    blocks = BR.build_manager_digest(m, sc).split("\n\n")
+    assert blocks[0].startswith("Bom dia, ") and "(base 31/12/2017)" in blocks[0]
+    assert blocks[1].startswith(("Antes de cobrar", "Base em ordem"))
+    assert blocks[2] == "Top 3 por valor esperado:"
+    for i, b in enumerate(blocks[3:6], 1):
+        name, detail = b.split("\n")
+        assert name.startswith(f"*{i}) ") and name.endswith("*")
+        assert detail.startswith("US$ ") and detail.endswith(" parados") and " esperados · " in detail
+    assert blocks[-1].startswith("Detalhes no app: https://")
 
 
 def test_team_headline_numbers_come_from_the_scope(sc):
@@ -126,6 +182,11 @@ def test_briefs_json_numbers_validate_and_file_is_small(df, tmp_path, monkeypatc
     assert len(b["agents"]) == 27 and len(b["managers"]) == 6
     for a in b["agents"]:
         assert BR.validate_numbers(a["brief"], set(a["allowed_numbers"])) == [], a["agent"]
+    ids = {d["opportunity_id"] for d in json.loads((tmp_path / "scores.json").read_text())["deals"]}
+    for a in b["agents"]:
+        assert [d["pos"] for d in a["deals"]] == list(range(1, len(a["deals"]) + 1)) and a["deals"], a["agent"]
+        assert all(d["opportunity_id"] in ids for d in a["deals"]), a["agent"]
+        assert not any(d["opportunity_id"] in a["brief"] for d in a["deals"])
     for m in b["managers"]:
         assert BR.validate_numbers(m["digest"], set(m["allowed_numbers"])) == [], m["manager"]
         assert m["digest"].startswith("Bom dia, ") and "Detalhes no app: https://" in m["digest"]

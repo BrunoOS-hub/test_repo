@@ -10,8 +10,8 @@
 ## Estado atual
 
 - **Fase:** F3 (pauta via WhatsApp)
-- **Último marco:** pauta de segunda **entregue no WhatsApp de verdade**: execução #5 no n8n Cloud (`claunx.app.n8n.cloud`, workflow `XcYye3zvXXBXz4Em`), 2 enviadas, 0 falhas. JSON exportado e sanitizado em `automation/` (38/38 testes). Falta ativar o GitHub Pages (Settings → Pages → Source: GitHub Actions).
-- **Próxima ação:** F4 (respostas 1/2/3 → Data Table do n8n → motor). T3.2 (Haiku) é opcional; T3.5 (vídeo) fica para F5.
+- **Último marco:** pauta de segunda **entregue no WhatsApp de verdade**: execução #5 no n8n Cloud (`claunx.app.n8n.cloud`, workflow `XcYye3zvXXBXz4Em`), 2 enviadas, 0 falhas. JSON exportado e sanitizado em `automation/` (44 testes). Falta ativar o GitHub Pages (Settings → Pages → Source: GitHub Actions).
+- **Próxima ação:** F4 (respostas "avancei/perdi/adiar + posição" → Data Table do n8n → motor). T3.2 (Haiku) é opcional; T3.5 (vídeo) fica para F5.
 - **Bloqueios:** nenhum.
 
 ---
@@ -66,7 +66,7 @@ Stack: **HTML + JS puro, sem build.** Abre com duplo clique e publica no GitHub 
 - [x] T2.6 Testado em 390px (sem rolagem horizontal). Workflow `.github/workflows/pages.yml` pronto; **falta ativar:** Settings → Pages → Source: GitHub Actions
 
 ### F3: Pauta via WhatsApp 🔄 (~1,5h)
-- [x] T3.1 `engine/brief.py`: monta a mensagem determinística (top 5 Agir + resumo de Decidir) e `validate_numbers` para checar texto de LLM (D11)
+- [x] T3.1 `engine/brief.py`: monta a mensagem determinística (top 5 Agir + resumo de Decidir) e `validate_numbers` para checar texto de LLM (D11). *Formato revisado após teste no celular (D14): sem lista automática, sem código no texto, resposta por posição.*
 - [ ] T3.2 Redação opcional com Claude Haiku:
   - **regra:** todo número no texto do LLM precisa existir no JSON; se não existir, usa o texto determinístico;
   - registrar custo em tokens por vendedor.
@@ -77,7 +77,7 @@ Stack: **HTML + JS puro, sem build.** Abre com duplo clique e publica no GitHub 
 **Restrição:** o sandbox gratuito do Whapi tem 5 conversas/mês, 150 mensagens/dia e 1.000 requisições/mês. Basta para o desenvolvimento e o vídeo. O plano pago (US$ 35/mês por canal, US$ 29 no anual) só se justifica se decidirmos deixar um número aberto para o avaliador.
 
 ### F4: Loop de respostas ⬜ (~1h)
-- [ ] T4.1 Webhook do Whapi → n8n: interpretar "1/2/3 + código do deal"
+- [ ] T4.1 Webhook do Whapi → n8n: interpretar "avancei/perdi/adiar + posição" e mapear a posição ao deal pelo campo `deals` do `briefs.json`
 - [ ] T4.2 Persistir as respostas. **Verificar os limites do plano gratuito antes de escolher** entre Upstash Redis, Google Sheets e Data Tables do n8n.
 - [ ] T4.3 O motor lê as respostas:
   - "perdi" sai da fila;
@@ -111,6 +111,7 @@ Stack: **HTML + JS puro, sem build.** Abre com duplo clique e publica no GitHub 
 | D9 | Reaproveitar ideias de concorrentes, nunca código; citar o benchmark no registro do processo | Transparência; os avaliadores têm os 109 PRs | Bruno + Claude |
 | D10 | Desempate determinístico por opportunity_id no backtest | +10,6% era artefato de ordenação instável; o número reproduzível é +7,2% | Claude Code (detectou) + Bruno |
 | D11 | Brief gerado no motor e reutilizado no app e no WhatsApp | Um só texto, um só lugar de validação; o app não calcula nada | Bruno + Claude |
+| D14 | Brief sem código de deal no texto; resposta por posição ("avancei 1"); "1)" em vez de "1."; sem espaço no início de linha; `briefs.json` guarda `deals` (pos → opportunity_id) | Teste no celular: WhatsApp vira "1. " em lista e desalinha a indentação; I/1 e O/0 confundem na digitação | Bruno |
 | D13 | Credencial Whapi como **Bearer Auth** (não Header Auth); workflow criado direto na instância pelo MCP do n8n e exportado para o repo | Menos passos (só colar o token); o repo guarda a versão que de fato rodou | Claude + Bruno |
 | D12 | n8n lê `briefs.json` do GitHub raw; o motor continua sendo a única fonte de números; telefones só dentro do n8n | O workflow não precisa de servidor nem de segredo no repo; o n8n só entrega texto já validado | Bruno + Claude |
 

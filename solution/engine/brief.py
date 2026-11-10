@@ -11,7 +11,8 @@ import pandas as pd
 from .config import APP_URL, HORIZON_DAYS
 
 NO_ACCOUNT = "conta não cadastrada"
-REPLY_LINE = "Responda com o número + código. Ex.: *1 {c}* = avancei · *2 {c}* = perdi · *3 {c}* = adiar"
+REPLY_INTRO = "Responda com a ação + o número do deal:"
+REPLY_LINE = "*avancei 1* · *perdi 1* · *adiar 1*"
 
 
 def money(x) -> str:
@@ -86,8 +87,20 @@ def team_headline(scope: dict) -> str:
     return text
 
 
+def brief_deals(agent: str, sc: pd.DataFrame, top: int = 5) -> list[dict]:
+    """Deals numerados na pauta do vendedor (posição → opportunity_id). O código não aparece no texto:
+    é a F4 que mapeia a resposta "avancei 2" de volta ao deal. Sem fila Agir, o deal numerado 1 é o
+    "Comece por" da fila Decidir; sem nenhum dos dois, não há o que responder."""
+    me = sc[sc["sales_agent"] == agent]
+    agir = me[me["queue"] == "Agir"].sort_values("rank_in_agent").head(top)
+    decidir = me[me["queue"] == "Decidir"].sort_values("rank_in_agent").head(1)
+    shown = agir if len(agir) else decidir
+    return [{"pos": i, "opportunity_id": r["opportunity_id"]} for i, (_, r) in enumerate(shown.iterrows(), 1)]
+
+
 def build_brief(agent: str, sc: pd.DataFrame, top: int = 5) -> str:
-    """Pauta de segunda do vendedor em PT-BR. Seções vazias são omitidas."""
+    """Pauta de segunda do vendedor em PT-BR, pensada para o WhatsApp: nenhuma linha começa com espaço
+    ou "1. " (viraria lista automática), blocos separados por linha em branco. Seções vazias são omitidas."""
     me = sc[sc["sales_agent"] == agent]
     as_of = pd.Timestamp(sc.attrs["as_of"]).strftime("%d/%m/%Y")
     wall = sc.attrs["wall_days"]
@@ -96,24 +109,26 @@ def build_brief(agent: str, sc: pd.DataFrame, top: int = 5) -> str:
     n_qualify = int((me["queue"] == "Qualificar").sum())
 
     first = agent.split()[0]
-    lines = [f"Bom dia, {first}! Sua pauta da semana (base {as_of}):"]
+    blocks = [f"Bom dia, {first}! Sua pauta da semana (base {as_of})"]
     if len(agir):
         shown = agir.head(top)
-        lines.append(f"🎯 *Agir*: {len(shown)} de {len(agir)} deals vivos")
+        blocks.append(f"🎯 *Agir*: {len(shown)} de {len(agir)} deals vivos")
         for i, (_, r) in enumerate(shown.iterrows(), 1):
-            lines.append(f"{i}. {r['product']} · {_account(r)}")
-            lines.append(f"   {money(r['expected_value'])} esperados ({r['chance_90d']:.0%} em 90 dias) → {r['action']}")
-            lines.append(f"   cód {r['opportunity_id']}")
+            blocks.append(f"*{i}) {r['product']} · {_account(r)}*\n"
+                          f"{money(r['expected_value'])} esperados · {r['chance_90d']:.0%} em {HORIZON_DAYS} dias\n"
+                          f"→ {r['action']}")
     if len(decidir):
         r = decidir.iloc[0]
-        lines.append(f"🧹 *Decidir*: {len(decidir)} deals passaram de {wall} dias ({money(decidir['sales_price'].sum())} parados). "
-                     f"Comece por: {r['product']} · {_account(r)} (cód {r['opportunity_id']}).")
+        start = f"{r['product']} · {_account(r)}"
+        if not len(agir):  # o "Comece por" vira o deal 1 da resposta
+            start = f"*1) {start}*"
+        blocks.append(f"🧹 *Decidir*: {len(decidir)} deals passaram de {wall} dias ({money(decidir['sales_price'].sum())} parados). "
+                      f"Comece por: {start}.")
     if n_qualify:
-        lines.append(f"🔎 *Qualificar*: {n_qualify} deals sem primeiro contato.")
-    # Exemplo com código real: o do 1º deal de Agir; sem Agir, o 1º de Decidir (ou, no limite, da fila que houver).
-    example = next(d for d in (agir, decidir, me.sort_values(["queue", "rank_in_agent"])) if len(d)).iloc[0]["opportunity_id"]
-    lines.append(REPLY_LINE.replace("{c}", example))
-    text = "\n".join(lines)
+        blocks.append(f"🔎 *Qualificar*: {n_qualify} deals sem primeiro contato.")
+    if brief_deals(agent, sc, top):  # sem deal numerado não há o que responder
+        blocks.append(f"{REPLY_INTRO}\n{REPLY_LINE}")
+    text = "\n\n".join(blocks)
 
     extra = validate_numbers(text, engine_numbers(me, sc, top))
     if extra:  # só acontece se o formato mudar sem atualizar a lista de números do motor
@@ -122,16 +137,16 @@ def build_brief(agent: str, sc: pd.DataFrame, top: int = 5) -> str:
 
 
 def build_manager_digest(manager: str, sc: pd.DataFrame, top: int = 3) -> str:
-    """Digest semanal do gestor: recomendação do time + top vendedores por valor esperado."""
+    """Digest semanal do gestor: recomendação do time + top vendedores por valor esperado (mesmo padrão do brief)."""
     team = sc[sc["manager"] == manager]
     as_of = pd.Timestamp(sc.attrs["as_of"]).strftime("%d/%m/%Y")
     agents = agent_summary(team).sort_values(["expected_value_sum", "sales_agent"], ascending=[False, True]).head(top)
-    lines = [f"Bom dia, {manager.split()[0]}! Seu time na semana (base {as_of}):", team_headline(_aggregate(team)),
-             f"Top {len(agents)} por valor esperado:"]
+    blocks = [f"Bom dia, {manager.split()[0]}! Seu time na semana (base {as_of})", team_headline(_aggregate(team)),
+              f"Top {len(agents)} por valor esperado:"]
     for i, (_, a) in enumerate(agents.iterrows(), 1):
-        lines.append(f"{i}. {a['sales_agent']} · {money(a['expected_value_sum'])} esperados · {_num(a['decide_count'])} parados")
-    lines.append(f"Detalhes no app: {APP_URL}")
-    text = "\n".join(lines)
+        blocks.append(f"*{i}) {a['sales_agent']}*\n{money(a['expected_value_sum'])} esperados · {_num(a['decide_count'])} parados")
+    blocks.append(f"Detalhes no app: {APP_URL}")
+    text = "\n\n".join(blocks)
     extra = validate_numbers(text, manager_numbers(manager, sc, top))
     if extra:
         raise ValueError(f"Digest de {manager} cita números que o motor não produziu: {extra}")
@@ -140,13 +155,12 @@ def build_manager_digest(manager: str, sc: pd.DataFrame, top: int = 3) -> str:
 
 # ---- validação de números -------------------------------------------------
 
-_CODE = re.compile(r"cód [A-Z0-9]+|(?<=\*\d )[A-Z0-9]{8}(?=\*)")  # códigos de deal misturam letras e dígitos
 _NUMBER = re.compile(r"(?<![\w.,/])\d+(?:[.,/]\d+)*%?(?![\w])")
 
 
 def extract_numbers(text: str) -> list[str]:
-    """Números citados no texto (dinheiro, %, datas, contagens). Códigos de deal são ignorados."""
-    return _NUMBER.findall(_CODE.sub("cód", text))
+    """Números citados no texto (dinheiro, %, datas, contagens, posições). Códigos de deal não entram no texto."""
+    return _NUMBER.findall(text)
 
 
 def validate_numbers(text: str, allowed: set[str]) -> list[str]:
@@ -156,7 +170,7 @@ def validate_numbers(text: str, allowed: set[str]) -> list[str]:
 
 def engine_numbers(me: pd.DataFrame, sc: pd.DataFrame, top: int = 5) -> set[str]:
     """Todo número que o motor produziu para este vendedor, já formatado como aparece no texto."""
-    allowed = {str(i) for i in range(1, max(top, 3) + 1)}  # numeração da lista e opções 1/2/3
+    allowed = {str(i) for i in range(1, max(top, 3) + 1)}  # posições dos deals (1)…5)) e o exemplo "avancei 1"
     allowed.add(pd.Timestamp(sc.attrs["as_of"]).strftime("%d/%m/%Y"))
     allowed.update([str(sc.attrs["wall_days"]), str(HORIZON_DAYS)])
     for q in ("Agir", "Qualificar", "Decidir"):

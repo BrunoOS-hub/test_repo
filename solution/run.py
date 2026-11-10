@@ -120,6 +120,7 @@ def build_briefs(sc):
         name = a["sales_agent"]
         agents.append({"agent": name, "manager": a["manager"], "region": a["regional_office"],
                        "brief": BR.build_brief(name, sc),
+                       "deals": BR.brief_deals(name, sc),
                        "allowed_numbers": sorted(BR.engine_numbers(me(name), sc))})
     managers = [{"manager": m, "digest": BR.build_manager_digest(m, sc),
                  "allowed_numbers": sorted(BR.manager_numbers(m, sc))}

@@ -30,3 +30,15 @@
 - **Exec. #5:** 2 enviadas, 0 falhas. A pauta do Zane Levy chegou como texto e o digest da Summer Sewald como link preview do app.
 - **Lição:** o erro do Whapi vinha do canal, não do workflow. Ler a execução pelo MCP (request e resposta) separou isso em um passo.
 - **Segurança:** o token apareceu uma vez no chat. Fica a ação de gerar um token novo depois da gravação do vídeo. O JSON versionado não tem telefone nem ID de credencial (teste automatizado).
+
+## Revisão no celular (10/11/2026)
+
+O Bruno testou a pauta no WhatsApp e achou 3 problemas:
+
+1. **Lista automática:** o WhatsApp transforma "1. " em lista e os 3 espaços de indentação desalinham. Correção: "*1) Produto · Conta*", sem espaço no início de nenhuma linha e com linha em branco entre os blocos.
+2. **Código do deal ilegível:** `FZWU2I30` e `4R4QF0ZU` confundem I/1 e O/0 na digitação. Correção: o código saiu do texto. O vendedor responde com a posição ("avancei 1", "perdi 1", "adiar 1") e o `briefs.json` guarda `deals: [{pos, opportunity_id}]` por vendedor, para a F4 mapear posição → deal.
+3. **Digest do gestor no mesmo padrão:** cabeçalho, recomendação e top 3 em blocos separados, cada vendedor como "*1) Nome*" + linha de valores.
+
+Testes novos: nenhuma linha começa com espaço ou "<dígito>. "; nenhum ID aparece no texto; `deals` tem pos 1..N com IDs que existem em `scores.json`; a última linha é "*avancei 1* · *perdi 1* · *adiar 1*". `validate_numbers` segue passando (posições 1 a 5 entram no `allowed`).
+
+**Onde a IA errou:** o brief antigo tinha um teste com comentário "todo vendedor tem Agir", falso: 6 de 27 não têm. Sem Agir, "avancei 1" não apontaria para deal nenhum. Correção: nesses casos o "Comece por" da fila Decidir vira o deal 1 (e, se não houver Agir nem Decidir, a linha de resposta some).
