@@ -3,17 +3,19 @@
 Workflow n8n que lê `briefs.json` (gerado pelo motor) e envia a pauta de cada vendedor e o digest de cada gestor pelo Whapi.
 O n8n **não calcula nem escreve número**: ele só entrega o texto pronto. Os telefones ficam só dentro do n8n.
 
-**Fluxo:** Manual Trigger (demo) ou Schedule (segunda 08:00, America/Sao_Paulo) → busca `briefs.json` no GitHub raw → nó
-"Destinatários" cruza nome e telefone → loop de 1 em 1 → `POST gate.whapi.cloud/messages/text` → espera 5 s → "Resumo" (enviadas e falhas).
+**Fluxo:** "Rodar agora (demo)" ou "Toda segunda 8h" (America/Sao_Paulo) → nó "Config" (nomes e telefones da demo) → busca `briefs.json` no GitHub raw →
+"Montar mensagens" cruza nome e texto → loop de 1 em 1 → `POST gate.whapi.cloud/messages/text` → pausa de 5 s → "Resumo do envio" (enviadas e falhas).
+
+**Validado em 10/11/2026:** execução #5 no n8n Cloud, 2 mensagens entregues (pauta do Zane Levy e digest da Summer Sewald), 0 falhas.
 
 ## Como usar
 
 1. No n8n: **Import from file** → `automation/n8n-pauta-segunda.json`.
-2. Crie a credencial **Header Auth** chamada `Whapi`: *Name* `Authorization`, *Value* `Bearer <seu token>`.
+2. Crie a credencial **Bearer Auth** chamada `Whapi` e cole só o token do canal (sem a palavra "Bearer").
    Se o nó "Enviar via Whapi" não pegar a credencial sozinho, selecione `Whapi` nele.
-3. No nó **Destinatários**, troque os `55XXXXXXXXXXX` por telefones reais (só dígitos: 55 + DDD + número) e os nomes, se quiser.
-   Com o placeholder, o nó para com um erro claro.
-4. Clique em **Test workflow** (Manual Trigger). Para ativar a segunda 08:00, ative o workflow.
+3. No nó **Config (telefones da demo)**, troque os `55XXXXXXXXXXX` por telefones reais (só dígitos: 55 + DDD + número).
+   Com o placeholder, o workflow para com um erro claro.
+4. Clique em **Execute workflow** a partir de "Rodar agora (demo)". Para ativar a segunda 08:00, ative o workflow.
 
 Para atualizar a pauta: `python run.py export`, commit e push. O n8n lê sempre a versão da `main`.
 

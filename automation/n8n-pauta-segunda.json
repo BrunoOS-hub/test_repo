@@ -1,10 +1,10 @@
 {
-  "name": "Pauta de segunda (Lead Scorer)",
+  "name": "Lead Scorer · Pauta de segunda (WhatsApp)",
   "nodes": [
     {
       "parameters": {},
-      "id": "5a1f0c52-0b6e-4c1a-9d10-000000000001",
-      "name": "Manual Trigger",
+      "id": "ffd673fb-9dd0-4371-a7c1-46a4bb8cfc2b",
+      "name": "Rodar agora (demo)",
       "type": "n8n-nodes-base.manualTrigger",
       "typeVersion": 1,
       "position": [
@@ -23,19 +23,58 @@
           ]
         }
       },
-      "id": "5a1f0c52-0b6e-4c1a-9d10-000000000002",
+      "id": "ef331f9d-cd20-4d4a-8793-9d356f88bc51",
       "name": "Toda segunda 8h",
       "type": "n8n-nodes-base.scheduleTrigger",
-      "typeVersion": 1.2,
+      "typeVersion": 1.4,
       "position": [
         0,
-        200
-      ],
-      "notes": "Segunda-feira 08:00 no fuso America/Sao_Paulo (definido em Settings do workflow)."
+        208
+      ]
     },
     {
       "parameters": {
-        "method": "GET",
+        "assignments": {
+          "assignments": [
+            {
+              "id": "agent",
+              "name": "agent_name",
+              "type": "string",
+              "value": "Zane Levy"
+            },
+            {
+              "id": "agentPhone",
+              "name": "agent_phone",
+              "type": "string",
+              "value": "55XXXXXXXXXXX"
+            },
+            {
+              "id": "manager",
+              "name": "manager_name",
+              "type": "string",
+              "value": "Summer Sewald"
+            },
+            {
+              "id": "managerPhone",
+              "name": "manager_phone",
+              "type": "string",
+              "value": "55XXXXXXXXXXX"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "04ba1c7b-bc02-4f06-8e14-4cc700514d35",
+      "name": "Config (telefones da demo)",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        240,
+        96
+      ]
+    },
+    {
+      "parameters": {
         "url": "https://raw.githubusercontent.com/BrunoOS-hub/test_repo/main/solution/outputs/briefs.json",
         "options": {
           "response": {
@@ -45,26 +84,26 @@
           }
         }
       },
-      "id": "5a1f0c52-0b6e-4c1a-9d10-000000000003",
+      "id": "9812aa87-f090-4b45-a6e9-c377f2fe0ea2",
       "name": "Buscar briefs.json",
       "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2,
+      "typeVersion": 4.5,
       "position": [
-        260,
-        100
+        480,
+        96
       ]
     },
     {
       "parameters": {
-        "jsCode": "// Destinatários da demo. Troque os telefones (só dígitos: 55 + DDD + número).\n// Os telefones ficam só aqui, dentro do n8n: nunca no repositório.\nconst DEMO_RECIPIENTS = [\n  { type: 'agent', name: 'Zane Levy', phone: '55XXXXXXXXXXX' },\n  { type: 'manager', name: 'Summer Sewald', phone: '55XXXXXXXXXXX' },\n];\n\nconst data = $input.first().json;\nif (!Array.isArray(data.agents) || !Array.isArray(data.managers)) {\n  throw new Error('briefs.json em formato inesperado: faltam \"agents\" ou \"managers\". Confira a URL do nó \"Buscar briefs.json\".');\n}\n\nconst out = [];\nfor (const r of DEMO_RECIPIENTS) {\n  if (r.type !== 'agent' && r.type !== 'manager') {\n    throw new Error(`Tipo inválido para ${r.name}: use 'agent' ou 'manager'.`);\n  }\n  if (!/^\\d{10,15}$/.test(r.phone)) {\n    throw new Error(`Telefone inválido para ${r.name}: troque o placeholder em DEMO_RECIPIENTS (só dígitos: 55 + DDD + número).`);\n  }\n  const isManager = r.type === 'manager';\n  const list = isManager ? data.managers : data.agents;\n  const key = isManager ? 'manager' : 'agent';\n  const item = list.find((x) => x[key] === r.name);\n  if (!item) {\n    throw new Error(`\"${r.name}\" (${r.type}) não existe no briefs.json. Disponíveis: ${list.map((x) => x[key]).join(', ')}`);\n  }\n  out.push({ json: { to: r.phone, body: isManager ? item.digest : item.brief, name: r.name, type: r.type } });\n}\nreturn out;\n"
+        "jsCode": "// Números e textos vêm prontos do motor (briefs.json). Aqui só cruzamos destinatário com texto.\nconst cfg = $('Config (telefones da demo)').first().json;\nconst data = $input.first().json;\nif (!Array.isArray(data.agents) || !Array.isArray(data.managers)) {\n  throw new Error('briefs.json em formato inesperado: faltam agents/managers.');\n}\nconst targets = [\n  { type: 'agent', name: cfg.agent_name, phone: String(cfg.agent_phone || '') },\n  { type: 'manager', name: cfg.manager_name, phone: String(cfg.manager_phone || '') },\n];\nconst out = [];\nfor (const t of targets) {\n  if (!/^\\d{10,15}$/.test(t.phone)) throw new Error(`Telefone inválido para ${t.name}: preencha o nó Config (só dígitos, 55 + DDD + número).`);\n  const list = t.type === 'manager' ? data.managers : data.agents;\n  const key = t.type === 'manager' ? 'manager' : 'agent';\n  const item = list.find((x) => x[key] === t.name);\n  if (!item) throw new Error(`\"${t.name}\" não existe no briefs.json. Disponíveis: ${list.map((x) => x[key]).join(', ')}`);\n  out.push({ json: { to: t.phone, body: t.type === 'manager' ? item.digest : item.brief, name: t.name, type: t.type, as_of: data.as_of } });\n}\nreturn out;\n"
       },
-      "id": "5a1f0c52-0b6e-4c1a-9d10-000000000004",
-      "name": "Destinatários",
+      "id": "8bd7cf71-b3ac-4f42-9049-94970fb2d576",
+      "name": "Montar mensagens",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        520,
-        100
+        720,
+        96
       ]
     },
     {
@@ -72,13 +111,13 @@
         "batchSize": 1,
         "options": {}
       },
-      "id": "5a1f0c52-0b6e-4c1a-9d10-000000000005",
-      "name": "Loop Over Items",
+      "id": "86c4659c-d9d7-4a95-9531-8ef001efbdda",
+      "name": "Um por vez",
       "type": "n8n-nodes-base.splitInBatches",
       "typeVersion": 3,
       "position": [
-        780,
-        100
+        960,
+        96
       ]
     },
     {
@@ -86,24 +125,23 @@
         "method": "POST",
         "url": "https://gate.whapi.cloud/messages/text",
         "authentication": "genericCredentialType",
-        "genericAuthType": "httpHeaderAuth",
+        "genericAuthType": "httpBearerAuth",
         "sendBody": true,
         "contentType": "json",
         "specifyBody": "json",
         "jsonBody": "={{ JSON.stringify({ to: $json.to, body: $json.body }) }}",
         "options": {}
       },
-      "id": "5a1f0c52-0b6e-4c1a-9d10-000000000006",
+      "id": "4cc34347-957b-448c-a677-5c00b8e6e8d7",
       "name": "Enviar via Whapi",
       "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2,
+      "typeVersion": 4.5,
       "position": [
-        1040,
-        200
+        1200,
+        208
       ],
-      "onError": "continueRegularOutput",
       "credentials": {
-        "httpHeaderAuth": {
+        "httpBearerAuth": {
           "name": "Whapi"
         }
       }
@@ -114,36 +152,52 @@
         "amount": 5,
         "unit": "seconds"
       },
-      "id": "5a1f0c52-0b6e-4c1a-9d10-000000000007",
-      "name": "Aguardar 5s",
+      "id": "a9ad5151-64d6-4a11-9bea-0e1de5ec994c",
+      "name": "Pausa 5s (antispam)",
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "position": [
-        1300,
-        200
+        1440,
+        208
       ],
-      "webhookId": "5a1f0c52-0b6e-4c1a-9d10-0000000000a7"
+      "webhookId": "8ee4180d-347a-4281-8ee4-4411304a1f51"
     },
     {
       "parameters": {
-        "jsCode": "// Cada item que volta do loop é a resposta do Whapi. Sucesso = { sent: true }.\nconst items = $input.all();\nconst ok = (i) => i.json.sent === true && !i.json.error;\nconst falhas = items.filter((i) => !ok(i));\nreturn [{\n  json: {\n    total: items.length,\n    enviadas: items.length - falhas.length,\n    falhas: falhas.length,\n    erros: falhas.map((i) => (i.json.error && (i.json.error.message || i.json.error)) || JSON.stringify(i.json).slice(0, 200)),\n  },\n}];\n"
+        "jsCode": "const items = $input.all();\nconst ok = (i) => i.json.sent === true;\nconst falhas = items.filter((i) => !ok(i));\nreturn [{ json: { total: items.length, enviadas: items.length - falhas.length, falhas: falhas.length, detalhes: falhas.map((i) => JSON.stringify(i.json).slice(0, 200)) } }];\n"
       },
-      "id": "5a1f0c52-0b6e-4c1a-9d10-000000000008",
-      "name": "Resumo",
+      "id": "23e52e1f-3706-4265-bf3e-15f2d2c00252",
+      "name": "Resumo do envio",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        1040,
+        1200,
         0
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Pauta de segunda (Lead Scorer G4)\nO motor Python gera os textos (briefs.json no GitHub). Este workflow só entrega no WhatsApp via Whapi.\n1. Preencha os telefones no nó **Config**\n2. Crie a credencial **Whapi** (Bearer Auth = token do canal)\n3. Clique em **Rodar agora (demo)**",
+        "height": 224,
+        "width": 640,
+        "color": 5
+      },
+      "id": "8285cb53-b648-4dd7-9fed-d7d7f6ae2cc0",
+      "name": "Nota",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        224,
+        -176
       ]
     }
   ],
   "connections": {
-    "Manual Trigger": {
+    "Rodar agora (demo)": {
       "main": [
         [
           {
-            "node": "Buscar briefs.json",
+            "node": "Config (telefones da demo)",
             "type": "main",
             "index": 0
           }
@@ -151,6 +205,17 @@
       ]
     },
     "Toda segunda 8h": {
+      "main": [
+        [
+          {
+            "node": "Config (telefones da demo)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Config (telefones da demo)": {
       "main": [
         [
           {
@@ -165,29 +230,29 @@
       "main": [
         [
           {
-            "node": "Destinatários",
+            "node": "Montar mensagens",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "Destinatários": {
+    "Montar mensagens": {
       "main": [
         [
           {
-            "node": "Loop Over Items",
+            "node": "Um por vez",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "Loop Over Items": {
+    "Um por vez": {
       "main": [
         [
           {
-            "node": "Resumo",
+            "node": "Resumo do envio",
             "type": "main",
             "index": 0
           }
@@ -205,18 +270,18 @@
       "main": [
         [
           {
-            "node": "Aguardar 5s",
+            "node": "Pausa 5s (antispam)",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "Aguardar 5s": {
+    "Pausa 5s (antispam)": {
       "main": [
         [
           {
-            "node": "Loop Over Items",
+            "node": "Um por vez",
             "type": "main",
             "index": 0
           }
@@ -224,10 +289,11 @@
       ]
     }
   },
-  "active": false,
   "settings": {
     "executionOrder": "v1",
     "timezone": "America/Sao_Paulo"
   },
-  "pinData": {}
+  "meta": {
+    "note": "Exportado da instância n8n onde rodou com sucesso em 10/11/2026 (execução #5: 2 enviadas, 0 falhas). Telefones e ID de credencial removidos."
+  }
 }

@@ -19,3 +19,14 @@
 
 - **D12:** o n8n lê `briefs.json` do GitHub raw. O motor continua a única fonte de números, e os telefones ficam só dentro do n8n.
 - **Demo em modo manual** (Manual Trigger) para o vídeo, com o agendamento já configurado para segunda 08:00.
+
+## Teste real (10/11/2026)
+
+- O workflow foi criado direto na instância n8n pelo MCP do n8n, sem import manual, e validado pelo SDK antes de salvar.
+- **Teste seco (exec. #1):** sem telefone, buscou o `briefs.json` e parou no erro esperado ("Telefone inválido… preencha o nó Config"). Nada foi enviado.
+- **Onde travou:**
+  - exec. #2: rodou só o gatilho ("Execute step" no nó, não o workflow inteiro);
+  - exec. #3 e #4: o Whapi respondeu **404 "Channel not found"**. A causa era o token de um canal que não estava ativo. O Bruno corrigiu no painel do Whapi e criou uma credencial nova, que não estava ligada ao nó; liguei pelo MCP.
+- **Exec. #5:** 2 enviadas, 0 falhas. A pauta do Zane Levy chegou como texto e o digest da Summer Sewald como link preview do app.
+- **Lição:** o erro do Whapi vinha do canal, não do workflow. Ler a execução pelo MCP (request e resposta) separou isso em um passo.
+- **Segurança:** o token apareceu uma vez no chat. Fica a ação de gerar um token novo depois da gravação do vídeo. O JSON versionado não tem telefone nem ID de credencial (teste automatizado).
