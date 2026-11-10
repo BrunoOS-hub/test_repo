@@ -10,7 +10,7 @@
 ## Estado atual
 
 - **Fase:** F3 (pauta via WhatsApp)
-- **Último marco:** app web estático pronto (Vendedor, Gestor, Como funciona) e brief de WhatsApp determinístico no motor (15/15 testes). Falta ativar o GitHub Pages (Settings → Pages → Source: GitHub Actions).
+- **Último marco:** app web estático revisado (ações por fase do deal, faixa de decisão do gestor) e brief de WhatsApp sem placeholder (30/30 testes). Falta ativar o GitHub Pages (Settings → Pages → Source: GitHub Actions).
 - **Próxima ação:** F3, a partir do T3.2 (redação opcional com Claude Haiku, validada por `validate_numbers`) e do T3.3 (workflow n8n + Whapi).
 - **Bloqueios:** nenhum.
 

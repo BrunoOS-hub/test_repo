@@ -14,7 +14,7 @@ python run.py agent "Zane Levy"  # pauta de segunda de um vendedor
 python run.py backtest           # score vs. alternativas em segundas passadas
 python run.py export             # outputs/scores.json + app/data.js (app e WhatsApp)
 open app/index.html              # app web: duplo clique, sem servidor e sem chave de API
-pytest -q                        # 15 testes
+pytest -q                        # 30 testes
 ```
 
 ## Lógica

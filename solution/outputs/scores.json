@@ -115,425 +115,499 @@
    "sales_agent": "Anna Snelling",
    "manager": "Dustin Brinkmann",
    "regional_office": "Central",
+   "open_count": 112,
    "alive": 1,
    "expected_value_sum": 3.0,
    "decide_count": 56,
    "decide_value": 95359.0,
    "qualify_count": 55,
    "missing_account_count": 69,
-   "brief": "Bom dia, Anna! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 1 de 1 deals vivos\n1. MG Special · conta não cadastrada\n   US$ 3 esperados (6% em 90 dias) → Pedir a decisão hoje: o deal chegou ao limite histórico de fechamento.\n   cód B08R55ET\n🧹 *Decidir*: 56 deals passaram de 138 dias (US$ 95.359 parados). Comece por: GTX Plus Pro · Bioholding (cód NSX4NR40).\n🔎 *Qualificar*: 55 deals sem primeiro contato.\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+   "brief": "Bom dia, Anna! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 1 de 1 deals vivos\n1. MG Special · conta não cadastrada\n   US$ 3 esperados (6% em 90 dias) → Pedir a decisão hoje: o deal chegou ao limite histórico de fechamento.\n   cód B08R55ET\n🧹 *Decidir*: 56 deals passaram de 138 dias (US$ 95.359 parados). Comece por: GTX Plus Pro · Bioholding (cód NSX4NR40).\n🔎 *Qualificar*: 55 deals sem primeiro contato.\nResponda com o número + código. Ex.: *1 B08R55ET* = avancei · *2 B08R55ET* = perdi · *3 B08R55ET* = adiar",
+   "headline": "Antes de cobrar priorização: limpar 56 deals parados (US$ 95.359) e cadastrar a conta de 69 deals. Comece pelos que passaram do limite há menos tempo."
   },
   {
    "sales_agent": "Boris Faz",
    "manager": "Rocco Neubert",
    "regional_office": "East",
+   "open_count": 57,
    "alive": 13,
    "expected_value_sum": 11131.0,
    "decide_count": 44,
    "decide_value": 109276.0,
    "qualify_count": 0,
    "missing_account_count": 39,
-   "brief": "Bom dia, Boris! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 13 deals vivos\n1. GTX Plus Pro · Bluth Company\n   US$ 2.467 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód I5VHXAWW\n2. GTX Pro · conta não cadastrada\n   US$ 1.838 esperados (38% em 90 dias) → Fase em que mais se perde: qualificar a necessidade e agendar a próxima reunião.\n   cód NGTVHTFH\n3. MG Advanced · conta não cadastrada\n   US$ 1.527 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód BREOLQD9\n4. MG Advanced · conta não cadastrada\n   US$ 1.518 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód EP5QRHID\n5. GTX Pro · conta não cadastrada\n   US$ 1.465 esperados (30% em 90 dias) → Pedir a decisão: faltam 21 dias para o limite histórico.\n   cód 5E274CQS\n🧹 *Decidir*: 44 deals passaram de 138 dias (US$ 109.276 parados). Comece por: GTX Plus Pro · conta não cadastrada (cód WO1OYV0Z).\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+   "brief": "Bom dia, Boris! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 13 deals vivos\n1. GTX Plus Pro · Bluth Company\n   US$ 2.467 esperados (45% em 90 dias) → Apresentar proposta e marcar a próxima reunião com data.\n   cód I5VHXAWW\n2. GTX Pro · conta não cadastrada\n   US$ 1.838 esperados (38% em 90 dias) → Qualificar: confirmar necessidade, orçamento e quem decide. É a fase em que mais se perde.\n   cód NGTVHTFH\n3. MG Advanced · conta não cadastrada\n   US$ 1.527 esperados (45% em 90 dias) → Apresentar proposta e marcar a próxima reunião com data.\n   cód BREOLQD9\n4. MG Advanced · conta não cadastrada\n   US$ 1.518 esperados (45% em 90 dias) → Negociar: tratar objeções e envolver quem assina.\n   cód EP5QRHID\n5. GTX Pro · conta não cadastrada\n   US$ 1.465 esperados (30% em 90 dias) → Pedir a decisão: faltam 21 dias para o limite histórico.\n   cód 5E274CQS\n🧹 *Decidir*: 44 deals passaram de 138 dias (US$ 109.276 parados). Comece por: GTX Plus Pro · conta não cadastrada (cód WO1OYV0Z).\nResponda com o número + código. Ex.: *1 I5VHXAWW* = avancei · *2 I5VHXAWW* = perdi · *3 I5VHXAWW* = adiar",
+   "headline": "Antes de cobrar priorização: limpar 44 deals parados (US$ 109.276) e cadastrar a conta de 39 deals. Comece pelos que passaram do limite há menos tempo."
   },
   {
    "sales_agent": "Cassey Cress",
    "manager": "Rocco Neubert",
    "regional_office": "East",
+   "open_count": 85,
    "alive": 23,
    "expected_value_sum": 11944.0,
    "decide_count": 62,
    "decide_value": 172198.0,
    "qualify_count": 0,
    "missing_account_count": 56,
-   "brief": "Bom dia, Cassey! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 23 deals vivos\n1. GTX Pro · Inity\n   US$ 2.170 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód WJO52I18\n2. GTX Pro · Toughzap\n   US$ 2.156 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód XSTGL252\n3. GTX Plus Pro · conta não cadastrada\n   US$ 2.090 esperados (38% em 90 dias) → Fase em que mais se perde: qualificar a necessidade e agendar a próxima reunião.\n   cód RDHTQLNI\n4. GTX Plus Pro · conta não cadastrada\n   US$ 1.665 esperados (30% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód R6Q5JOLX\n5. GTX Plus Basic · conta não cadastrada\n   US$ 493 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód J962I0KG\n🧹 *Decidir*: 62 deals passaram de 138 dias (US$ 172.198 parados). Comece por: GTX Plus Pro · conta não cadastrada (cód 6TGCOE5O).\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+   "brief": "Bom dia, Cassey! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 23 deals vivos\n1. GTX Pro · Inity\n   US$ 2.170 esperados (45% em 90 dias) → Apresentar proposta e marcar a próxima reunião com data.\n   cód WJO52I18\n2. GTX Pro · Toughzap\n   US$ 2.156 esperados (45% em 90 dias) → Negociar: tratar objeções e envolver quem assina.\n   cód XSTGL252\n3. GTX Plus Pro · conta não cadastrada\n   US$ 2.090 esperados (38% em 90 dias) → Qualificar: confirmar necessidade, orçamento e quem decide. É a fase em que mais se perde.\n   cód RDHTQLNI\n4. GTX Plus Pro · conta não cadastrada\n   US$ 1.665 esperados (30% em 90 dias) → Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido.\n   cód R6Q5JOLX\n5. GTX Plus Basic · conta não cadastrada\n   US$ 493 esperados (45% em 90 dias) → Apresentar proposta e marcar a próxima reunião com data.\n   cód J962I0KG\n🧹 *Decidir*: 62 deals passaram de 138 dias (US$ 172.198 parados). Comece por: GTX Plus Pro · conta não cadastrada (cód 6TGCOE5O).\nResponda com o número + código. Ex.: *1 WJO52I18* = avancei · *2 WJO52I18* = perdi · *3 WJO52I18* = adiar",
+   "headline": "Antes de cobrar priorização: limpar 62 deals parados (US$ 172.198) e cadastrar a conta de 56 deals. Comece pelos que passaram do limite há menos tempo."
   },
   {
    "sales_agent": "Cecily Lampkin",
    "manager": "Dustin Brinkmann",
    "regional_office": "Central",
+   "open_count": 43,
    "alive": 0,
    "expected_value_sum": 0.0,
    "decide_count": 19,
    "decide_value": 29565.0,
    "qualify_count": 24,
    "missing_account_count": 33,
-   "brief": "Bom dia, Cecily! Sua pauta da semana (base 31/12/2017):\n🧹 *Decidir*: 19 deals passaram de 138 dias (US$ 29.565 parados). Comece por: MG Advanced · conta não cadastrada (cód 8MUD1WS1).\n🔎 *Qualificar*: 24 deals sem primeiro contato.\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+   "brief": "Bom dia, Cecily! Sua pauta da semana (base 31/12/2017):\n🧹 *Decidir*: 19 deals passaram de 138 dias (US$ 29.565 parados). Comece por: MG Advanced · conta não cadastrada (cód 8MUD1WS1).\n🔎 *Qualificar*: 24 deals sem primeiro contato.\nResponda com o número + código. Ex.: *1 8MUD1WS1* = avancei · *2 8MUD1WS1* = perdi · *3 8MUD1WS1* = adiar",
+   "headline": "Antes de cobrar priorização: limpar 19 deals parados (US$ 29.565) e cadastrar a conta de 33 deals. Comece pelos que passaram do limite há menos tempo."
   },
   {
    "sales_agent": "Corliss Cosme",
    "manager": "Cara Losch",
    "regional_office": "East",
+   "open_count": 81,
    "alive": 18,
    "expected_value_sum": 14792.0,
    "decide_count": 63,
    "decide_value": 159954.0,
    "qualify_count": 0,
    "missing_account_count": 54,
-   "brief": "Bom dia, Corliss! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 18 deals vivos\n1. GTX Plus Pro · conta não cadastrada\n   US$ 2.467 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód GQDS81G1\n2. GTX Pro · conta não cadastrada\n   US$ 2.170 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód C2FSIMZP\n3. GTX Plus Pro · conta não cadastrada\n   US$ 1.665 esperados (30% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód A7OVC1WK\n4. MG Advanced · conta não cadastrada\n   US$ 1.527 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód 0CR37ETK\n5. GTX Pro · conta não cadastrada\n   US$ 1.465 esperados (30% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód G7QIQDSA\n🧹 *Decidir*: 63 deals passaram de 138 dias (US$ 159.954 parados). Comece por: GTX Plus Pro · conta não cadastrada (cód FOJG3OCO).\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+   "brief": "Bom dia, Corliss! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 18 deals vivos\n1. GTX Plus Pro · conta não cadastrada\n   US$ 2.467 esperados (45% em 90 dias) → Apresentar proposta e marcar a próxima reunião com data.\n   cód GQDS81G1\n2. GTX Pro · conta não cadastrada\n   US$ 2.170 esperados (45% em 90 dias) → Apresentar proposta e marcar a próxima reunião com data.\n   cód C2FSIMZP\n3. GTX Plus Pro · conta não cadastrada\n   US$ 1.665 esperados (30% em 90 dias) → Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido.\n   cód A7OVC1WK\n4. MG Advanced · conta não cadastrada\n   US$ 1.527 esperados (45% em 90 dias) → Apresentar proposta e marcar a próxima reunião com data.\n   cód 0CR37ETK\n5. GTX Pro · conta não cadastrada\n   US$ 1.465 esperados (30% em 90 dias) → Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido.\n   cód G7QIQDSA\n🧹 *Decidir*: 63 deals passaram de 138 dias (US$ 159.954 parados). Comece por: GTX Plus Pro · conta não cadastrada (cód FOJG3OCO).\nResponda com o número + código. Ex.: *1 GQDS81G1* = avancei · *2 GQDS81G1* = perdi · *3 GQDS81G1* = adiar",
+   "headline": "Antes de cobrar priorização: limpar 63 deals parados (US$ 159.954) e cadastrar a conta de 54 deals. Comece pelos que passaram do limite há menos tempo."
   },
   {
    "sales_agent": "Daniell Hammack",
    "manager": "Rocco Neubert",
    "regional_office": "East",
+   "open_count": 72,
    "alive": 21,
    "expected_value_sum": 12680.0,
    "decide_count": 51,
    "decide_value": 155018.0,
    "qualify_count": 0,
    "missing_account_count": 47,
-   "brief": "Bom dia, Daniell! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 21 deals vivos\n1. GTX Pro · conta não cadastrada\n   US$ 2.156 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód ZEYGDEBG\n2. GTX Plus Pro · conta não cadastrada\n   US$ 1.665 esperados (30% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód LFI3BGEE\n3. MG Advanced · conta não cadastrada\n   US$ 1.518 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód JIEO87ZV\n4. GTX Pro · conta não cadastrada\n   US$ 1.465 esperados (30% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód IDKBZCAF\n5. GTX Pro · conta não cadastrada\n   US$ 1.465 esperados (30% em 90 dias) → Pedir a decisão: faltam 29 dias para o limite histórico.\n   cód 9DY57A6F\n🧹 *Decidir*: 51 deals passaram de 138 dias (US$ 155.018 parados). Comece por: GTX Plus Pro · conta não cadastrada (cód HEWKNHTH).\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+   "brief": "Bom dia, Daniell! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 21 deals vivos\n1. GTX Pro · conta não cadastrada\n   US$ 2.156 esperados (45% em 90 dias) → Negociar: tratar objeções e envolver quem assina.\n   cód ZEYGDEBG\n2. GTX Plus Pro · conta não cadastrada\n   US$ 1.665 esperados (30% em 90 dias) → Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido.\n   cód LFI3BGEE\n3. MG Advanced · conta não cadastrada\n   US$ 1.518 esperados (45% em 90 dias) → Negociar: tratar objeções e envolver quem assina.\n   cód JIEO87ZV\n4. GTX Pro · conta não cadastrada\n   US$ 1.465 esperados (30% em 90 dias) → Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido.\n   cód IDKBZCAF\n5. GTX Pro · conta não cadastrada\n   US$ 1.465 esperados (30% em 90 dias) → Pedir a decisão: faltam 29 dias para o limite histórico.\n   cód 9DY57A6F\n🧹 *Decidir*: 51 deals passaram de 138 dias (US$ 155.018 parados). Comece por: GTX Plus Pro · conta não cadastrada (cód HEWKNHTH).\nResponda com o número + código. Ex.: *1 ZEYGDEBG* = avancei · *2 ZEYGDEBG* = perdi · *3 ZEYGDEBG* = adiar",
+   "headline": "Antes de cobrar priorização: limpar 51 deals parados (US$ 155.018) e cadastrar a conta de 47 deals. Comece pelos que passaram do limite há menos tempo."
   },
   {
    "sales_agent": "Darcel Schlecht",
    "manager": "Melvin Marxen",
    "regional_office": "Central",
+   "open_count": 194,
    "alive": 0,
    "expected_value_sum": 0.0,
    "decide_count": 83,
    "decide_value": 273766.0,
    "qualify_count": 111,
    "missing_account_count": 134,
-   "brief": "Bom dia, Darcel! Sua pauta da semana (base 31/12/2017):\n🧹 *Decidir*: 83 deals passaram de 138 dias (US$ 273.766 parados). Comece por: GTX Plus Pro · conta não cadastrada (cód Z4OOTJAJ).\n🔎 *Qualificar*: 111 deals sem primeiro contato.\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+   "brief": "Bom dia, Darcel! Sua pauta da semana (base 31/12/2017):\n🧹 *Decidir*: 83 deals passaram de 138 dias (US$ 273.766 parados). Comece por: GTX Plus Pro · conta não cadastrada (cód Z4OOTJAJ).\n🔎 *Qualificar*: 111 deals sem primeiro contato.\nResponda com o número + código. Ex.: *1 Z4OOTJAJ* = avancei · *2 Z4OOTJAJ* = perdi · *3 Z4OOTJAJ* = adiar",
+   "headline": "Antes de cobrar priorização: limpar 83 deals parados (US$ 273.766) e cadastrar a conta de 134 deals. Comece pelos que passaram do limite há menos tempo."
   },
   {
    "sales_agent": "Elease Gluck",
    "manager": "Celia Rouche",
    "regional_office": "West",
+   "open_count": 51,
    "alive": 12,
    "expected_value_sum": 5234.0,
    "decide_count": 39,
    "decide_value": 230990.0,
    "qualify_count": 0,
    "missing_account_count": 33,
-   "brief": "Bom dia, Elease! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 12 deals vivos\n1. GTX Plus Pro · conta não cadastrada\n   US$ 1.665 esperados (30% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód NRK892VX\n2. GTX Plus Pro · Plexzap\n   US$ 1.665 esperados (30% em 90 dias) → Pedir a decisão: faltam 18 dias para o limite histórico.\n   cód 6OD1J7MW\n3. MG Advanced · Labdrill\n   US$ 1.031 esperados (30% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód 1LHU0876\n4. GTX Plus Basic · conta não cadastrada\n   US$ 448 esperados (41% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód IQR162ZT\n5. GTX Pro · conta não cadastrada\n   US$ 292 esperados (6% em 90 dias) → Pedir a decisão: faltam 13 dias para o limite histórico.\n   cód 3ORQ2R0R\n🧹 *Decidir*: 39 deals passaram de 138 dias (US$ 230.990 parados). Comece por: GTK 500 · conta não cadastrada (cód A04V2WB3).\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+   "brief": "Bom dia, Elease! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 12 deals vivos\n1. GTX Plus Pro · conta não cadastrada\n   US$ 1.665 esperados (30% em 90 dias) → Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido.\n   cód NRK892VX\n2. GTX Plus Pro · Plexzap\n   US$ 1.665 esperados (30% em 90 dias) → Pedir a decisão: faltam 18 dias para o limite histórico.\n   cód 6OD1J7MW\n3. MG Advanced · Labdrill\n   US$ 1.031 esperados (30% em 90 dias) → Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido.\n   cód 1LHU0876\n4. GTX Plus Basic · conta não cadastrada\n   US$ 448 esperados (41% em 90 dias) → Apresentar proposta e marcar a próxima reunião com data.\n   cód IQR162ZT\n5. GTX Pro · conta não cadastrada\n   US$ 292 esperados (6% em 90 dias) → Pedir a decisão: faltam 13 dias para o limite histórico.\n   cód 3ORQ2R0R\n🧹 *Decidir*: 39 deals passaram de 138 dias (US$ 230.990 parados). Comece por: GTK 500 · conta não cadastrada (cód A04V2WB3).\nResponda com o número + código. Ex.: *1 NRK892VX* = avancei · *2 NRK892VX* = perdi · *3 NRK892VX* = adiar",
+   "headline": "Antes de cobrar priorização: limpar 39 deals parados (US$ 230.990) e cadastrar a conta de 33 deals. Comece pelos que passaram do limite há menos tempo."
   },
   {
    "sales_agent": "Gladys Colclough",
    "manager": "Melvin Marxen",
    "regional_office": "Central",
+   "open_count": 85,
    "alive": 0,
    "expected_value_sum": 0.0,
    "decide_count": 36,
    "decide_value": 62513.0,
    "qualify_count": 49,
    "missing_account_count": 55,
-   "brief": "Bom dia, Gladys! Sua pauta da semana (base 31/12/2017):\n🧹 *Decidir*: 36 deals passaram de 138 dias (US$ 62.513 parados). Comece por: GTX Plus Pro · The New York Inquirer (cód 5MAXF8FK).\n🔎 *Qualificar*: 49 deals sem primeiro contato.\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+   "brief": "Bom dia, Gladys! Sua pauta da semana (base 31/12/2017):\n🧹 *Decidir*: 36 deals passaram de 138 dias (US$ 62.513 parados). Comece por: GTX Plus Pro · The New York Inquirer (cód 5MAXF8FK).\n🔎 *Qualificar*: 49 deals sem primeiro contato.\nResponda com o número + código. Ex.: *1 5MAXF8FK* = avancei · *2 5MAXF8FK* = perdi · *3 5MAXF8FK* = adiar",
+   "headline": "Antes de cobrar priorização: limpar 36 deals parados (US$ 62.513) e cadastrar a conta de 55 deals. Comece pelos que passaram do limite há menos tempo."
   },
   {
    "sales_agent": "Hayden Neloms",
    "manager": "Celia Rouche",
    "regional_office": "West",
+   "open_count": 50,
    "alive": 6,
    "expected_value_sum": 3092.0,
    "decide_count": 44,
    "decide_value": 113394.0,
    "qualify_count": 0,
    "missing_account_count": 36,
-   "brief": "Bom dia, Hayden! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 6 deals vivos\n1. GTX Plus Pro · Konmatfix\n   US$ 1.665 esperados (30% em 90 dias) → Pedir a decisão: faltam 21 dias para o limite histórico.\n   cód 7GDSUY9K\n2. MG Advanced · conta não cadastrada\n   US$ 1.031 esperados (30% em 90 dias) → Pedir a decisão: faltam 26 dias para o limite histórico.\n   cód ZGW9SCQ0\n3. GTX Plus Basic · conta não cadastrada\n   US$ 333 esperados (30% em 90 dias) → Pedir a decisão: faltam 19 dias para o limite histórico.\n   cód DZP41ANW\n4. MG Special · conta não cadastrada\n   US$ 25 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód W5FH95XO\n5. MG Special · Silis\n   US$ 21 esperados (38% em 90 dias) → Fase em que mais se perde: qualificar a necessidade e agendar a próxima reunião.\n   cód HB740BLB\n🧹 *Decidir*: 44 deals passaram de 138 dias (US$ 113.394 parados). Comece por: GTX Plus Pro · conta não cadastrada (cód QQPAK72N).\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+   "brief": "Bom dia, Hayden! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 6 deals vivos\n1. GTX Plus Pro · Konmatfix\n   US$ 1.665 esperados (30% em 90 dias) → Pedir a decisão: faltam 21 dias para o limite histórico.\n   cód 7GDSUY9K\n2. MG Advanced · conta não cadastrada\n   US$ 1.031 esperados (30% em 90 dias) → Pedir a decisão: faltam 26 dias para o limite histórico.\n   cód ZGW9SCQ0\n3. GTX Plus Basic · conta não cadastrada\n   US$ 333 esperados (30% em 90 dias) → Pedir a decisão: faltam 19 dias para o limite histórico.\n   cód DZP41ANW\n4. MG Special · conta não cadastrada\n   US$ 25 esperados (45% em 90 dias) → Negociar: tratar objeções e envolver quem assina.\n   cód W5FH95XO\n5. MG Special · Silis\n   US$ 21 esperados (38% em 90 dias) → Qualificar: confirmar necessidade, orçamento e quem decide. É a fase em que mais se perde.\n   cód HB740BLB\n🧹 *Decidir*: 44 deals passaram de 138 dias (US$ 113.394 parados). Comece por: GTX Plus Pro · conta não cadastrada (cód QQPAK72N).\nResponda com o número + código. Ex.: *1 7GDSUY9K* = avancei · *2 7GDSUY9K* = perdi · *3 7GDSUY9K* = adiar",
+   "headline": "Antes de cobrar priorização: limpar 44 deals parados (US$ 113.394) e cadastrar a conta de 36 deals. Comece pelos que passaram do limite há menos tempo."
   },
   {
    "sales_agent": "James Ascencio",
    "manager": "Summer Sewald",
    "regional_office": "West",
+   "open_count": 61,
    "alive": 14,
    "expected_value_sum": 17750.0,
    "decide_count": 47,
    "decide_value": 134192.0,
    "qualify_count": 0,
    "missing_account_count": 44,
-   "brief": "Bom dia, James! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 14 deals vivos\n1. GTX Plus Pro · conta não cadastrada\n   US$ 2.467 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód NNNEMOZ5\n2. GTX Plus Pro · conta não cadastrada\n   US$ 2.452 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód YQJGEI71\n3. GTX Pro · conta não cadastrada\n   US$ 2.156 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód OMCFUDOU\n4. GTX Plus Pro · conta não cadastrada\n   US$ 1.665 esperados (30% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód NX28C8EI\n5. GTX Plus Pro · conta não cadastrada\n   US$ 1.665 esperados (30% em 90 dias) → Pedir a decisão: faltam 27 dias para o limite histórico.\n   cód 77IBMLTB\n🧹 *Decidir*: 47 deals passaram de 138 dias (US$ 134.192 parados). Comece por: GTX Plus Pro · conta não cadastrada (cód 1O72EKFY).\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+   "brief": "Bom dia, James! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 14 deals vivos\n1. GTX Plus Pro · conta não cadastrada\n   US$ 2.467 esperados (45% em 90 dias) → Apresentar proposta e marcar a próxima reunião com data.\n   cód NNNEMOZ5\n2. GTX Plus Pro · conta não cadastrada\n   US$ 2.452 esperados (45% em 90 dias) → Negociar: tratar objeções e envolver quem assina.\n   cód YQJGEI71\n3. GTX Pro · conta não cadastrada\n   US$ 2.156 esperados (45% em 90 dias) → Negociar: tratar objeções e envolver quem assina.\n   cód OMCFUDOU\n4. GTX Plus Pro · conta não cadastrada\n   US$ 1.665 esperados (30% em 90 dias) → Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido.\n   cód NX28C8EI\n5. GTX Plus Pro · conta não cadastrada\n   US$ 1.665 esperados (30% em 90 dias) → Pedir a decisão: faltam 27 dias para o limite histórico.\n   cód 77IBMLTB\n🧹 *Decidir*: 47 deals passaram de 138 dias (US$ 134.192 parados). Comece por: GTX Plus Pro · conta não cadastrada (cód 1O72EKFY).\nResponda com o número + código. Ex.: *1 NNNEMOZ5* = avancei · *2 NNNEMOZ5* = perdi · *3 NNNEMOZ5* = adiar",
+   "headline": "Antes de cobrar priorização: limpar 47 deals parados (US$ 134.192) e cadastrar a conta de 44 deals. Comece pelos que passaram do limite há menos tempo."
   },
   {
    "sales_agent": "Jonathan Berthelot",
    "manager": "Melvin Marxen",
    "regional_office": "Central",
+   "open_count": 81,
    "alive": 0,
    "expected_value_sum": 0.0,
    "decide_count": 33,
    "decide_value": 39704.0,
    "qualify_count": 48,
    "missing_account_count": 58,
-   "brief": "Bom dia, Jonathan! Sua pauta da semana (base 31/12/2017):\n🧹 *Decidir*: 33 deals passaram de 138 dias (US$ 39.704 parados). Comece por: GTX Pro · conta não cadastrada (cód KBPKLB2X).\n🔎 *Qualificar*: 48 deals sem primeiro contato.\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+   "brief": "Bom dia, Jonathan! Sua pauta da semana (base 31/12/2017):\n🧹 *Decidir*: 33 deals passaram de 138 dias (US$ 39.704 parados). Comece por: GTX Pro · conta não cadastrada (cód KBPKLB2X).\n🔎 *Qualificar*: 48 deals sem primeiro contato.\nResponda com o número + código. Ex.: *1 KBPKLB2X* = avancei · *2 KBPKLB2X* = perdi · *3 KBPKLB2X* = adiar",
+   "headline": "Antes de cobrar priorização: limpar 33 deals parados (US$ 39.704) e cadastrar a conta de 58 deals. Comece pelos que passaram do limite há menos tempo."
   },
   {
    "sales_agent": "Kami Bicknell",
    "manager": "Summer Sewald",
    "regional_office": "West",
+   "open_count": 90,
    "alive": 25,
    "expected_value_sum": 15643.0,
    "decide_count": 65,
    "decide_value": 127743.0,
    "qualify_count": 0,
    "missing_account_count": 61,
-   "brief": "Bom dia, Kami! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 25 deals vivos\n1. GTX Plus Pro · conta não cadastrada\n   US$ 2.452 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód P5C842B5\n2. GTX Pro · conta não cadastrada\n   US$ 2.156 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód BZGJ44FH\n3. GTX Pro · conta não cadastrada\n   US$ 2.156 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód OFC7ZTU8\n4. GTX Pro · Kan-code\n   US$ 1.465 esperados (30% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód 7FLPKZN7\n5. GTX Pro · conta não cadastrada\n   US$ 1.465 esperados (30% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód 197EQMY8\n🧹 *Decidir*: 65 deals passaram de 138 dias (US$ 127.743 parados). Comece por: GTX Plus Pro · conta não cadastrada (cód JQA8H6M5).\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+   "brief": "Bom dia, Kami! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 25 deals vivos\n1. GTX Plus Pro · conta não cadastrada\n   US$ 2.452 esperados (45% em 90 dias) → Negociar: tratar objeções e envolver quem assina.\n   cód P5C842B5\n2. GTX Pro · conta não cadastrada\n   US$ 2.156 esperados (45% em 90 dias) → Negociar: tratar objeções e envolver quem assina.\n   cód BZGJ44FH\n3. GTX Pro · conta não cadastrada\n   US$ 2.156 esperados (45% em 90 dias) → Negociar: tratar objeções e envolver quem assina.\n   cód OFC7ZTU8\n4. GTX Pro · Kan-code\n   US$ 1.465 esperados (30% em 90 dias) → Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido.\n   cód 7FLPKZN7\n5. GTX Pro · conta não cadastrada\n   US$ 1.465 esperados (30% em 90 dias) → Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido.\n   cód 197EQMY8\n🧹 *Decidir*: 65 deals passaram de 138 dias (US$ 127.743 parados). Comece por: GTX Plus Pro · conta não cadastrada (cód JQA8H6M5).\nResponda com o número + código. Ex.: *1 P5C842B5* = avancei · *2 P5C842B5* = perdi · *3 P5C842B5* = adiar",
+   "headline": "Antes de cobrar priorização: limpar 65 deals parados (US$ 127.743) e cadastrar a conta de 61 deals. Comece pelos que passaram do limite há menos tempo."
   },
   {
    "sales_agent": "Kary Hendrixson",
    "manager": "Summer Sewald",
    "regional_office": "West",
+   "open_count": 103,
    "alive": 21,
    "expected_value_sum": 16854.0,
    "decide_count": 82,
    "decide_value": 229267.0,
    "qualify_count": 0,
    "missing_account_count": 66,
-   "brief": "Bom dia, Kary! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 21 deals vivos\n1. GTX Plus Pro · Rangreen\n   US$ 2.452 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód JJGRAQ2K\n2. GTX Pro · Newex\n   US$ 2.170 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód D55HTKRU\n3. GTX Pro · Zencorporation\n   US$ 2.170 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód SQ71BWHG\n4. GTX Pro · conta não cadastrada\n   US$ 2.156 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód VVE9HGLD\n5. GTX Pro · Conecom\n   US$ 1.838 esperados (38% em 90 dias) → Fase em que mais se perde: qualificar a necessidade e agendar a próxima reunião.\n   cód RTWE19SU\n🧹 *Decidir*: 82 deals passaram de 138 dias (US$ 229.267 parados). Comece por: GTX Plus Pro · Kan-code (cód 5CAP1055).\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+   "brief": "Bom dia, Kary! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 21 deals vivos\n1. GTX Plus Pro · Rangreen\n   US$ 2.452 esperados (45% em 90 dias) → Negociar: tratar objeções e envolver quem assina.\n   cód JJGRAQ2K\n2. GTX Pro · Newex\n   US$ 2.170 esperados (45% em 90 dias) → Apresentar proposta e marcar a próxima reunião com data.\n   cód D55HTKRU\n3. GTX Pro · Zencorporation\n   US$ 2.170 esperados (45% em 90 dias) → Apresentar proposta e marcar a próxima reunião com data.\n   cód SQ71BWHG\n4. GTX Pro · conta não cadastrada\n   US$ 2.156 esperados (45% em 90 dias) → Negociar: tratar objeções e envolver quem assina.\n   cód VVE9HGLD\n5. GTX Pro · Conecom\n   US$ 1.838 esperados (38% em 90 dias) → Qualificar: confirmar necessidade, orçamento e quem decide. É a fase em que mais se perde.\n   cód RTWE19SU\n🧹 *Decidir*: 82 deals passaram de 138 dias (US$ 229.267 parados). Comece por: GTX Plus Pro · Kan-code (cód 5CAP1055).\nResponda com o número + código. Ex.: *1 JJGRAQ2K* = avancei · *2 JJGRAQ2K* = perdi · *3 JJGRAQ2K* = adiar",
+   "headline": "Antes de cobrar priorização: limpar 82 deals parados (US$ 229.267) e cadastrar a conta de 66 deals. Comece pelos que passaram do limite há menos tempo."
   },
   {
    "sales_agent": "Lajuana Vencill",
    "manager": "Dustin Brinkmann",
    "regional_office": "Central",
+   "open_count": 80,
    "alive": 1,
    "expected_value_sum": 33.0,
    "decide_count": 39,
    "decide_value": 57968.0,
    "qualify_count": 40,
    "missing_account_count": 57,
-   "brief": "Bom dia, Lajuana! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 1 de 1 deals vivos\n1. GTX Basic · conta não cadastrada\n   US$ 33 esperados (6% em 90 dias) → Pedir a decisão hoje: o deal chegou ao limite histórico de fechamento.\n   cód XGHMOHYQ\n🧹 *Decidir*: 39 deals passaram de 138 dias (US$ 57.968 parados). Comece por: GTX Plus Pro · conta não cadastrada (cód OD895EQM).\n🔎 *Qualificar*: 40 deals sem primeiro contato.\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+   "brief": "Bom dia, Lajuana! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 1 de 1 deals vivos\n1. GTX Basic · conta não cadastrada\n   US$ 33 esperados (6% em 90 dias) → Pedir a decisão hoje: o deal chegou ao limite histórico de fechamento.\n   cód XGHMOHYQ\n🧹 *Decidir*: 39 deals passaram de 138 dias (US$ 57.968 parados). Comece por: GTX Plus Pro · conta não cadastrada (cód OD895EQM).\n🔎 *Qualificar*: 40 deals sem primeiro contato.\nResponda com o número + código. Ex.: *1 XGHMOHYQ* = avancei · *2 XGHMOHYQ* = perdi · *3 XGHMOHYQ* = adiar",
+   "headline": "Antes de cobrar priorização: limpar 39 deals parados (US$ 57.968) e cadastrar a conta de 57 deals. Comece pelos que passaram do limite há menos tempo."
   },
   {
    "sales_agent": "Markita Hansen",
    "manager": "Celia Rouche",
    "regional_office": "West",
+   "open_count": 79,
    "alive": 19,
    "expected_value_sum": 9348.0,
    "decide_count": 60,
    "decide_value": 250651.0,
    "qualify_count": 0,
    "missing_account_count": 52,
-   "brief": "Bom dia, Markita! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 19 deals vivos\n1. GTX Pro · conta não cadastrada\n   US$ 2.170 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód ON821ADT\n2. GTX Pro · conta não cadastrada\n   US$ 2.170 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód N2249A7T\n3. GTX Pro · conta não cadastrada\n   US$ 1.465 esperados (30% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód SMP2K39G\n4. MG Advanced · Lexiqvolax\n   US$ 1.386 esperados (41% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód K9KGXL2E\n5. GTX Plus Basic · Zoomit\n   US$ 493 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód XSEG5T4H\n🧹 *Decidir*: 60 deals passaram de 138 dias (US$ 250.651 parados). Comece por: GTK 500 · Rundofase (cód 021Z2J9L).\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+   "brief": "Bom dia, Markita! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 19 deals vivos\n1. GTX Pro · conta não cadastrada\n   US$ 2.170 esperados (45% em 90 dias) → Apresentar proposta e marcar a próxima reunião com data.\n   cód ON821ADT\n2. GTX Pro · conta não cadastrada\n   US$ 2.170 esperados (45% em 90 dias) → Apresentar proposta e marcar a próxima reunião com data.\n   cód N2249A7T\n3. GTX Pro · conta não cadastrada\n   US$ 1.465 esperados (30% em 90 dias) → Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido.\n   cód SMP2K39G\n4. MG Advanced · Lexiqvolax\n   US$ 1.386 esperados (41% em 90 dias) → Apresentar proposta e marcar a próxima reunião com data.\n   cód K9KGXL2E\n5. GTX Plus Basic · Zoomit\n   US$ 493 esperados (45% em 90 dias) → Apresentar proposta e marcar a próxima reunião com data.\n   cód XSEG5T4H\n🧹 *Decidir*: 60 deals passaram de 138 dias (US$ 250.651 parados). Comece por: GTK 500 · Rundofase (cód 021Z2J9L).\nResponda com o número + código. Ex.: *1 ON821ADT* = avancei · *2 ON821ADT* = perdi · *3 ON821ADT* = adiar",
+   "headline": "Antes de cobrar priorização: limpar 60 deals parados (US$ 250.651) e cadastrar a conta de 52 deals. Comece pelos que passaram do limite há menos tempo."
   },
   {
    "sales_agent": "Marty Freudenburg",
    "manager": "Melvin Marxen",
    "regional_office": "Central",
+   "open_count": 87,
    "alive": 0,
    "expected_value_sum": 0.0,
    "decide_count": 33,
    "decide_value": 108803.0,
    "qualify_count": 54,
    "missing_account_count": 53,
-   "brief": "Bom dia, Marty! Sua pauta da semana (base 31/12/2017):\n🧹 *Decidir*: 33 deals passaram de 138 dias (US$ 108.803 parados). Comece por: GTK 500 · conta não cadastrada (cód DO6VKC2G).\n🔎 *Qualificar*: 54 deals sem primeiro contato.\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+   "brief": "Bom dia, Marty! Sua pauta da semana (base 31/12/2017):\n🧹 *Decidir*: 33 deals passaram de 138 dias (US$ 108.803 parados). Comece por: GTK 500 · conta não cadastrada (cód DO6VKC2G).\n🔎 *Qualificar*: 54 deals sem primeiro contato.\nResponda com o número + código. Ex.: *1 DO6VKC2G* = avancei · *2 DO6VKC2G* = perdi · *3 DO6VKC2G* = adiar",
+   "headline": "Antes de cobrar priorização: limpar 33 deals parados (US$ 108.803) e cadastrar a conta de 53 deals. Comece pelos que passaram do limite há menos tempo."
   },
   {
    "sales_agent": "Maureen Marcano",
    "manager": "Summer Sewald",
    "regional_office": "West",
+   "open_count": 72,
    "alive": 18,
    "expected_value_sum": 12385.0,
    "decide_count": 54,
    "decide_value": 99402.0,
    "qualify_count": 0,
    "missing_account_count": 56,
-   "brief": "Bom dia, Maureen! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 18 deals vivos\n1. GTX Plus Pro · conta não cadastrada\n   US$ 2.467 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód T7N0RX05\n2. GTX Plus Pro · conta não cadastrada\n   US$ 1.665 esperados (30% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód NMLTE4CS\n3. GTX Plus Pro · conta não cadastrada\n   US$ 1.665 esperados (30% em 90 dias) → Pedir a decisão: faltam 30 dias para o limite histórico.\n   cód VRWH3YJV\n4. MG Advanced · conta não cadastrada\n   US$ 1.518 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód HXGDBNAV\n5. MG Advanced · conta não cadastrada\n   US$ 1.031 esperados (30% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód WSO3NMK5\n🧹 *Decidir*: 54 deals passaram de 138 dias (US$ 99.402 parados). Comece por: GTX Plus Pro · Sonron (cód MV227O65).\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+   "brief": "Bom dia, Maureen! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 18 deals vivos\n1. GTX Plus Pro · conta não cadastrada\n   US$ 2.467 esperados (45% em 90 dias) → Apresentar proposta e marcar a próxima reunião com data.\n   cód T7N0RX05\n2. GTX Plus Pro · conta não cadastrada\n   US$ 1.665 esperados (30% em 90 dias) → Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido.\n   cód NMLTE4CS\n3. GTX Plus Pro · conta não cadastrada\n   US$ 1.665 esperados (30% em 90 dias) → Pedir a decisão: faltam 30 dias para o limite histórico.\n   cód VRWH3YJV\n4. MG Advanced · conta não cadastrada\n   US$ 1.518 esperados (45% em 90 dias) → Negociar: tratar objeções e envolver quem assina.\n   cód HXGDBNAV\n5. MG Advanced · conta não cadastrada\n   US$ 1.031 esperados (30% em 90 dias) → Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido.\n   cód WSO3NMK5\n🧹 *Decidir*: 54 deals passaram de 138 dias (US$ 99.402 parados). Comece por: GTX Plus Pro · Sonron (cód MV227O65).\nResponda com o número + código. Ex.: *1 T7N0RX05* = avancei · *2 T7N0RX05* = perdi · *3 T7N0RX05* = adiar",
+   "headline": "Antes de cobrar priorização: limpar 54 deals parados (US$ 99.402) e cadastrar a conta de 56 deals. Comece pelos que passaram do limite há menos tempo."
   },
   {
    "sales_agent": "Moses Frase",
    "manager": "Dustin Brinkmann",
    "regional_office": "Central",
+   "open_count": 65,
    "alive": 0,
    "expected_value_sum": 0.0,
    "decide_count": 34,
    "decide_value": 50552.0,
    "qualify_count": 31,
    "missing_account_count": 44,
-   "brief": "Bom dia, Moses! Sua pauta da semana (base 31/12/2017):\n🧹 *Decidir*: 34 deals passaram de 138 dias (US$ 50.552 parados). Comece por: GTX Plus Pro · Genco Pura Olive Oil Company (cód F3EOBN5A).\n🔎 *Qualificar*: 31 deals sem primeiro contato.\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+   "brief": "Bom dia, Moses! Sua pauta da semana (base 31/12/2017):\n🧹 *Decidir*: 34 deals passaram de 138 dias (US$ 50.552 parados). Comece por: GTX Plus Pro · Genco Pura Olive Oil Company (cód F3EOBN5A).\n🔎 *Qualificar*: 31 deals sem primeiro contato.\nResponda com o número + código. Ex.: *1 F3EOBN5A* = avancei · *2 F3EOBN5A* = perdi · *3 F3EOBN5A* = adiar",
+   "headline": "Antes de cobrar priorização: limpar 34 deals parados (US$ 50.552) e cadastrar a conta de 44 deals. Comece pelos que passaram do limite há menos tempo."
   },
   {
    "sales_agent": "Niesha Huffines",
    "manager": "Melvin Marxen",
    "regional_office": "Central",
+   "open_count": 64,
    "alive": 2,
    "expected_value_sum": 358.0,
    "decide_count": 28,
    "decide_value": 51012.0,
    "qualify_count": 34,
    "missing_account_count": 39,
-   "brief": "Bom dia, Niesha! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 2 de 2 deals vivos\n1. GTX Pro · conta não cadastrada\n   US$ 292 esperados (6% em 90 dias) → Pedir a decisão hoje: o deal chegou ao limite histórico de fechamento.\n   cód PYQ3VX08\n2. GTX Plus Basic · conta não cadastrada\n   US$ 66 esperados (6% em 90 dias) → Pedir a decisão hoje: o deal chegou ao limite histórico de fechamento.\n   cód 1MQ3015O\n🧹 *Decidir*: 28 deals passaram de 138 dias (US$ 51.012 parados). Comece por: GTX Plus Pro · Blackzim (cód BBOWBQA6).\n🔎 *Qualificar*: 34 deals sem primeiro contato.\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+   "brief": "Bom dia, Niesha! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 2 de 2 deals vivos\n1. GTX Pro · conta não cadastrada\n   US$ 292 esperados (6% em 90 dias) → Pedir a decisão hoje: o deal chegou ao limite histórico de fechamento.\n   cód PYQ3VX08\n2. GTX Plus Basic · conta não cadastrada\n   US$ 66 esperados (6% em 90 dias) → Pedir a decisão hoje: o deal chegou ao limite histórico de fechamento.\n   cód 1MQ3015O\n🧹 *Decidir*: 28 deals passaram de 138 dias (US$ 51.012 parados). Comece por: GTX Plus Pro · Blackzim (cód BBOWBQA6).\n🔎 *Qualificar*: 34 deals sem primeiro contato.\nResponda com o número + código. Ex.: *1 PYQ3VX08* = avancei · *2 PYQ3VX08* = perdi · *3 PYQ3VX08* = adiar",
+   "headline": "Antes de cobrar priorização: limpar 28 deals parados (US$ 51.012) e cadastrar a conta de 39 deals. Comece pelos que passaram do limite há menos tempo."
   },
   {
    "sales_agent": "Rosalina Dieter",
    "manager": "Celia Rouche",
    "regional_office": "West",
+   "open_count": 50,
    "alive": 16,
    "expected_value_sum": 11849.0,
    "decide_count": 34,
    "decide_value": 82431.0,
    "qualify_count": 0,
    "missing_account_count": 34,
-   "brief": "Bom dia, Rosalina! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 16 deals vivos\n1. GTK 500 · Betasoloin\n   US$ 8.132 esperados (30% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód 1LY8CAXD\n2. MG Advanced · Zoomit\n   US$ 1.518 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód OHOWVHYX\n3. GTX Pro · conta não cadastrada\n   US$ 1.465 esperados (30% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód P8QXRXMR\n4. GTX Plus Basic · Dalttechnology\n   US$ 333 esperados (30% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód 61IKUAZI\n5. GTX Basic · conta não cadastrada\n   US$ 246 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód GL2FM1RM\n🧹 *Decidir*: 34 deals passaram de 138 dias (US$ 82.431 parados). Comece por: GTK 500 · conta não cadastrada (cód 9SRD5NCR).\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+   "brief": "Bom dia, Rosalina! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 16 deals vivos\n1. GTK 500 · Betasoloin\n   US$ 8.132 esperados (30% em 90 dias) → Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido.\n   cód 1LY8CAXD\n2. MG Advanced · Zoomit\n   US$ 1.518 esperados (45% em 90 dias) → Negociar: tratar objeções e envolver quem assina.\n   cód OHOWVHYX\n3. GTX Pro · conta não cadastrada\n   US$ 1.465 esperados (30% em 90 dias) → Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido.\n   cód P8QXRXMR\n4. GTX Plus Basic · Dalttechnology\n   US$ 333 esperados (30% em 90 dias) → Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido.\n   cód 61IKUAZI\n5. GTX Basic · conta não cadastrada\n   US$ 246 esperados (45% em 90 dias) → Negociar: tratar objeções e envolver quem assina.\n   cód GL2FM1RM\n🧹 *Decidir*: 34 deals passaram de 138 dias (US$ 82.431 parados). Comece por: GTK 500 · conta não cadastrada (cód 9SRD5NCR).\nResponda com o número + código. Ex.: *1 1LY8CAXD* = avancei · *2 1LY8CAXD* = perdi · *3 1LY8CAXD* = adiar",
+   "headline": "Antes de cobrar priorização: limpar 34 deals parados (US$ 82.431) e cadastrar a conta de 34 deals. Comece pelos que passaram do limite há menos tempo."
   },
   {
    "sales_agent": "Rosie Papadopoulos",
    "manager": "Cara Losch",
    "regional_office": "East",
+   "open_count": 39,
    "alive": 6,
    "expected_value_sum": 8320.0,
    "decide_count": 33,
    "decide_value": 93458.0,
    "qualify_count": 0,
    "missing_account_count": 24,
-   "brief": "Bom dia, Rosie! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 6 deals vivos\n1. GTX Pro · conta não cadastrada\n   US$ 2.170 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód QD7MU7DD\n2. GTX Pro · Konex\n   US$ 2.156 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód 2DY9U1V7\n3. GTX Pro · conta não cadastrada\n   US$ 1.465 esperados (30% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód NS6JLCZ2\n4. GTX Pro · Sonron\n   US$ 1.465 esperados (30% em 90 dias) → Pedir a decisão: faltam 27 dias para o limite histórico.\n   cód 8XY5IA68\n5. MG Advanced · conta não cadastrada\n   US$ 1.031 esperados (30% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód WVKBXWA9\n🧹 *Decidir*: 33 deals passaram de 138 dias (US$ 93.458 parados). Comece por: GTX Plus Pro · conta não cadastrada (cód 98K99UW9).\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+   "brief": "Bom dia, Rosie! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 6 deals vivos\n1. GTX Pro · conta não cadastrada\n   US$ 2.170 esperados (45% em 90 dias) → Apresentar proposta e marcar a próxima reunião com data.\n   cód QD7MU7DD\n2. GTX Pro · Konex\n   US$ 2.156 esperados (45% em 90 dias) → Negociar: tratar objeções e envolver quem assina.\n   cód 2DY9U1V7\n3. GTX Pro · conta não cadastrada\n   US$ 1.465 esperados (30% em 90 dias) → Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido.\n   cód NS6JLCZ2\n4. GTX Pro · Sonron\n   US$ 1.465 esperados (30% em 90 dias) → Pedir a decisão: faltam 27 dias para o limite histórico.\n   cód 8XY5IA68\n5. MG Advanced · conta não cadastrada\n   US$ 1.031 esperados (30% em 90 dias) → Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido.\n   cód WVKBXWA9\n🧹 *Decidir*: 33 deals passaram de 138 dias (US$ 93.458 parados). Comece por: GTX Plus Pro · conta não cadastrada (cód 98K99UW9).\nResponda com o número + código. Ex.: *1 QD7MU7DD* = avancei · *2 QD7MU7DD* = perdi · *3 QD7MU7DD* = adiar",
+   "headline": "Antes de cobrar priorização: limpar 33 deals parados (US$ 93.458) e cadastrar a conta de 24 deals. Comece pelos que passaram do limite há menos tempo."
   },
   {
    "sales_agent": "Versie Hillebrand",
    "manager": "Dustin Brinkmann",
    "regional_office": "Central",
+   "open_count": 97,
    "alive": 1,
    "expected_value_sum": 3.0,
    "decide_count": 42,
    "decide_value": 48603.0,
    "qualify_count": 54,
    "missing_account_count": 69,
-   "brief": "Bom dia, Versie! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 1 de 1 deals vivos\n1. MG Special · Finhigh\n   US$ 3 esperados (6% em 90 dias) → Pedir a decisão hoje: o deal chegou ao limite histórico de fechamento.\n   cód W1XRTUT2\n🧹 *Decidir*: 42 deals passaram de 138 dias (US$ 48.603 parados). Comece por: GTX Plus Pro · Hatfan (cód WRKPDK7O).\n🔎 *Qualificar*: 54 deals sem primeiro contato.\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+   "brief": "Bom dia, Versie! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 1 de 1 deals vivos\n1. MG Special · Finhigh\n   US$ 3 esperados (6% em 90 dias) → Pedir a decisão hoje: o deal chegou ao limite histórico de fechamento.\n   cód W1XRTUT2\n🧹 *Decidir*: 42 deals passaram de 138 dias (US$ 48.603 parados). Comece por: GTX Plus Pro · Hatfan (cód WRKPDK7O).\n🔎 *Qualificar*: 54 deals sem primeiro contato.\nResponda com o número + código. Ex.: *1 W1XRTUT2* = avancei · *2 W1XRTUT2* = perdi · *3 W1XRTUT2* = adiar",
+   "headline": "Antes de cobrar priorização: limpar 42 deals parados (US$ 48.603) e cadastrar a conta de 69 deals. Comece pelos que passaram do limite há menos tempo."
   },
   {
    "sales_agent": "Vicki Laflamme",
    "manager": "Celia Rouche",
    "regional_office": "West",
+   "open_count": 104,
    "alive": 24,
    "expected_value_sum": 16333.0,
    "decide_count": 80,
    "decide_value": 176304.0,
    "qualify_count": 0,
    "missing_account_count": 77,
-   "brief": "Bom dia, Vicki! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 24 deals vivos\n1. GTX Plus Pro · conta não cadastrada\n   US$ 2.452 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód X7MN9ROG\n2. GTX Plus Pro · conta não cadastrada\n   US$ 2.452 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód DYYJW46L\n3. GTX Plus Pro · conta não cadastrada\n   US$ 2.452 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód E2CJIO85\n4. GTX Pro · conta não cadastrada\n   US$ 2.170 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód 6JBM1ZKO\n5. GTX Plus Pro · Treequote\n   US$ 1.665 esperados (30% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód 4SOUOUKH\n🧹 *Decidir*: 80 deals passaram de 138 dias (US$ 176.304 parados). Comece por: GTX Plus Pro · conta não cadastrada (cód 3C6E0D28).\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+   "brief": "Bom dia, Vicki! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 24 deals vivos\n1. GTX Plus Pro · conta não cadastrada\n   US$ 2.452 esperados (45% em 90 dias) → Negociar: tratar objeções e envolver quem assina.\n   cód X7MN9ROG\n2. GTX Plus Pro · conta não cadastrada\n   US$ 2.452 esperados (45% em 90 dias) → Negociar: tratar objeções e envolver quem assina.\n   cód DYYJW46L\n3. GTX Plus Pro · conta não cadastrada\n   US$ 2.452 esperados (45% em 90 dias) → Negociar: tratar objeções e envolver quem assina.\n   cód E2CJIO85\n4. GTX Pro · conta não cadastrada\n   US$ 2.170 esperados (45% em 90 dias) → Apresentar proposta e marcar a próxima reunião com data.\n   cód 6JBM1ZKO\n5. GTX Plus Pro · Treequote\n   US$ 1.665 esperados (30% em 90 dias) → Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido.\n   cód 4SOUOUKH\n🧹 *Decidir*: 80 deals passaram de 138 dias (US$ 176.304 parados). Comece por: GTX Plus Pro · conta não cadastrada (cód 3C6E0D28).\nResponda com o número + código. Ex.: *1 X7MN9ROG* = avancei · *2 X7MN9ROG* = perdi · *3 X7MN9ROG* = adiar",
+   "headline": "Antes de cobrar priorização: limpar 80 deals parados (US$ 176.304) e cadastrar a conta de 77 deals. Comece pelos que passaram do limite há menos tempo."
   },
   {
    "sales_agent": "Violet Mclelland",
    "manager": "Cara Losch",
    "regional_office": "East",
+   "open_count": 68,
    "alive": 17,
    "expected_value_sum": 2761.0,
    "decide_count": 51,
    "decide_value": 67544.0,
    "qualify_count": 0,
    "missing_account_count": 48,
-   "brief": "Bom dia, Violet! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 17 deals vivos\n1. MG Advanced · conta não cadastrada\n   US$ 1.031 esperados (30% em 90 dias) → Pedir a decisão: faltam 28 dias para o limite histórico.\n   cód 3NC5XSDF\n2. GTX Plus Basic · conta não cadastrada\n   US$ 490 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód 5TCGN3GX\n3. GTX Plus Basic · conta não cadastrada\n   US$ 333 esperados (30% em 90 dias) → Pedir a decisão: faltam 20 dias para o limite histórico.\n   cód VKIR68JX\n4. GTX Pro · conta não cadastrada\n   US$ 292 esperados (6% em 90 dias) → Pedir a decisão: faltam 8 dias para o limite histórico.\n   cód QKW7MDJK\n5. GTX Basic · conta não cadastrada\n   US$ 246 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód 4ZKFSG5F\n🧹 *Decidir*: 51 deals passaram de 138 dias (US$ 67.544 parados). Comece por: GTX Plus Pro · conta não cadastrada (cód 8LW65NDL).\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+   "brief": "Bom dia, Violet! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 17 deals vivos\n1. MG Advanced · conta não cadastrada\n   US$ 1.031 esperados (30% em 90 dias) → Pedir a decisão: faltam 28 dias para o limite histórico.\n   cód 3NC5XSDF\n2. GTX Plus Basic · conta não cadastrada\n   US$ 490 esperados (45% em 90 dias) → Negociar: tratar objeções e envolver quem assina.\n   cód 5TCGN3GX\n3. GTX Plus Basic · conta não cadastrada\n   US$ 333 esperados (30% em 90 dias) → Pedir a decisão: faltam 20 dias para o limite histórico.\n   cód VKIR68JX\n4. GTX Pro · conta não cadastrada\n   US$ 292 esperados (6% em 90 dias) → Pedir a decisão: faltam 8 dias para o limite histórico.\n   cód QKW7MDJK\n5. GTX Basic · conta não cadastrada\n   US$ 246 esperados (45% em 90 dias) → Negociar: tratar objeções e envolver quem assina.\n   cód 4ZKFSG5F\n🧹 *Decidir*: 51 deals passaram de 138 dias (US$ 67.544 parados). Comece por: GTX Plus Pro · conta não cadastrada (cód 8LW65NDL).\nResponda com o número + código. Ex.: *1 3NC5XSDF* = avancei · *2 3NC5XSDF* = perdi · *3 3NC5XSDF* = adiar",
+   "headline": "Antes de cobrar priorização: limpar 51 deals parados (US$ 67.544) e cadastrar a conta de 48 deals. Comece pelos que passaram do limite há menos tempo."
   },
   {
    "sales_agent": "Wilburn Farren",
    "manager": "Cara Losch",
    "regional_office": "East",
+   "open_count": 31,
    "alive": 9,
    "expected_value_sum": 10332.0,
    "decide_count": 22,
    "decide_value": 51480.0,
    "qualify_count": 0,
    "missing_account_count": 28,
-   "brief": "Bom dia, Wilburn! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 9 deals vivos\n1. GTX Plus Pro · conta não cadastrada\n   US$ 2.452 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód HN6TZPAF\n2. GTX Pro · Gogozoom\n   US$ 2.156 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód 1L68AC0E\n3. GTX Plus Pro · conta não cadastrada\n   US$ 1.665 esperados (30% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód QNB3SCN9\n4. GTX Plus Pro · conta não cadastrada\n   US$ 1.665 esperados (30% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód 9JTFD4FZ\n5. MG Advanced · conta não cadastrada\n   US$ 1.031 esperados (30% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód NBBIFIKB\n🧹 *Decidir*: 22 deals passaram de 138 dias (US$ 51.480 parados). Comece por: GTX Plus Pro · conta não cadastrada (cód TV300INP).\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+   "brief": "Bom dia, Wilburn! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 9 deals vivos\n1. GTX Plus Pro · conta não cadastrada\n   US$ 2.452 esperados (45% em 90 dias) → Negociar: tratar objeções e envolver quem assina.\n   cód HN6TZPAF\n2. GTX Pro · Gogozoom\n   US$ 2.156 esperados (45% em 90 dias) → Negociar: tratar objeções e envolver quem assina.\n   cód 1L68AC0E\n3. GTX Plus Pro · conta não cadastrada\n   US$ 1.665 esperados (30% em 90 dias) → Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido.\n   cód QNB3SCN9\n4. GTX Plus Pro · conta não cadastrada\n   US$ 1.665 esperados (30% em 90 dias) → Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido.\n   cód 9JTFD4FZ\n5. MG Advanced · conta não cadastrada\n   US$ 1.031 esperados (30% em 90 dias) → Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido.\n   cód NBBIFIKB\n🧹 *Decidir*: 22 deals passaram de 138 dias (US$ 51.480 parados). Comece por: GTX Plus Pro · conta não cadastrada (cód TV300INP).\nResponda com o número + código. Ex.: *1 HN6TZPAF* = avancei · *2 HN6TZPAF* = perdi · *3 HN6TZPAF* = adiar",
+   "headline": "Antes de cobrar priorização: limpar 22 deals parados (US$ 51.480) e cadastrar a conta de 28 deals. Comece pelos que passaram do limite há menos tempo."
   },
   {
    "sales_agent": "Zane Levy",
    "manager": "Summer Sewald",
    "regional_office": "West",
+   "open_count": 88,
    "alive": 31,
    "expected_value_sum": 16167.0,
    "decide_count": 57,
    "decide_value": 127517.0,
    "qualify_count": 0,
    "missing_account_count": 59,
-   "brief": "Bom dia, Zane! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 31 deals vivos\n1. GTX Plus Pro · The New York Inquirer\n   US$ 2.239 esperados (41% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód FZWU2I30\n2. GTX Pro · Gogozoom\n   US$ 2.156 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód 4D0K5T7T\n3. GTX Plus Pro · Initech\n   US$ 1.665 esperados (30% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód 01XZ9CRY\n4. GTX Plus Pro · conta não cadastrada\n   US$ 1.665 esperados (30% em 90 dias) → Pedir a decisão: faltam 18 dias para o limite histórico.\n   cód J0G6ZLYZ\n5. GTX Pro · conta não cadastrada\n   US$ 1.465 esperados (30% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód 4R4QF0ZU\n🧹 *Decidir*: 57 deals passaram de 138 dias (US$ 127.517 parados). Comece por: GTX Plus Pro · conta não cadastrada (cód 8WB5HXOB).\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+   "brief": "Bom dia, Zane! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 31 deals vivos\n1. GTX Plus Pro · The New York Inquirer\n   US$ 2.239 esperados (41% em 90 dias) → Apresentar proposta e marcar a próxima reunião com data.\n   cód FZWU2I30\n2. GTX Pro · Gogozoom\n   US$ 2.156 esperados (45% em 90 dias) → Negociar: tratar objeções e envolver quem assina.\n   cód 4D0K5T7T\n3. GTX Plus Pro · Initech\n   US$ 1.665 esperados (30% em 90 dias) → Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido.\n   cód 01XZ9CRY\n4. GTX Plus Pro · conta não cadastrada\n   US$ 1.665 esperados (30% em 90 dias) → Pedir a decisão: faltam 18 dias para o limite histórico.\n   cód J0G6ZLYZ\n5. GTX Pro · conta não cadastrada\n   US$ 1.465 esperados (30% em 90 dias) → Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido.\n   cód 4R4QF0ZU\n🧹 *Decidir*: 57 deals passaram de 138 dias (US$ 127.517 parados). Comece por: GTX Plus Pro · conta não cadastrada (cód 8WB5HXOB).\nResponda com o número + código. Ex.: *1 FZWU2I30* = avancei · *2 FZWU2I30* = perdi · *3 FZWU2I30* = adiar",
+   "headline": "Antes de cobrar priorização: limpar 57 deals parados (US$ 127.517) e cadastrar a conta de 59 deals. Comece pelos que passaram do limite há menos tempo."
   }
  ],
  "managers": [
   {
    "manager": "Cara Losch",
    "regional_office": "East",
+   "open_count": 219,
    "alive": 50,
    "expected_value_sum": 36205.0,
    "decide_count": 169,
    "decide_value": 372436.0,
    "qualify_count": 0,
-   "missing_account_count": 154
+   "missing_account_count": 154,
+   "headline": "Antes de cobrar priorização: limpar 169 deals parados (US$ 372.436) e cadastrar a conta de 154 deals. Comece pelos que passaram do limite há menos tempo."
   },
   {
    "manager": "Celia Rouche",
    "regional_office": "West",
+   "open_count": 334,
    "alive": 77,
    "expected_value_sum": 45856.0,
    "decide_count": 257,
    "decide_value": 853770.0,
    "qualify_count": 0,
-   "missing_account_count": 232
+   "missing_account_count": 232,
+   "headline": "Antes de cobrar priorização: limpar 257 deals parados (US$ 853.770) e cadastrar a conta de 232 deals. Comece pelos que passaram do limite há menos tempo."
   },
   {
    "manager": "Dustin Brinkmann",
    "regional_office": "Central",
+   "open_count": 397,
    "alive": 3,
    "expected_value_sum": 39.0,
    "decide_count": 190,
    "decide_value": 282047.0,
    "qualify_count": 204,
-   "missing_account_count": 272
+   "missing_account_count": 272,
+   "headline": "Antes de cobrar priorização: limpar 190 deals parados (US$ 282.047) e cadastrar a conta de 272 deals. Comece pelos que passaram do limite há menos tempo."
   },
   {
    "manager": "Melvin Marxen",
    "regional_office": "Central",
+   "open_count": 511,
    "alive": 2,
    "expected_value_sum": 358.0,
    "decide_count": 213,
    "decide_value": 535798.0,
    "qualify_count": 296,
-   "missing_account_count": 339
+   "missing_account_count": 339,
+   "headline": "Antes de cobrar priorização: limpar 213 deals parados (US$ 535.798) e cadastrar a conta de 339 deals. Comece pelos que passaram do limite há menos tempo."
   },
   {
    "manager": "Rocco Neubert",
    "regional_office": "East",
+   "open_count": 214,
    "alive": 57,
    "expected_value_sum": 35755.0,
    "decide_count": 157,
    "decide_value": 436492.0,
    "qualify_count": 0,
-   "missing_account_count": 142
+   "missing_account_count": 142,
+   "headline": "Antes de cobrar priorização: limpar 157 deals parados (US$ 436.492) e cadastrar a conta de 142 deals. Comece pelos que passaram do limite há menos tempo."
   },
   {
    "manager": "Summer Sewald",
    "regional_office": "West",
+   "open_count": 414,
    "alive": 109,
    "expected_value_sum": 78799.0,
    "decide_count": 305,
    "decide_value": 718121.0,
    "qualify_count": 0,
-   "missing_account_count": 286
+   "missing_account_count": 286,
+   "headline": "Antes de cobrar priorização: limpar 305 deals parados (US$ 718.121) e cadastrar a conta de 286 deals. Comece pelos que passaram do limite há menos tempo."
   }
  ],
  "regions": [
   {
    "regional_office": "Central",
+   "open_count": 908,
    "alive": 5,
    "expected_value_sum": 397.0,
    "decide_count": 403,
    "decide_value": 817845.0,
    "qualify_count": 500,
-   "missing_account_count": 611
+   "missing_account_count": 611,
+   "headline": "Antes de cobrar priorização: limpar 403 deals parados (US$ 817.845) e cadastrar a conta de 611 deals. Comece pelos que passaram do limite há menos tempo."
   },
   {
    "regional_office": "East",
+   "open_count": 433,
    "alive": 107,
    "expected_value_sum": 71960.0,
    "decide_count": 326,
    "decide_value": 808928.0,
    "qualify_count": 0,
-   "missing_account_count": 296
+   "missing_account_count": 296,
+   "headline": "Antes de cobrar priorização: limpar 326 deals parados (US$ 808.928) e cadastrar a conta de 296 deals. Comece pelos que passaram do limite há menos tempo."
   },
   {
    "regional_office": "West",
+   "open_count": 748,
    "alive": 186,
    "expected_value_sum": 124655.0,
    "decide_count": 562,
    "decide_value": 1571891.0,
    "qualify_count": 0,
-   "missing_account_count": 518
+   "missing_account_count": 518,
+   "headline": "Antes de cobrar priorização: limpar 562 deals parados (US$ 1.571.891) e cadastrar a conta de 518 deals. Comece pelos que passaram do limite há menos tempo."
   }
  ],
  "totals": {
+  "open_count": 2089,
   "alive": 298,
   "expected_value_sum": 197012.0,
   "decide_count": 1291,
   "decide_value": 3198664.0,
   "qualify_count": 500,
-  "missing_account_count": 1425
+  "missing_account_count": 1425,
+  "headline": "Antes de cobrar priorização: limpar 1.291 deals parados (US$ 3.198.664) e cadastrar a conta de 1.425 deals. Comece pelos que passaram do limite há menos tempo."
  },
  "deals": [
   {
@@ -554,7 +628,7 @@
    "expected_value": 8132.0,
    "missing_account": false,
    "reason": "US$ 26.768 × 30% de chance em 90 dias (deals com 95 dias) = US$ 8.132 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "GQDS81G1",
@@ -574,7 +648,7 @@
    "expected_value": 2467.0,
    "missing_account": true,
    "reason": "US$ 5.482 × 45% de chance em 90 dias (deals com 31 dias) = US$ 2.467 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "I5VHXAWW",
@@ -594,7 +668,7 @@
    "expected_value": 2467.0,
    "missing_account": false,
    "reason": "US$ 5.482 × 45% de chance em 90 dias (deals com 55 dias) = US$ 2.467 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "NNNEMOZ5",
@@ -614,7 +688,7 @@
    "expected_value": 2467.0,
    "missing_account": true,
    "reason": "US$ 5.482 × 45% de chance em 90 dias (deals com 56 dias) = US$ 2.467 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "T7N0RX05",
@@ -634,7 +708,7 @@
    "expected_value": 2467.0,
    "missing_account": true,
    "reason": "US$ 5.482 × 45% de chance em 90 dias (deals com 57 dias) = US$ 2.467 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "HN6TZPAF",
@@ -654,7 +728,7 @@
    "expected_value": 2452.0,
    "missing_account": true,
    "reason": "US$ 5.482 × 45% de chance em 90 dias (deals com 61 dias) = US$ 2.452 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "P5C842B5",
@@ -674,7 +748,7 @@
    "expected_value": 2452.0,
    "missing_account": true,
    "reason": "US$ 5.482 × 45% de chance em 90 dias (deals com 64 dias) = US$ 2.452 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "JJGRAQ2K",
@@ -694,7 +768,7 @@
    "expected_value": 2452.0,
    "missing_account": false,
    "reason": "US$ 5.482 × 45% de chance em 90 dias (deals com 69 dias) = US$ 2.452 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "X7MN9ROG",
@@ -714,7 +788,7 @@
    "expected_value": 2452.0,
    "missing_account": true,
    "reason": "US$ 5.482 × 45% de chance em 90 dias (deals com 69 dias) = US$ 2.452 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "YQJGEI71",
@@ -734,7 +808,7 @@
    "expected_value": 2452.0,
    "missing_account": true,
    "reason": "US$ 5.482 × 45% de chance em 90 dias (deals com 73 dias) = US$ 2.452 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "DYYJW46L",
@@ -754,7 +828,7 @@
    "expected_value": 2452.0,
    "missing_account": true,
    "reason": "US$ 5.482 × 45% de chance em 90 dias (deals com 78 dias) = US$ 2.452 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "E2CJIO85",
@@ -774,7 +848,7 @@
    "expected_value": 2452.0,
    "missing_account": true,
    "reason": "US$ 5.482 × 45% de chance em 90 dias (deals com 89 dias) = US$ 2.452 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "FZWU2I30",
@@ -794,7 +868,7 @@
    "expected_value": 2239.0,
    "missing_account": false,
    "reason": "US$ 5.482 × 41% de chance em 90 dias (deals com 21 dias) = US$ 2.239 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "D55HTKRU",
@@ -814,7 +888,7 @@
    "expected_value": 2170.0,
    "missing_account": false,
    "reason": "US$ 4.821 × 45% de chance em 90 dias (deals com 37 dias) = US$ 2.170 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "6JBM1ZKO",
@@ -834,7 +908,7 @@
    "expected_value": 2170.0,
    "missing_account": true,
    "reason": "US$ 4.821 × 45% de chance em 90 dias (deals com 52 dias) = US$ 2.170 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "C2FSIMZP",
@@ -854,7 +928,7 @@
    "expected_value": 2170.0,
    "missing_account": true,
    "reason": "US$ 4.821 × 45% de chance em 90 dias (deals com 54 dias) = US$ 2.170 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "QD7MU7DD",
@@ -874,7 +948,7 @@
    "expected_value": 2170.0,
    "missing_account": true,
    "reason": "US$ 4.821 × 45% de chance em 90 dias (deals com 56 dias) = US$ 2.170 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "ON821ADT",
@@ -894,7 +968,7 @@
    "expected_value": 2170.0,
    "missing_account": true,
    "reason": "US$ 4.821 × 45% de chance em 90 dias (deals com 57 dias) = US$ 2.170 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "SQ71BWHG",
@@ -914,7 +988,7 @@
    "expected_value": 2170.0,
    "missing_account": false,
    "reason": "US$ 4.821 × 45% de chance em 90 dias (deals com 57 dias) = US$ 2.170 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "WJO52I18",
@@ -934,7 +1008,7 @@
    "expected_value": 2170.0,
    "missing_account": false,
    "reason": "US$ 4.821 × 45% de chance em 90 dias (deals com 57 dias) = US$ 2.170 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "N2249A7T",
@@ -954,7 +1028,7 @@
    "expected_value": 2170.0,
    "missing_account": true,
    "reason": "US$ 4.821 × 45% de chance em 90 dias (deals com 59 dias) = US$ 2.170 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "OMCFUDOU",
@@ -974,7 +1048,7 @@
    "expected_value": 2156.0,
    "missing_account": true,
    "reason": "US$ 4.821 × 45% de chance em 90 dias (deals com 61 dias) = US$ 2.156 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "4D0K5T7T",
@@ -994,7 +1068,7 @@
    "expected_value": 2156.0,
    "missing_account": false,
    "reason": "US$ 4.821 × 45% de chance em 90 dias (deals com 66 dias) = US$ 2.156 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "2DY9U1V7",
@@ -1014,7 +1088,7 @@
    "expected_value": 2156.0,
    "missing_account": false,
    "reason": "US$ 4.821 × 45% de chance em 90 dias (deals com 72 dias) = US$ 2.156 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "BZGJ44FH",
@@ -1034,7 +1108,7 @@
    "expected_value": 2156.0,
    "missing_account": true,
    "reason": "US$ 4.821 × 45% de chance em 90 dias (deals com 73 dias) = US$ 2.156 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "OFC7ZTU8",
@@ -1054,7 +1128,7 @@
    "expected_value": 2156.0,
    "missing_account": true,
    "reason": "US$ 4.821 × 45% de chance em 90 dias (deals com 75 dias) = US$ 2.156 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "XSTGL252",
@@ -1074,7 +1148,7 @@
    "expected_value": 2156.0,
    "missing_account": false,
    "reason": "US$ 4.821 × 45% de chance em 90 dias (deals com 77 dias) = US$ 2.156 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "ZEYGDEBG",
@@ -1094,7 +1168,7 @@
    "expected_value": 2156.0,
    "missing_account": true,
    "reason": "US$ 4.821 × 45% de chance em 90 dias (deals com 83 dias) = US$ 2.156 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "VVE9HGLD",
@@ -1114,7 +1188,7 @@
    "expected_value": 2156.0,
    "missing_account": true,
    "reason": "US$ 4.821 × 45% de chance em 90 dias (deals com 87 dias) = US$ 2.156 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "1L68AC0E",
@@ -1134,7 +1208,7 @@
    "expected_value": 2156.0,
    "missing_account": false,
    "reason": "US$ 4.821 × 45% de chance em 90 dias (deals com 88 dias) = US$ 2.156 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "RDHTQLNI",
@@ -1154,7 +1228,7 @@
    "expected_value": 2090.0,
    "missing_account": true,
    "reason": "US$ 5.482 × 38% de chance em 90 dias (deals com 10 dias) = US$ 2.090 esperados.",
-   "action": "Fase em que mais se perde: qualificar a necessidade e agendar a próxima reunião."
+   "action": "Qualificar: confirmar necessidade, orçamento e quem decide. É a fase em que mais se perde."
   },
   {
    "opportunity_id": "NGTVHTFH",
@@ -1174,7 +1248,7 @@
    "expected_value": 1838.0,
    "missing_account": true,
    "reason": "US$ 4.821 × 38% de chance em 90 dias (deals com 12 dias) = US$ 1.838 esperados.",
-   "action": "Fase em que mais se perde: qualificar a necessidade e agendar a próxima reunião."
+   "action": "Qualificar: confirmar necessidade, orçamento e quem decide. É a fase em que mais se perde."
   },
   {
    "opportunity_id": "RTWE19SU",
@@ -1194,7 +1268,7 @@
    "expected_value": 1838.0,
    "missing_account": false,
    "reason": "US$ 4.821 × 38% de chance em 90 dias (deals com 14 dias) = US$ 1.838 esperados.",
-   "action": "Fase em que mais se perde: qualificar a necessidade e agendar a próxima reunião."
+   "action": "Qualificar: confirmar necessidade, orçamento e quem decide. É a fase em que mais se perde."
   },
   {
    "opportunity_id": "QNB3SCN9",
@@ -1214,7 +1288,7 @@
    "expected_value": 1665.0,
    "missing_account": true,
    "reason": "US$ 5.482 × 30% de chance em 90 dias (deals com 91 dias) = US$ 1.665 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "4SOUOUKH",
@@ -1234,7 +1308,7 @@
    "expected_value": 1665.0,
    "missing_account": false,
    "reason": "US$ 5.482 × 30% de chance em 90 dias (deals com 92 dias) = US$ 1.665 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "NMLTE4CS",
@@ -1254,7 +1328,7 @@
    "expected_value": 1665.0,
    "missing_account": true,
    "reason": "US$ 5.482 × 30% de chance em 90 dias (deals com 92 dias) = US$ 1.665 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "NX28C8EI",
@@ -1274,7 +1348,7 @@
    "expected_value": 1665.0,
    "missing_account": true,
    "reason": "US$ 5.482 × 30% de chance em 90 dias (deals com 92 dias) = US$ 1.665 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "9JTFD4FZ",
@@ -1294,7 +1368,7 @@
    "expected_value": 1665.0,
    "missing_account": true,
    "reason": "US$ 5.482 × 30% de chance em 90 dias (deals com 94 dias) = US$ 1.665 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "LFI3BGEE",
@@ -1314,7 +1388,7 @@
    "expected_value": 1665.0,
    "missing_account": true,
    "reason": "US$ 5.482 × 30% de chance em 90 dias (deals com 100 dias) = US$ 1.665 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "NRK892VX",
@@ -1334,7 +1408,7 @@
    "expected_value": 1665.0,
    "missing_account": true,
    "reason": "US$ 5.482 × 30% de chance em 90 dias (deals com 102 dias) = US$ 1.665 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "A7OVC1WK",
@@ -1354,7 +1428,7 @@
    "expected_value": 1665.0,
    "missing_account": true,
    "reason": "US$ 5.482 × 30% de chance em 90 dias (deals com 103 dias) = US$ 1.665 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "01XZ9CRY",
@@ -1374,7 +1448,7 @@
    "expected_value": 1665.0,
    "missing_account": false,
    "reason": "US$ 5.482 × 30% de chance em 90 dias (deals com 104 dias) = US$ 1.665 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "DY8DMZZ9",
@@ -1394,7 +1468,7 @@
    "expected_value": 1665.0,
    "missing_account": true,
    "reason": "US$ 5.482 × 30% de chance em 90 dias (deals com 106 dias) = US$ 1.665 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "R6Q5JOLX",
@@ -1414,7 +1488,7 @@
    "expected_value": 1665.0,
    "missing_account": true,
    "reason": "US$ 5.482 × 30% de chance em 90 dias (deals com 106 dias) = US$ 1.665 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "VRWH3YJV",
@@ -1554,7 +1628,7 @@
    "expected_value": 1527.0,
    "missing_account": true,
    "reason": "US$ 3.393 × 45% de chance em 90 dias (deals com 45 dias) = US$ 1.527 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "0CR37ETK",
@@ -1574,7 +1648,7 @@
    "expected_value": 1527.0,
    "missing_account": true,
    "reason": "US$ 3.393 × 45% de chance em 90 dias (deals com 56 dias) = US$ 1.527 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "HXGDBNAV",
@@ -1594,7 +1668,7 @@
    "expected_value": 1518.0,
    "missing_account": true,
    "reason": "US$ 3.393 × 45% de chance em 90 dias (deals com 67 dias) = US$ 1.518 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "4S17VJ7O",
@@ -1614,7 +1688,7 @@
    "expected_value": 1518.0,
    "missing_account": true,
    "reason": "US$ 3.393 × 45% de chance em 90 dias (deals com 73 dias) = US$ 1.518 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "OHOWVHYX",
@@ -1634,7 +1708,7 @@
    "expected_value": 1518.0,
    "missing_account": false,
    "reason": "US$ 3.393 × 45% de chance em 90 dias (deals com 81 dias) = US$ 1.518 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "JIEO87ZV",
@@ -1654,7 +1728,7 @@
    "expected_value": 1518.0,
    "missing_account": true,
    "reason": "US$ 3.393 × 45% de chance em 90 dias (deals com 86 dias) = US$ 1.518 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "EP5QRHID",
@@ -1674,7 +1748,7 @@
    "expected_value": 1518.0,
    "missing_account": true,
    "reason": "US$ 3.393 × 45% de chance em 90 dias (deals com 88 dias) = US$ 1.518 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "NS6JLCZ2",
@@ -1694,7 +1768,7 @@
    "expected_value": 1465.0,
    "missing_account": true,
    "reason": "US$ 4.821 × 30% de chance em 90 dias (deals com 93 dias) = US$ 1.465 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "SMP2K39G",
@@ -1714,7 +1788,7 @@
    "expected_value": 1465.0,
    "missing_account": true,
    "reason": "US$ 4.821 × 30% de chance em 90 dias (deals com 94 dias) = US$ 1.465 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "FSYTM6YE",
@@ -1734,7 +1808,7 @@
    "expected_value": 1465.0,
    "missing_account": true,
    "reason": "US$ 4.821 × 30% de chance em 90 dias (deals com 95 dias) = US$ 1.465 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "G7QIQDSA",
@@ -1754,7 +1828,7 @@
    "expected_value": 1465.0,
    "missing_account": true,
    "reason": "US$ 4.821 × 30% de chance em 90 dias (deals com 96 dias) = US$ 1.465 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "P8QXRXMR",
@@ -1774,7 +1848,7 @@
    "expected_value": 1465.0,
    "missing_account": true,
    "reason": "US$ 4.821 × 30% de chance em 90 dias (deals com 97 dias) = US$ 1.465 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "7FLPKZN7",
@@ -1794,7 +1868,7 @@
    "expected_value": 1465.0,
    "missing_account": false,
    "reason": "US$ 4.821 × 30% de chance em 90 dias (deals com 99 dias) = US$ 1.465 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "IDKBZCAF",
@@ -1814,7 +1888,7 @@
    "expected_value": 1465.0,
    "missing_account": true,
    "reason": "US$ 4.821 × 30% de chance em 90 dias (deals com 101 dias) = US$ 1.465 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "197EQMY8",
@@ -1834,7 +1908,7 @@
    "expected_value": 1465.0,
    "missing_account": true,
    "reason": "US$ 4.821 × 30% de chance em 90 dias (deals com 102 dias) = US$ 1.465 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "4R4QF0ZU",
@@ -1854,7 +1928,7 @@
    "expected_value": 1465.0,
    "missing_account": true,
    "reason": "US$ 4.821 × 30% de chance em 90 dias (deals com 102 dias) = US$ 1.465 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "9DY57A6F",
@@ -2054,7 +2128,7 @@
    "expected_value": 1386.0,
    "missing_account": false,
    "reason": "US$ 3.393 × 41% de chance em 90 dias (deals com 18 dias) = US$ 1.386 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "3Q15OHQB",
@@ -2074,7 +2148,7 @@
    "expected_value": 1031.0,
    "missing_account": true,
    "reason": "US$ 3.393 × 30% de chance em 90 dias (deals com 99 dias) = US$ 1.031 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "1LHU0876",
@@ -2094,7 +2168,7 @@
    "expected_value": 1031.0,
    "missing_account": false,
    "reason": "US$ 3.393 × 30% de chance em 90 dias (deals com 100 dias) = US$ 1.031 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "2FM8HJDM",
@@ -2114,7 +2188,7 @@
    "expected_value": 1031.0,
    "missing_account": true,
    "reason": "US$ 3.393 × 30% de chance em 90 dias (deals com 102 dias) = US$ 1.031 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "PSMWYTMB",
@@ -2134,7 +2208,7 @@
    "expected_value": 1031.0,
    "missing_account": false,
    "reason": "US$ 3.393 × 30% de chance em 90 dias (deals com 102 dias) = US$ 1.031 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "WVKBXWA9",
@@ -2154,7 +2228,7 @@
    "expected_value": 1031.0,
    "missing_account": true,
    "reason": "US$ 3.393 × 30% de chance em 90 dias (deals com 103 dias) = US$ 1.031 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "UU7N7LZK",
@@ -2174,7 +2248,7 @@
    "expected_value": 1031.0,
    "missing_account": true,
    "reason": "US$ 3.393 × 30% de chance em 90 dias (deals com 104 dias) = US$ 1.031 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "WSO3NMK5",
@@ -2194,7 +2268,7 @@
    "expected_value": 1031.0,
    "missing_account": true,
    "reason": "US$ 3.393 × 30% de chance em 90 dias (deals com 104 dias) = US$ 1.031 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "8LA72RM8",
@@ -2214,7 +2288,7 @@
    "expected_value": 1031.0,
    "missing_account": false,
    "reason": "US$ 3.393 × 30% de chance em 90 dias (deals com 105 dias) = US$ 1.031 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "NBBIFIKB",
@@ -2234,7 +2308,7 @@
    "expected_value": 1031.0,
    "missing_account": true,
    "reason": "US$ 3.393 × 30% de chance em 90 dias (deals com 107 dias) = US$ 1.031 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "3NC5XSDF",
@@ -2334,7 +2408,7 @@
    "expected_value": 493.0,
    "missing_account": true,
    "reason": "US$ 1.096 × 45% de chance em 90 dias (deals com 33 dias) = US$ 493 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "YMWG4Z3S",
@@ -2354,7 +2428,7 @@
    "expected_value": 493.0,
    "missing_account": false,
    "reason": "US$ 1.096 × 45% de chance em 90 dias (deals com 38 dias) = US$ 493 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "J962I0KG",
@@ -2374,7 +2448,7 @@
    "expected_value": 493.0,
    "missing_account": true,
    "reason": "US$ 1.096 × 45% de chance em 90 dias (deals com 41 dias) = US$ 493 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "62PCN0KS",
@@ -2394,7 +2468,7 @@
    "expected_value": 493.0,
    "missing_account": true,
    "reason": "US$ 1.096 × 45% de chance em 90 dias (deals com 45 dias) = US$ 493 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "NXXKM7C7",
@@ -2414,7 +2488,7 @@
    "expected_value": 493.0,
    "missing_account": false,
    "reason": "US$ 1.096 × 45% de chance em 90 dias (deals com 47 dias) = US$ 493 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "G1W97XZA",
@@ -2434,7 +2508,7 @@
    "expected_value": 493.0,
    "missing_account": true,
    "reason": "US$ 1.096 × 45% de chance em 90 dias (deals com 48 dias) = US$ 493 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "PMK11X5L",
@@ -2454,7 +2528,7 @@
    "expected_value": 493.0,
    "missing_account": true,
    "reason": "US$ 1.096 × 45% de chance em 90 dias (deals com 53 dias) = US$ 493 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "XSEG5T4H",
@@ -2474,7 +2548,7 @@
    "expected_value": 493.0,
    "missing_account": false,
    "reason": "US$ 1.096 × 45% de chance em 90 dias (deals com 58 dias) = US$ 493 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "0N11U6L3",
@@ -2494,7 +2568,7 @@
    "expected_value": 490.0,
    "missing_account": false,
    "reason": "US$ 1.096 × 45% de chance em 90 dias (deals com 62 dias) = US$ 490 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "SLILSQJV",
@@ -2514,7 +2588,7 @@
    "expected_value": 490.0,
    "missing_account": true,
    "reason": "US$ 1.096 × 45% de chance em 90 dias (deals com 73 dias) = US$ 490 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "Y6NI5EBV",
@@ -2534,7 +2608,7 @@
    "expected_value": 490.0,
    "missing_account": true,
    "reason": "US$ 1.096 × 45% de chance em 90 dias (deals com 75 dias) = US$ 490 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "5TCGN3GX",
@@ -2554,7 +2628,7 @@
    "expected_value": 490.0,
    "missing_account": true,
    "reason": "US$ 1.096 × 45% de chance em 90 dias (deals com 76 dias) = US$ 490 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "QCBO7C6E",
@@ -2574,7 +2648,7 @@
    "expected_value": 490.0,
    "missing_account": true,
    "reason": "US$ 1.096 × 45% de chance em 90 dias (deals com 79 dias) = US$ 490 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "4O3EPWFR",
@@ -2594,7 +2668,7 @@
    "expected_value": 490.0,
    "missing_account": true,
    "reason": "US$ 1.096 × 45% de chance em 90 dias (deals com 80 dias) = US$ 490 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "L9EVLHSJ",
@@ -2614,7 +2688,7 @@
    "expected_value": 490.0,
    "missing_account": true,
    "reason": "US$ 1.096 × 45% de chance em 90 dias (deals com 84 dias) = US$ 490 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "LDJ6VTNW",
@@ -2634,7 +2708,7 @@
    "expected_value": 490.0,
    "missing_account": true,
    "reason": "US$ 1.096 × 45% de chance em 90 dias (deals com 88 dias) = US$ 490 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "TOJ902PF",
@@ -2654,7 +2728,7 @@
    "expected_value": 448.0,
    "missing_account": false,
    "reason": "US$ 1.096 × 41% de chance em 90 dias (deals com 16 dias) = US$ 448 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "IQR162ZT",
@@ -2674,7 +2748,7 @@
    "expected_value": 448.0,
    "missing_account": true,
    "reason": "US$ 1.096 × 41% de chance em 90 dias (deals com 18 dias) = US$ 448 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "PM2BF2KB",
@@ -2694,7 +2768,7 @@
    "expected_value": 448.0,
    "missing_account": false,
    "reason": "US$ 1.096 × 41% de chance em 90 dias (deals com 18 dias) = US$ 448 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "VL8YNHD7",
@@ -2714,7 +2788,7 @@
    "expected_value": 448.0,
    "missing_account": true,
    "reason": "US$ 1.096 × 41% de chance em 90 dias (deals com 23 dias) = US$ 448 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "RS31U03Y",
@@ -2734,7 +2808,7 @@
    "expected_value": 448.0,
    "missing_account": true,
    "reason": "US$ 1.096 × 41% de chance em 90 dias (deals com 24 dias) = US$ 448 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "HCQK8NQ8",
@@ -2754,7 +2828,7 @@
    "expected_value": 418.0,
    "missing_account": true,
    "reason": "US$ 1.096 × 38% de chance em 90 dias (deals com 11 dias) = US$ 418 esperados.",
-   "action": "Fase em que mais se perde: qualificar a necessidade e agendar a próxima reunião."
+   "action": "Qualificar: confirmar necessidade, orçamento e quem decide. É a fase em que mais se perde."
   },
   {
    "opportunity_id": "GWOOPZE8",
@@ -2774,7 +2848,7 @@
    "expected_value": 333.0,
    "missing_account": false,
    "reason": "US$ 1.096 × 30% de chance em 90 dias (deals com 91 dias) = US$ 333 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "GXIVJQPG",
@@ -2794,7 +2868,7 @@
    "expected_value": 333.0,
    "missing_account": false,
    "reason": "US$ 1.096 × 30% de chance em 90 dias (deals com 91 dias) = US$ 333 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "C51GWGUE",
@@ -2814,7 +2888,7 @@
    "expected_value": 333.0,
    "missing_account": true,
    "reason": "US$ 1.096 × 30% de chance em 90 dias (deals com 93 dias) = US$ 333 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "JXUSPNPV",
@@ -2834,7 +2908,7 @@
    "expected_value": 333.0,
    "missing_account": true,
    "reason": "US$ 1.096 × 30% de chance em 90 dias (deals com 96 dias) = US$ 333 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "61IKUAZI",
@@ -2854,7 +2928,7 @@
    "expected_value": 333.0,
    "missing_account": false,
    "reason": "US$ 1.096 × 30% de chance em 90 dias (deals com 102 dias) = US$ 333 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "V1SX6HOD",
@@ -2874,7 +2948,7 @@
    "expected_value": 333.0,
    "missing_account": true,
    "reason": "US$ 1.096 × 30% de chance em 90 dias (deals com 103 dias) = US$ 333 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "KQ83VL8T",
@@ -2894,7 +2968,7 @@
    "expected_value": 333.0,
    "missing_account": true,
    "reason": "US$ 1.096 × 30% de chance em 90 dias (deals com 105 dias) = US$ 333 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "24K085JJ",
@@ -2914,7 +2988,7 @@
    "expected_value": 333.0,
    "missing_account": true,
    "reason": "US$ 1.096 × 30% de chance em 90 dias (deals com 107 dias) = US$ 333 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "5X3TSUA9",
@@ -3634,7 +3708,7 @@
    "expected_value": 248.0,
    "missing_account": false,
    "reason": "US$ 550 × 45% de chance em 90 dias (deals com 34 dias) = US$ 248 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "J1G2SZKD",
@@ -3654,7 +3728,7 @@
    "expected_value": 248.0,
    "missing_account": false,
    "reason": "US$ 550 × 45% de chance em 90 dias (deals com 39 dias) = US$ 248 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "W4XB23IP",
@@ -3674,7 +3748,7 @@
    "expected_value": 248.0,
    "missing_account": true,
    "reason": "US$ 550 × 45% de chance em 90 dias (deals com 52 dias) = US$ 248 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "J9PCNCUP",
@@ -3694,7 +3768,7 @@
    "expected_value": 248.0,
    "missing_account": false,
    "reason": "US$ 550 × 45% de chance em 90 dias (deals com 55 dias) = US$ 248 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "MA56XGWR",
@@ -3714,7 +3788,7 @@
    "expected_value": 248.0,
    "missing_account": false,
    "reason": "US$ 550 × 45% de chance em 90 dias (deals com 56 dias) = US$ 248 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "RN67OVFW",
@@ -3734,7 +3808,7 @@
    "expected_value": 248.0,
    "missing_account": true,
    "reason": "US$ 550 × 45% de chance em 90 dias (deals com 57 dias) = US$ 248 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "E1LFK6E3",
@@ -3754,7 +3828,7 @@
    "expected_value": 248.0,
    "missing_account": true,
    "reason": "US$ 550 × 45% de chance em 90 dias (deals com 58 dias) = US$ 248 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "7EHJYKWE",
@@ -3774,7 +3848,7 @@
    "expected_value": 246.0,
    "missing_account": false,
    "reason": "US$ 550 × 45% de chance em 90 dias (deals com 64 dias) = US$ 246 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "31IV2B9O",
@@ -3794,7 +3868,7 @@
    "expected_value": 246.0,
    "missing_account": true,
    "reason": "US$ 550 × 45% de chance em 90 dias (deals com 66 dias) = US$ 246 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "OYH46MQB",
@@ -3814,7 +3888,7 @@
    "expected_value": 246.0,
    "missing_account": true,
    "reason": "US$ 550 × 45% de chance em 90 dias (deals com 67 dias) = US$ 246 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "HWOBBZWQ",
@@ -3834,7 +3908,7 @@
    "expected_value": 246.0,
    "missing_account": true,
    "reason": "US$ 550 × 45% de chance em 90 dias (deals com 68 dias) = US$ 246 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "GL2FM1RM",
@@ -3854,7 +3928,7 @@
    "expected_value": 246.0,
    "missing_account": true,
    "reason": "US$ 550 × 45% de chance em 90 dias (deals com 70 dias) = US$ 246 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "RYWETTBK",
@@ -3874,7 +3948,7 @@
    "expected_value": 246.0,
    "missing_account": false,
    "reason": "US$ 550 × 45% de chance em 90 dias (deals com 72 dias) = US$ 246 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "4ZKFSG5F",
@@ -3894,7 +3968,7 @@
    "expected_value": 246.0,
    "missing_account": true,
    "reason": "US$ 550 × 45% de chance em 90 dias (deals com 76 dias) = US$ 246 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "NGG8O0JX",
@@ -3914,7 +3988,7 @@
    "expected_value": 246.0,
    "missing_account": true,
    "reason": "US$ 550 × 45% de chance em 90 dias (deals com 79 dias) = US$ 246 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "ORYORRQV",
@@ -3934,7 +4008,7 @@
    "expected_value": 246.0,
    "missing_account": false,
    "reason": "US$ 550 × 45% de chance em 90 dias (deals com 79 dias) = US$ 246 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "F761DF0M",
@@ -3954,7 +4028,7 @@
    "expected_value": 246.0,
    "missing_account": false,
    "reason": "US$ 550 × 45% de chance em 90 dias (deals com 81 dias) = US$ 246 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "5WAKI1NB",
@@ -3974,7 +4048,7 @@
    "expected_value": 246.0,
    "missing_account": true,
    "reason": "US$ 550 × 45% de chance em 90 dias (deals com 88 dias) = US$ 246 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "MYD4PBM9",
@@ -3994,7 +4068,7 @@
    "expected_value": 246.0,
    "missing_account": true,
    "reason": "US$ 550 × 45% de chance em 90 dias (deals com 89 dias) = US$ 246 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "J5BCAQ1Z",
@@ -4014,7 +4088,7 @@
    "expected_value": 225.0,
    "missing_account": false,
    "reason": "US$ 550 × 41% de chance em 90 dias (deals com 16 dias) = US$ 225 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "GMY4U7RD",
@@ -4034,7 +4108,7 @@
    "expected_value": 225.0,
    "missing_account": true,
    "reason": "US$ 550 × 41% de chance em 90 dias (deals com 22 dias) = US$ 225 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "LC93MVYP",
@@ -4054,7 +4128,7 @@
    "expected_value": 225.0,
    "missing_account": true,
    "reason": "US$ 550 × 41% de chance em 90 dias (deals com 30 dias) = US$ 225 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "RYNZ2WOK",
@@ -4234,7 +4308,7 @@
    "expected_value": 167.0,
    "missing_account": false,
    "reason": "US$ 550 × 30% de chance em 90 dias (deals com 91 dias) = US$ 167 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "WV2YBM8V",
@@ -4254,7 +4328,7 @@
    "expected_value": 167.0,
    "missing_account": true,
    "reason": "US$ 550 × 30% de chance em 90 dias (deals com 92 dias) = US$ 167 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "K2NPVZL8",
@@ -4274,7 +4348,7 @@
    "expected_value": 167.0,
    "missing_account": true,
    "reason": "US$ 550 × 30% de chance em 90 dias (deals com 99 dias) = US$ 167 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "ZBDT3T2H",
@@ -4294,7 +4368,7 @@
    "expected_value": 167.0,
    "missing_account": true,
    "reason": "US$ 550 × 30% de chance em 90 dias (deals com 104 dias) = US$ 167 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "PAQ6EKHB",
@@ -4314,7 +4388,7 @@
    "expected_value": 167.0,
    "missing_account": true,
    "reason": "US$ 550 × 30% de chance em 90 dias (deals com 105 dias) = US$ 167 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "ER0U0TOC",
@@ -4334,7 +4408,7 @@
    "expected_value": 167.0,
    "missing_account": true,
    "reason": "US$ 550 × 30% de chance em 90 dias (deals com 107 dias) = US$ 167 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "JBECEURV",
@@ -4914,7 +4988,7 @@
    "expected_value": 66.0,
    "missing_account": false,
    "reason": "US$ 1.096 × 6% de chance em 90 dias (deals com 137 dias) = US$ 66 esperados.",
-   "action": "Pedir a decisão: faltam 1 dias para o limite histórico."
+   "action": "Pedir a decisão: falta 1 dia para o limite histórico."
   },
   {
    "opportunity_id": "1MQ3015O",
@@ -5274,7 +5348,7 @@
    "expected_value": 25.0,
    "missing_account": true,
    "reason": "US$ 55 × 45% de chance em 90 dias (deals com 34 dias) = US$ 25 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "4ZQTMS3Z",
@@ -5294,7 +5368,7 @@
    "expected_value": 25.0,
    "missing_account": false,
    "reason": "US$ 55 × 45% de chance em 90 dias (deals com 38 dias) = US$ 25 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "PV3TH2FF",
@@ -5314,7 +5388,7 @@
    "expected_value": 25.0,
    "missing_account": true,
    "reason": "US$ 55 × 45% de chance em 90 dias (deals com 38 dias) = US$ 25 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "PQ84ANKD",
@@ -5334,7 +5408,7 @@
    "expected_value": 25.0,
    "missing_account": true,
    "reason": "US$ 55 × 45% de chance em 90 dias (deals com 41 dias) = US$ 25 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "7XRWWM0X",
@@ -5354,7 +5428,7 @@
    "expected_value": 25.0,
    "missing_account": false,
    "reason": "US$ 55 × 45% de chance em 90 dias (deals com 46 dias) = US$ 25 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "0KWYQTQQ",
@@ -5374,7 +5448,7 @@
    "expected_value": 25.0,
    "missing_account": true,
    "reason": "US$ 55 × 45% de chance em 90 dias (deals com 51 dias) = US$ 25 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "1BW8S7JD",
@@ -5394,7 +5468,7 @@
    "expected_value": 25.0,
    "missing_account": true,
    "reason": "US$ 55 × 45% de chance em 90 dias (deals com 55 dias) = US$ 25 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "IBB0VGUN",
@@ -5414,7 +5488,7 @@
    "expected_value": 25.0,
    "missing_account": true,
    "reason": "US$ 55 × 45% de chance em 90 dias (deals com 56 dias) = US$ 25 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "46UHJGY0",
@@ -5434,7 +5508,7 @@
    "expected_value": 25.0,
    "missing_account": true,
    "reason": "US$ 55 × 45% de chance em 90 dias (deals com 59 dias) = US$ 25 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "854QZNWK",
@@ -5454,7 +5528,7 @@
    "expected_value": 25.0,
    "missing_account": true,
    "reason": "US$ 55 × 45% de chance em 90 dias (deals com 60 dias) = US$ 25 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "O1SCOU11",
@@ -5474,7 +5548,7 @@
    "expected_value": 25.0,
    "missing_account": true,
    "reason": "US$ 55 × 45% de chance em 90 dias (deals com 61 dias) = US$ 25 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "W5FH95XO",
@@ -5494,7 +5568,7 @@
    "expected_value": 25.0,
    "missing_account": true,
    "reason": "US$ 55 × 45% de chance em 90 dias (deals com 62 dias) = US$ 25 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "S7UVZXM3",
@@ -5514,7 +5588,7 @@
    "expected_value": 25.0,
    "missing_account": true,
    "reason": "US$ 55 × 45% de chance em 90 dias (deals com 68 dias) = US$ 25 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "B2FSFXKA",
@@ -5534,7 +5608,7 @@
    "expected_value": 25.0,
    "missing_account": true,
    "reason": "US$ 55 × 45% de chance em 90 dias (deals com 73 dias) = US$ 25 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "W72TPY7P",
@@ -5554,7 +5628,7 @@
    "expected_value": 25.0,
    "missing_account": true,
    "reason": "US$ 55 × 45% de chance em 90 dias (deals com 73 dias) = US$ 25 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "RVUJPYY8",
@@ -5574,7 +5648,7 @@
    "expected_value": 25.0,
    "missing_account": true,
    "reason": "US$ 55 × 45% de chance em 90 dias (deals com 74 dias) = US$ 25 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "8SLDCS0F",
@@ -5594,7 +5668,7 @@
    "expected_value": 25.0,
    "missing_account": true,
    "reason": "US$ 55 × 45% de chance em 90 dias (deals com 81 dias) = US$ 25 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "0HUWQWOJ",
@@ -5614,7 +5688,7 @@
    "expected_value": 25.0,
    "missing_account": true,
    "reason": "US$ 55 × 45% de chance em 90 dias (deals com 83 dias) = US$ 25 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "O691ZXXH",
@@ -5634,7 +5708,7 @@
    "expected_value": 25.0,
    "missing_account": true,
    "reason": "US$ 55 × 45% de chance em 90 dias (deals com 84 dias) = US$ 25 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "QDBJOE9M",
@@ -5654,7 +5728,7 @@
    "expected_value": 25.0,
    "missing_account": true,
    "reason": "US$ 55 × 45% de chance em 90 dias (deals com 84 dias) = US$ 25 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "MIA65OVY",
@@ -5674,7 +5748,7 @@
    "expected_value": 25.0,
    "missing_account": true,
    "reason": "US$ 55 × 45% de chance em 90 dias (deals com 86 dias) = US$ 25 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "06C1N1F7",
@@ -5694,7 +5768,7 @@
    "expected_value": 25.0,
    "missing_account": true,
    "reason": "US$ 55 × 45% de chance em 90 dias (deals com 87 dias) = US$ 25 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Negociar: tratar objeções e envolver quem assina."
   },
   {
    "opportunity_id": "07GUKIG3",
@@ -5714,7 +5788,7 @@
    "expected_value": 22.0,
    "missing_account": true,
    "reason": "US$ 55 × 41% de chance em 90 dias (deals com 26 dias) = US$ 22 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Apresentar proposta e marcar a próxima reunião com data."
   },
   {
    "opportunity_id": "DB801ISB",
@@ -5734,7 +5808,7 @@
    "expected_value": 21.0,
    "missing_account": true,
    "reason": "US$ 55 × 38% de chance em 90 dias (deals com 9 dias) = US$ 21 esperados.",
-   "action": "Fase em que mais se perde: qualificar a necessidade e agendar a próxima reunião."
+   "action": "Qualificar: confirmar necessidade, orçamento e quem decide. É a fase em que mais se perde."
   },
   {
    "opportunity_id": "HB740BLB",
@@ -5754,7 +5828,7 @@
    "expected_value": 21.0,
    "missing_account": false,
    "reason": "US$ 55 × 38% de chance em 90 dias (deals com 11 dias) = US$ 21 esperados.",
-   "action": "Fase em que mais se perde: qualificar a necessidade e agendar a próxima reunião."
+   "action": "Qualificar: confirmar necessidade, orçamento e quem decide. É a fase em que mais se perde."
   },
   {
    "opportunity_id": "T6MPH7JC",
@@ -5774,7 +5848,7 @@
    "expected_value": 21.0,
    "missing_account": true,
    "reason": "US$ 55 × 38% de chance em 90 dias (deals com 14 dias) = US$ 21 esperados.",
-   "action": "Fase em que mais se perde: qualificar a necessidade e agendar a próxima reunião."
+   "action": "Qualificar: confirmar necessidade, orçamento e quem decide. É a fase em que mais se perde."
   },
   {
    "opportunity_id": "MG1YUTUE",
@@ -5794,7 +5868,7 @@
    "expected_value": 17.0,
    "missing_account": false,
    "reason": "US$ 55 × 30% de chance em 90 dias (deals com 91 dias) = US$ 17 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "LZ3B174J",
@@ -5814,7 +5888,7 @@
    "expected_value": 17.0,
    "missing_account": true,
    "reason": "US$ 55 × 30% de chance em 90 dias (deals com 93 dias) = US$ 17 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "EJVD09HQ",
@@ -5834,7 +5908,7 @@
    "expected_value": 17.0,
    "missing_account": false,
    "reason": "US$ 55 × 30% de chance em 90 dias (deals com 97 dias) = US$ 17 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "5F1RM2YM",
@@ -5854,7 +5928,7 @@
    "expected_value": 17.0,
    "missing_account": true,
    "reason": "US$ 55 × 30% de chance em 90 dias (deals com 102 dias) = US$ 17 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "D9MZMDOL",
@@ -5874,7 +5948,7 @@
    "expected_value": 17.0,
    "missing_account": false,
    "reason": "US$ 55 × 30% de chance em 90 dias (deals com 102 dias) = US$ 17 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "HJY0TQ7X",
@@ -5894,7 +5968,7 @@
    "expected_value": 17.0,
    "missing_account": false,
    "reason": "US$ 55 × 30% de chance em 90 dias (deals com 104 dias) = US$ 17 esperados.",
-   "action": "Avançar para proposta e marcar data de decisão."
+   "action": "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."
   },
   {
    "opportunity_id": "EQ0PLA0O",
@@ -6454,7 +6528,7 @@
    "expected_value": 3.0,
    "missing_account": true,
    "reason": "US$ 55 × 6% de chance em 90 dias (deals com 137 dias) = US$ 3 esperados.",
-   "action": "Pedir a decisão: faltam 1 dias para o limite histórico."
+   "action": "Pedir a decisão: falta 1 dia para o limite histórico."
   },
   {
    "opportunity_id": "B08R55ET",

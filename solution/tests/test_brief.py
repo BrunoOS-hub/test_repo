@@ -66,3 +66,46 @@ def test_export_writes_parseable_data_js(df):
     assert {"as_of", "wall_days", "curve", "audit", "backtest", "agents", "managers", "deals"} <= set(data)
     assert all(a["brief"].startswith("Bom dia") for a in data["agents"])
     assert data["totals"]["alive"] == sum(a["alive"] for a in data["agents"])
+
+
+def test_brief_has_no_placeholder_and_uses_real_code(sc):
+    for agent in sc["sales_agent"].unique():
+        me = sc[sc["sales_agent"] == agent]
+        text = BR.build_brief(agent, sc)
+        assert "{" not in text and "}" not in text, agent
+        first = next(q for q in ("Agir", "Decidir", "Qualificar") if (me["queue"] == q).any())
+        code = me[me["queue"] == first].sort_values("rank_in_agent").iloc[0]["opportunity_id"]
+        assert f"*1 {code}* = avancei · *2 {code}* = perdi · *3 {code}* = adiar" in text
+
+
+def test_brief_example_uses_decidir_when_agir_is_empty(sc):
+    only_decidir = [a for a in sc["sales_agent"].unique()
+                    if not ((sc["sales_agent"] == a) & (sc["queue"] == "Agir")).any()]
+    if not only_decidir:  # na base atual todo vendedor tem Agir: testa com a fila Agir removida
+        a = "Zane Levy"
+        sub = sc[(sc["sales_agent"] == a) & (sc["queue"] != "Agir")]
+        sub.attrs.update(sc.attrs)
+        code = sub[sub["queue"] == "Decidir"].sort_values("rank_in_agent").iloc[0]["opportunity_id"]
+        assert f"*1 {code}*" in BR.build_brief(a, sub)
+    else:
+        assert "*1 " in BR.build_brief(only_decidir[0], sc)
+
+
+def test_team_headline_numbers_come_from_the_scope(sc):
+    scopes = (BR.agent_summary(sc).to_dict("records") + BR.manager_summary(sc).to_dict("records")
+              + BR.region_summary(sc).to_dict("records") + [BR.total_summary(sc)])
+    for scope in scopes:
+        text = BR.team_headline(scope)
+        allowed = {BR._num(scope[k]) for k in ("decide_count", "decide_value", "missing_account_count")}
+        assert BR.validate_numbers(text, allowed) == [], text
+    # número inventado é acusado também aqui
+    assert BR.validate_numbers(BR.team_headline(BR.total_summary(sc)) + " US$ 1.234", allowed) == ["1.234"]
+
+
+def test_export_has_headline_per_scope(df):
+    import run
+
+    p = run.build_payload(df)
+    for scope in p["agents"] + p["managers"] + p["regions"] + [p["totals"]]:
+        assert scope["headline"].startswith(("Antes de cobrar", "Base em ordem"))
+        assert scope["open_count"] == scope["alive"] + scope["decide_count"] + scope["qualify_count"]

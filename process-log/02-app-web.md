@@ -25,3 +25,17 @@
 - **O app não calcula nada.** Todo número e todo texto vêm do Python.
 - **+7,2% (estimativa pontual) como número principal,** com o IC ao lado.
 - **Brief gerado no motor** e reaproveitado no app e no WhatsApp (D11).
+
+## Revisão (F2.1)
+
+Quatro ajustes depois de revisar o app antes de começar a F3:
+
+1. **Ação por fase do deal.** Antes, quase todo deal vivo recebia "Avançar para proposta e marcar data de decisão". Agora a ação segue a idade: qualificar (0–14 dias), propor (15–60), negociar (61–90), fechar (91 até 31 dias antes do limite) e pedir a decisão nos últimos 30 dias. O vendedor passa a ter um passo diferente para cada deal, em vez de um texto único. O único número que as ações citam é "dias até o limite", que vem do motor.
+2. **Brief sem placeholder.** A última linha tinha "{cód}" literal, que parecia erro de template. Agora o exemplo usa o código real do 1º deal (ou do 1º de Decidir, se não houver Agir), e o vendedor só precisa copiar e trocar o número.
+3. **Faixa de decisão no Gestor.** Três KPIs (valor esperado do time, deals parados além do limite, abertos sem conta) e uma recomendação de uma frase, `team_headline`, gerada no Python e exportada por escopo (vendedor, manager, região, base). O gestor vê primeiro o que fazer e depois a tabela. As colunas foram renomeadas ("Parado (US$)" e "Sem conta (todos abertos)") porque o rótulo antigo sugeria que "sem conta" valia só para a fila Decidir.
+4. **Testes.** Uma ação esperada por faixa de idade, brief sem chaves, e todo número da recomendação passa por `validate_numbers`. Total: 30 testes.
+
+**Onde a IA errou nesta rodada**
+- **"Faltam 1 dias".** Apareceu nos dados exportados (dois deals). Ajustei para "falta 1 dia" e coloquei no teste de faixas. O texto da instrução usava "faltam {n} dias" sem tratar o singular.
+- **Teste que não testava.** A primeira versão da checagem de `open_count` usava `>=` com `- 0`, o que aceitava qualquer coisa. Troquei por igualdade exata.
+

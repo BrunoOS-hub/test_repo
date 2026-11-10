@@ -56,6 +56,7 @@ def _reason(r, wall):
 
 
 def _action(r):
+    """Próximo passo por fase do deal (faixas de idade). Só cita número do motor (dias até o limite)."""
     if r["queue"] == "Qualificar":
         return "Fazer o primeiro contato e confirmar se há oportunidade."
     if r["queue"] == "Decidir":
@@ -63,7 +64,12 @@ def _action(r):
     if r["days_to_wall"] <= 0:
         return "Pedir a decisão hoje: o deal chegou ao limite histórico de fechamento."
     if r["days_to_wall"] <= 30:
-        return f"Pedir a decisão: faltam {int(r['days_to_wall'])} dias para o limite histórico."
+        n = int(r["days_to_wall"])
+        return f"Pedir a decisão: {'falta 1 dia' if n == 1 else f'faltam {n} dias'} para o limite histórico."
     if r["age"] <= 14:
-        return "Fase em que mais se perde: qualificar a necessidade e agendar a próxima reunião."
-    return "Avançar para proposta e marcar data de decisão."
+        return "Qualificar: confirmar necessidade, orçamento e quem decide. É a fase em que mais se perde."
+    if r["age"] <= 60:
+        return "Apresentar proposta e marcar a próxima reunião com data."
+    if r["age"] <= 90:
+        return "Negociar: tratar objeções e envolver quem assina."
+    return "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."

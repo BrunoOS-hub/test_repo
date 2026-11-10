@@ -79,3 +79,24 @@ def test_backtest_is_deterministic(df):
     # Mesma resposta com as linhas embaralhadas: o resultado não depende da ordem da base.
     _, s3 = backtest.run(df.sample(frac=1, random_state=1), **kw)
     pd.testing.assert_frame_equal(s1, s3)
+
+
+@pytest.mark.parametrize("age, expected", [
+    (0, "Qualificar: confirmar necessidade, orçamento e quem decide. É a fase em que mais se perde."),
+    (14, "Qualificar: confirmar necessidade, orçamento e quem decide. É a fase em que mais se perde."),
+    (15, "Apresentar proposta e marcar a próxima reunião com data."),
+    (60, "Apresentar proposta e marcar a próxima reunião com data."),
+    (61, "Negociar: tratar objeções e envolver quem assina."),
+    (90, "Negociar: tratar objeções e envolver quem assina."),
+    (91, "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."),
+    (107, "Fechar: pedir o sim ou o não com data. Depois disso a chance cai rápido."),  # wall - 31
+    (108, "Pedir a decisão: faltam 30 dias para o limite histórico."),
+    (137, "Pedir a decisão: falta 1 dia para o limite histórico."),
+    (138, "Pedir a decisão hoje: o deal chegou ao limite histórico de fechamento."),
+])
+def test_action_by_deal_phase(age, expected):
+    from engine.score import _action
+
+    wall = 138
+    row = {"queue": "Agir", "age": age, "days_to_wall": wall - age}
+    assert _action(row) == expected

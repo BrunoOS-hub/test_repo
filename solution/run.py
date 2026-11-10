@@ -82,6 +82,11 @@ def build_payload(df):
     agents = json.loads(BR.agent_summary(sc).to_json(orient="records"))
     for a in agents:
         a["brief"] = BR.build_brief(a["sales_agent"], sc)
+    managers = json.loads(BR.manager_summary(sc).to_json(orient="records"))
+    regions = json.loads(BR.region_summary(sc).to_json(orient="records"))
+    totals = BR.total_summary(sc)
+    for scope in agents + managers + regions + [totals]:  # recomendação do gestor, por escopo
+        scope["headline"] = BR.team_headline(scope)
     return {
         "as_of": sc.attrs["as_of"],
         "wall_days": sc.attrs["wall_days"],
@@ -89,9 +94,9 @@ def build_payload(df):
         "audit": data_audit(df, AS_OF),
         "backtest": backtest,
         "agents": agents,
-        "managers": json.loads(BR.manager_summary(sc).to_json(orient="records")),
-        "regions": json.loads(BR.region_summary(sc).to_json(orient="records")),
-        "totals": BR.total_summary(sc),
+        "managers": managers,
+        "regions": regions,
+        "totals": totals,
         "deals": json.loads(out.to_json(orient="records")),
     }
 

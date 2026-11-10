@@ -195,8 +195,8 @@
   // ---- gestor --------------------------------------------------------------
   var COLS = [
     ["sales_agent", "Vendedor", "text"], ["alive", "Vivos"], ["expected_value_sum", "Valor esperado"],
-    ["decide_count", "Decidir (n)"], ["decide_value", "Decidir (US$)"], ["qualify_count", "Qualificar"],
-    ["missing_account_count", "Sem conta"]
+    ["decide_count", "Decidir (n)"], ["decide_value", "Parado (US$)"], ["qualify_count", "Qualificar"],
+    ["missing_account_count", "Sem conta (todos abertos)"]
   ];
   function cell(key, r) {
     if (key === "expected_value_sum" || key === "decide_value") return money(r[key]);
@@ -234,6 +234,14 @@
 
     view.appendChild(h("h1", { text: "Visão do gestor" }));
     view.appendChild(h("p", { class: "sub", text: "Quem tem deal vivo, quem tem deal parado e onde o CRM está incompleto." }));
+    // Faixa de decisão: números e frase vêm prontos do Python para o escopo filtrado (nada é somado aqui).
+    var sc = totalRow(), r = sc.row;
+    view.appendChild(h("section", { class: "decision", "aria-label": "Faixa de decisão" }, [
+      h("div", { class: "kpis kpis3" }, [
+        kpi("Valor esperado do time (90 dias)", money(r.expected_value_sum), sc.label.replace("Total · ", "")),
+        kpi("Parado além de " + D.wall_days + " dias", nf.format(r.decide_count) + " deals · " + money(r.decide_value), "fila Decidir"),
+        kpi("Abertos sem conta", nf.format(r.missing_account_count) + " de " + nf.format(r.open_count), "todas as filas")]),
+      h("p", { class: "reco" }, [h("strong", { text: "Recomendação: " }), r.headline])]));
     view.appendChild(h("div", { class: "toolbar" }, [
       h("span", { class: "sub", text: rows.length + " vendedores" }),
       h("button", { class: "btn alt", text: "Exportar CSV (" + nf.format(filteredDeals().length) + " deals)", onclick: exportCsv })]));

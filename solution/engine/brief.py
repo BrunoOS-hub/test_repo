@@ -11,7 +11,7 @@ import pandas as pd
 from .config import HORIZON_DAYS
 
 NO_ACCOUNT = "conta não cadastrada"
-REPLY_LINE = "Responda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+REPLY_LINE = "Responda com o número + código. Ex.: *1 {c}* = avancei · *2 {c}* = perdi · *3 {c}* = adiar"
 
 
 def money(x) -> str:
@@ -30,6 +30,7 @@ def _aggregate(g: pd.DataFrame) -> dict:
     agir = g[g["queue"] == "Agir"]
     decidir = g[g["queue"] == "Decidir"]
     return {
+        "open_count": int(len(g)),
         "alive": int(len(agir)),
         "expected_value_sum": float(agir["expected_value"].sum()),
         "decide_count": int(len(decidir)),
@@ -65,6 +66,26 @@ def total_summary(sc: pd.DataFrame) -> dict:
     return _aggregate(sc)
 
 
+def _plural(n: int, one: str, many: str) -> str:
+    return f"{_num(n)} {one if n == 1 else many}"
+
+
+def team_headline(scope: dict) -> str:
+    """Recomendação de uma frase para o gestor, a partir do agregado do escopo (vendedor, manager, região ou base)."""
+    n, m = int(scope["decide_count"]), int(scope["missing_account_count"])
+    todo = []
+    if n:
+        todo.append(f"limpar {_plural(n, 'deal parado', 'deals parados')} ({money(scope['decide_value'])})")
+    if m:
+        todo.append(f"cadastrar a conta de {_plural(m, 'deal', 'deals')}")
+    if not todo:
+        return "Base em ordem: nenhum deal parado e todas as contas cadastradas. Priorize pela fila Agir."
+    text = "Antes de cobrar priorização: " + " e ".join(todo) + "."
+    if n:
+        text += " Comece pelos que passaram do limite há menos tempo."
+    return text
+
+
 def build_brief(agent: str, sc: pd.DataFrame, top: int = 5) -> str:
     """Pauta de segunda do vendedor em PT-BR. Seções vazias são omitidas."""
     me = sc[sc["sales_agent"] == agent]
@@ -89,7 +110,9 @@ def build_brief(agent: str, sc: pd.DataFrame, top: int = 5) -> str:
                      f"Comece por: {r['product']} · {_account(r)} (cód {r['opportunity_id']}).")
     if n_qualify:
         lines.append(f"🔎 *Qualificar*: {n_qualify} deals sem primeiro contato.")
-    lines.append(REPLY_LINE)
+    # Exemplo com código real: o do 1º deal de Agir; sem Agir, o 1º de Decidir (ou, no limite, da fila que houver).
+    example = next(d for d in (agir, decidir, me.sort_values(["queue", "rank_in_agent"])) if len(d)).iloc[0]["opportunity_id"]
+    lines.append(REPLY_LINE.replace("{c}", example))
     text = "\n".join(lines)
 
     extra = validate_numbers(text, engine_numbers(me, sc, top))
@@ -100,7 +123,7 @@ def build_brief(agent: str, sc: pd.DataFrame, top: int = 5) -> str:
 
 # ---- validação de números -------------------------------------------------
 
-_CODE = re.compile(r"cód (?:\{cód\}|[A-Z0-9]+)")  # códigos de deal misturam letras e dígitos
+_CODE = re.compile(r"cód [A-Z0-9]+|(?<=\*\d )[A-Z0-9]{8}(?=\*)")  # códigos de deal misturam letras e dígitos
 _NUMBER = re.compile(r"(?<![\w.,/])\d+(?:[.,/]\d+)*%?(?![\w])")
 
 
