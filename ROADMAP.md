@@ -9,9 +9,9 @@
 
 ## Estado atual
 
-- **Fase:** F2 (app web)
-- **Último marco:** motor + backtest prontos, validados localmente (9/9 testes). Backtest corrigido: +7,3% vs valor, reproduzível (D10).
-- **Próxima ação:** construir o app web (F2), começando por T2.1.
+- **Fase:** F3 (pauta via WhatsApp)
+- **Último marco:** app web estático pronto (Vendedor, Gestor, Como funciona) e brief de WhatsApp determinístico no motor (15/15 testes). Falta ativar o GitHub Pages (Settings → Pages → Source: GitHub Actions).
+- **Próxima ação:** F3, a partir do T3.2 (redação opcional com Claude Haiku, validada por `validate_numbers`) e do T3.3 (workflow n8n + Whapi).
 - **Bloqueios:** nenhum.
 
 ---
@@ -46,27 +46,27 @@ Legenda: ✅ feito · 🔄 em andamento · ⬜ a fazer
 - [x] T1.1 Carga e limpeza (`GTXPro` → `GTX Pro`, auditoria de dados)
 - [x] T1.2 Curva P(ganhar em 90 dias | idade), estimada por snapshots semanais e sem vazamento
 - [x] T1.3 Score = preço × chance; filas Agir / Qualificar / Decidir; razão e ação em PT-BR
-- [x] T1.4 Backtest em 18 segundas contra valor, "óbvia", mais novo e sorteio: **+7,3% vs valor (IC 90%: +1,6% a +13,1%)**, após corrigir o desempate (D10)
+- [x] T1.4 Backtest em 18 segundas contra valor, "óbvia", mais novo e sorteio: **+7,2% vs valor (IC 90%: +1,6% a +13,1%)**, após corrigir o desempate (D10)
 - [x] T1.5 8 testes (pytest)
 - [x] T1.6 Validar localmente no Mac (venv, pytest, run.py) + backtest determinístico (9 testes)
 
-### F2: App web ⬜ (~1,5h)
+### F2: App web ✅ (~1,5h)
 Stack: **HTML + JS puro, sem build.** Abre com duplo clique e publica no GitHub Pages.
-- [ ] T2.1 `run.py export` gera também `app/data.js` (`window.SCORES = {...}`), porque `fetch` não funciona em `file://`
-- [ ] T2.2 **Visão do vendedor ("Minha semana"):**
+- [x] T2.1 `run.py export` gera também `app/data.js` (`window.SCORES = {...}`), porque `fetch` não funciona em `file://`
+- [x] T2.2 **Visão do vendedor ("Minha semana"):**
   - seletor de vendedor, resumo em 3 frases;
   - as 3 filas, com cards de produto, conta, valor esperado, recibo e ação;
   - barra de idade até 138 dias.
-- [ ] T2.3 **Visão do gestor:**
+- [x] T2.3 **Visão do gestor:**
   - filtros por manager e região;
   - por vendedor: vivos, valor esperado, zumbis e valor parado;
   - botão "exportar CSV".
-- [ ] T2.4 Aba "Como funciona": curva, backtest e o que não usamos e por quê. No máximo uma tela.
-- [ ] T2.5 Prévia da mensagem de WhatsApp de cada vendedor, gerada pelo mesmo motor
-- [ ] T2.6 Publicar no GitHub Pages e testar em 390px (celular)
+- [x] T2.4 Aba "Como funciona": curva, backtest e o que não usamos e por quê. No máximo uma tela.
+- [x] T2.5 Prévia da mensagem de WhatsApp de cada vendedor, gerada pelo mesmo motor
+- [x] T2.6 Testado em 390px (sem rolagem horizontal). Workflow `.github/workflows/pages.yml` pronto; **falta ativar:** Settings → Pages → Source: GitHub Actions
 
-### F3: Pauta via WhatsApp ⬜ (~1,5h)
-- [ ] T3.1 `engine/brief.py`: monta a mensagem determinística (top 5 Agir + resumo de Decidir) a partir de `scores.json`
+### F3: Pauta via WhatsApp 🔄 (~1,5h)
+- [x] T3.1 `engine/brief.py`: monta a mensagem determinística (top 5 Agir + resumo de Decidir) e `validate_numbers` para checar texto de LLM (D11)
 - [ ] T3.2 Redação opcional com Claude Haiku:
   - **regra:** todo número no texto do LLM precisa existir no JSON; se não existir, usa o texto determinístico;
   - registrar custo em tokens por vendedor.
@@ -109,7 +109,8 @@ Stack: **HTML + JS puro, sem build.** Abre com duplo clique e publica no GitHub 
 | D7 | App em HTML + JS puro | Avaliador abre sem instalar nada; menos risco | Claude |
 | D8 | Whapi (nunca Z-API) + n8n | Stack do Bruno; canal real do vendedor brasileiro | Bruno |
 | D9 | Reaproveitar ideias de concorrentes, nunca código; citar o benchmark no registro do processo | Transparência; os avaliadores têm os 109 PRs | Bruno + Claude |
-| D10 | Desempate determinístico por opportunity_id no backtest | +10,6% era artefato de ordenação instável; o número reproduzível é +7,3% | Claude Code (detectou) + Bruno |
+| D10 | Desempate determinístico por opportunity_id no backtest | +10,6% era artefato de ordenação instável; o número reproduzível é +7,2% | Claude Code (detectou) + Bruno |
+| D11 | Brief gerado no motor e reutilizado no app e no WhatsApp | Um só texto, um só lugar de validação; o app não calcula nada | Bruno + Claude |
 
 ---
 
@@ -119,7 +120,7 @@ Stack: **HTML + JS puro, sem build.** Abre com duplo clique e publica no GitHub 
 - Parede: 138 dias. Engaging além dela: 1.291 (81%), cerca de US$ 3,2 mi a preço de lista.
 - Abertos sem conta: 1.425 de 2.089 (68%). Prospecting sem `engage_date`: 500 de 500.
 - Curva de chance em 90 dias por idade: 0-14 38% · 15-30 41% · 31-60 45% · 61-90 45% · 91-120 30% · 121-138 6% · 139+ 0%.
-- Backtest (top 5 por vendedor, 18 segundas): score 25,2% · valor 23,5% · óbvia 23,5% · mais novo 9,8% · sorteio 8,2%. Ganho do score: +7,3% vs valor (IC 90%: +1,6% a +13,1%).
+- Backtest (top 5 por vendedor, 18 segundas): score 25,2% · valor 23,5% · óbvia 23,5% · mais novo 9,8% · sorteio 8,2%. Ganho do score: +7,2% vs valor (IC 90%: +1,6% a +13,1%).
 
 ---
 

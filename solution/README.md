@@ -12,8 +12,9 @@ python run.py audit              # qualidade dos dados
 python run.py curve              # chance de ganhar em 90 dias por idade do deal
 python run.py agent "Zane Levy"  # pauta de segunda de um vendedor
 python run.py backtest           # score vs. alternativas em segundas passadas
-python run.py export             # outputs/scores.json para o app e o WhatsApp
-pytest -q                        # 9 testes
+python run.py export             # outputs/scores.json + app/data.js (app e WhatsApp)
+open app/index.html              # app web: duplo clique, sem servidor e sem chave de API
+pytest -q                        # 15 testes
 ```
 
 ## Lógica
@@ -38,7 +39,7 @@ Avaliamos 18 segundas-feiras, de junho a outubro de 2017, com o top-5 de cada ve
 
 | Ordenação | Receita capturada | vs. "valor" |
 |---|---|---|
-| **Score** | **25,2%** | **+7,3%** (IC 90%: +1,6% a +13,1%) |
+| **Score** | **25,2%** | **+7,2%** (IC 90%: +1,6% a +13,1%) |
 | Valor (preço) | 23,5% | — |
 | "Óbvia" (preço × win rate do vendedor × do produto) | 23,5% | 0% (empata com valor) |
 | Mais novo primeiro | 9,8% | −58% |

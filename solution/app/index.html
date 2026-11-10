@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lead Scorer · Minha semana</title>
+<meta name="description" content="Pauta semanal de vendas: quais deals trabalhar, quais qualificar e quais decidir. Todos os números vêm do motor em Python.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Ir para o conteúdo</a>
+<header class="top">
+  <div class="wrap">
+    <div class="brand"><span class="logo" aria-hidden="true">◆</span> Lead Scorer <small id="asof"></small></div>
+    <nav class="tabs" role="tablist" aria-label="Visões">
+      <button role="tab" id="t-vendedor" data-tab="vendedor" aria-selected="true">Vendedor</button>
+      <button role="tab" id="t-gestor" data-tab="gestor" aria-selected="false">Gestor</button>
+      <button role="tab" id="t-como" data-tab="como" aria-selected="false">Como funciona</button>
+    </nav>
+  </div>
+</header>
+<section class="filters" aria-label="Filtros">
+  <div class="wrap">
+    <label>Região <select id="f-region"></select></label>
+    <label>Manager <select id="f-manager"></select></label>
+    <label>Vendedor <select id="f-agent"></select></label>
+  </div>
+</section>
+<main id="main" class="wrap" tabindex="-1">
+  <noscript>Este app precisa de JavaScript.</noscript>
+  <div id="view"></div>
+</main>
+<footer class="wrap foot">Todos os números e textos vêm do motor em Python (<code>run.py export</code>). O app só filtra e exibe.</footer>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

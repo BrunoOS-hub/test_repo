@@ -59,6 +59,482 @@
    "GTXPro": "GTX Pro"
   }
  },
+ "backtest": {
+  "weeks": 18,
+  "k": 5,
+  "summary": [
+   {
+    "strategy": "score",
+    "captured": 6527902.0,
+    "total_won": 25899123.0,
+    "weeks": 18,
+    "share": 0.2520510829652417,
+    "vs_valor": 0.07225458544369556
+   },
+   {
+    "strategy": "valor",
+    "captured": 6088015.0,
+    "total_won": 25899123.0,
+    "weeks": 18,
+    "share": 0.23506645379459373,
+    "vs_valor": 0.0
+   },
+   {
+    "strategy": "mais_novo",
+    "captured": 2540967.0,
+    "total_won": 25899123.0,
+    "weeks": 18,
+    "share": 0.09811015608520798,
+    "vs_valor": -0.5826279994382406
+   },
+   {
+    "strategy": "obvia",
+    "captured": 6088015.0,
+    "total_won": 25899123.0,
+    "weeks": 18,
+    "share": 0.23506645379459373,
+    "vs_valor": 0.0
+   },
+   {
+    "strategy": "sorteio",
+    "captured": 2112393.0,
+    "total_won": 25899123.0,
+    "weeks": 18,
+    "share": 0.0815623370721858,
+    "vs_valor": -0.6530243437310848
+   }
+  ],
+  "lift_point": 0.07225458544369556,
+  "ci90": [
+   0.01607070489096705,
+   0.13101268051565343
+  ]
+ },
+ "agents": [
+  {
+   "sales_agent": "Anna Snelling",
+   "manager": "Dustin Brinkmann",
+   "regional_office": "Central",
+   "alive": 1,
+   "expected_value_sum": 3.0,
+   "decide_count": 56,
+   "decide_value": 95359.0,
+   "qualify_count": 55,
+   "missing_account_count": 69,
+   "brief": "Bom dia, Anna! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 1 de 1 deals vivos\n1. MG Special · conta não cadastrada\n   US$ 3 esperados (6% em 90 dias) → Pedir a decisão hoje: o deal chegou ao limite histórico de fechamento.\n   cód B08R55ET\n🧹 *Decidir*: 56 deals passaram de 138 dias (US$ 95.359 parados). Comece por: GTX Plus Pro · Bioholding (cód NSX4NR40).\n🔎 *Qualificar*: 55 deals sem primeiro contato.\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+  },
+  {
+   "sales_agent": "Boris Faz",
+   "manager": "Rocco Neubert",
+   "regional_office": "East",
+   "alive": 13,
+   "expected_value_sum": 11131.0,
+   "decide_count": 44,
+   "decide_value": 109276.0,
+   "qualify_count": 0,
+   "missing_account_count": 39,
+   "brief": "Bom dia, Boris! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 13 deals vivos\n1. GTX Plus Pro · Bluth Company\n   US$ 2.467 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód I5VHXAWW\n2. GTX Pro · conta não cadastrada\n   US$ 1.838 esperados (38% em 90 dias) → Fase em que mais se perde: qualificar a necessidade e agendar a próxima reunião.\n   cód NGTVHTFH\n3. MG Advanced · conta não cadastrada\n   US$ 1.527 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód BREOLQD9\n4. MG Advanced · conta não cadastrada\n   US$ 1.518 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód EP5QRHID\n5. GTX Pro · conta não cadastrada\n   US$ 1.465 esperados (30% em 90 dias) → Pedir a decisão: faltam 21 dias para o limite histórico.\n   cód 5E274CQS\n🧹 *Decidir*: 44 deals passaram de 138 dias (US$ 109.276 parados). Comece por: GTX Plus Pro · conta não cadastrada (cód WO1OYV0Z).\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+  },
+  {
+   "sales_agent": "Cassey Cress",
+   "manager": "Rocco Neubert",
+   "regional_office": "East",
+   "alive": 23,
+   "expected_value_sum": 11944.0,
+   "decide_count": 62,
+   "decide_value": 172198.0,
+   "qualify_count": 0,
+   "missing_account_count": 56,
+   "brief": "Bom dia, Cassey! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 23 deals vivos\n1. GTX Pro · Inity\n   US$ 2.170 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód WJO52I18\n2. GTX Pro · Toughzap\n   US$ 2.156 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód XSTGL252\n3. GTX Plus Pro · conta não cadastrada\n   US$ 2.090 esperados (38% em 90 dias) → Fase em que mais se perde: qualificar a necessidade e agendar a próxima reunião.\n   cód RDHTQLNI\n4. GTX Plus Pro · conta não cadastrada\n   US$ 1.665 esperados (30% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód R6Q5JOLX\n5. GTX Plus Basic · conta não cadastrada\n   US$ 493 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód J962I0KG\n🧹 *Decidir*: 62 deals passaram de 138 dias (US$ 172.198 parados). Comece por: GTX Plus Pro · conta não cadastrada (cód 6TGCOE5O).\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+  },
+  {
+   "sales_agent": "Cecily Lampkin",
+   "manager": "Dustin Brinkmann",
+   "regional_office": "Central",
+   "alive": 0,
+   "expected_value_sum": 0.0,
+   "decide_count": 19,
+   "decide_value": 29565.0,
+   "qualify_count": 24,
+   "missing_account_count": 33,
+   "brief": "Bom dia, Cecily! Sua pauta da semana (base 31/12/2017):\n🧹 *Decidir*: 19 deals passaram de 138 dias (US$ 29.565 parados). Comece por: MG Advanced · conta não cadastrada (cód 8MUD1WS1).\n🔎 *Qualificar*: 24 deals sem primeiro contato.\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+  },
+  {
+   "sales_agent": "Corliss Cosme",
+   "manager": "Cara Losch",
+   "regional_office": "East",
+   "alive": 18,
+   "expected_value_sum": 14792.0,
+   "decide_count": 63,
+   "decide_value": 159954.0,
+   "qualify_count": 0,
+   "missing_account_count": 54,
+   "brief": "Bom dia, Corliss! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 18 deals vivos\n1. GTX Plus Pro · conta não cadastrada\n   US$ 2.467 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód GQDS81G1\n2. GTX Pro · conta não cadastrada\n   US$ 2.170 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód C2FSIMZP\n3. GTX Plus Pro · conta não cadastrada\n   US$ 1.665 esperados (30% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód A7OVC1WK\n4. MG Advanced · conta não cadastrada\n   US$ 1.527 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód 0CR37ETK\n5. GTX Pro · conta não cadastrada\n   US$ 1.465 esperados (30% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód G7QIQDSA\n🧹 *Decidir*: 63 deals passaram de 138 dias (US$ 159.954 parados). Comece por: GTX Plus Pro · conta não cadastrada (cód FOJG3OCO).\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+  },
+  {
+   "sales_agent": "Daniell Hammack",
+   "manager": "Rocco Neubert",
+   "regional_office": "East",
+   "alive": 21,
+   "expected_value_sum": 12680.0,
+   "decide_count": 51,
+   "decide_value": 155018.0,
+   "qualify_count": 0,
+   "missing_account_count": 47,
+   "brief": "Bom dia, Daniell! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 21 deals vivos\n1. GTX Pro · conta não cadastrada\n   US$ 2.156 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód ZEYGDEBG\n2. GTX Plus Pro · conta não cadastrada\n   US$ 1.665 esperados (30% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód LFI3BGEE\n3. MG Advanced · conta não cadastrada\n   US$ 1.518 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód JIEO87ZV\n4. GTX Pro · conta não cadastrada\n   US$ 1.465 esperados (30% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód IDKBZCAF\n5. GTX Pro · conta não cadastrada\n   US$ 1.465 esperados (30% em 90 dias) → Pedir a decisão: faltam 29 dias para o limite histórico.\n   cód 9DY57A6F\n🧹 *Decidir*: 51 deals passaram de 138 dias (US$ 155.018 parados). Comece por: GTX Plus Pro · conta não cadastrada (cód HEWKNHTH).\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+  },
+  {
+   "sales_agent": "Darcel Schlecht",
+   "manager": "Melvin Marxen",
+   "regional_office": "Central",
+   "alive": 0,
+   "expected_value_sum": 0.0,
+   "decide_count": 83,
+   "decide_value": 273766.0,
+   "qualify_count": 111,
+   "missing_account_count": 134,
+   "brief": "Bom dia, Darcel! Sua pauta da semana (base 31/12/2017):\n🧹 *Decidir*: 83 deals passaram de 138 dias (US$ 273.766 parados). Comece por: GTX Plus Pro · conta não cadastrada (cód Z4OOTJAJ).\n🔎 *Qualificar*: 111 deals sem primeiro contato.\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+  },
+  {
+   "sales_agent": "Elease Gluck",
+   "manager": "Celia Rouche",
+   "regional_office": "West",
+   "alive": 12,
+   "expected_value_sum": 5234.0,
+   "decide_count": 39,
+   "decide_value": 230990.0,
+   "qualify_count": 0,
+   "missing_account_count": 33,
+   "brief": "Bom dia, Elease! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 12 deals vivos\n1. GTX Plus Pro · conta não cadastrada\n   US$ 1.665 esperados (30% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód NRK892VX\n2. GTX Plus Pro · Plexzap\n   US$ 1.665 esperados (30% em 90 dias) → Pedir a decisão: faltam 18 dias para o limite histórico.\n   cód 6OD1J7MW\n3. MG Advanced · Labdrill\n   US$ 1.031 esperados (30% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód 1LHU0876\n4. GTX Plus Basic · conta não cadastrada\n   US$ 448 esperados (41% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód IQR162ZT\n5. GTX Pro · conta não cadastrada\n   US$ 292 esperados (6% em 90 dias) → Pedir a decisão: faltam 13 dias para o limite histórico.\n   cód 3ORQ2R0R\n🧹 *Decidir*: 39 deals passaram de 138 dias (US$ 230.990 parados). Comece por: GTK 500 · conta não cadastrada (cód A04V2WB3).\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+  },
+  {
+   "sales_agent": "Gladys Colclough",
+   "manager": "Melvin Marxen",
+   "regional_office": "Central",
+   "alive": 0,
+   "expected_value_sum": 0.0,
+   "decide_count": 36,
+   "decide_value": 62513.0,
+   "qualify_count": 49,
+   "missing_account_count": 55,
+   "brief": "Bom dia, Gladys! Sua pauta da semana (base 31/12/2017):\n🧹 *Decidir*: 36 deals passaram de 138 dias (US$ 62.513 parados). Comece por: GTX Plus Pro · The New York Inquirer (cód 5MAXF8FK).\n🔎 *Qualificar*: 49 deals sem primeiro contato.\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+  },
+  {
+   "sales_agent": "Hayden Neloms",
+   "manager": "Celia Rouche",
+   "regional_office": "West",
+   "alive": 6,
+   "expected_value_sum": 3092.0,
+   "decide_count": 44,
+   "decide_value": 113394.0,
+   "qualify_count": 0,
+   "missing_account_count": 36,
+   "brief": "Bom dia, Hayden! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 6 deals vivos\n1. GTX Plus Pro · Konmatfix\n   US$ 1.665 esperados (30% em 90 dias) → Pedir a decisão: faltam 21 dias para o limite histórico.\n   cód 7GDSUY9K\n2. MG Advanced · conta não cadastrada\n   US$ 1.031 esperados (30% em 90 dias) → Pedir a decisão: faltam 26 dias para o limite histórico.\n   cód ZGW9SCQ0\n3. GTX Plus Basic · conta não cadastrada\n   US$ 333 esperados (30% em 90 dias) → Pedir a decisão: faltam 19 dias para o limite histórico.\n   cód DZP41ANW\n4. MG Special · conta não cadastrada\n   US$ 25 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód W5FH95XO\n5. MG Special · Silis\n   US$ 21 esperados (38% em 90 dias) → Fase em que mais se perde: qualificar a necessidade e agendar a próxima reunião.\n   cód HB740BLB\n🧹 *Decidir*: 44 deals passaram de 138 dias (US$ 113.394 parados). Comece por: GTX Plus Pro · conta não cadastrada (cód QQPAK72N).\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+  },
+  {
+   "sales_agent": "James Ascencio",
+   "manager": "Summer Sewald",
+   "regional_office": "West",
+   "alive": 14,
+   "expected_value_sum": 17750.0,
+   "decide_count": 47,
+   "decide_value": 134192.0,
+   "qualify_count": 0,
+   "missing_account_count": 44,
+   "brief": "Bom dia, James! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 14 deals vivos\n1. GTX Plus Pro · conta não cadastrada\n   US$ 2.467 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód NNNEMOZ5\n2. GTX Plus Pro · conta não cadastrada\n   US$ 2.452 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód YQJGEI71\n3. GTX Pro · conta não cadastrada\n   US$ 2.156 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód OMCFUDOU\n4. GTX Plus Pro · conta não cadastrada\n   US$ 1.665 esperados (30% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód NX28C8EI\n5. GTX Plus Pro · conta não cadastrada\n   US$ 1.665 esperados (30% em 90 dias) → Pedir a decisão: faltam 27 dias para o limite histórico.\n   cód 77IBMLTB\n🧹 *Decidir*: 47 deals passaram de 138 dias (US$ 134.192 parados). Comece por: GTX Plus Pro · conta não cadastrada (cód 1O72EKFY).\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+  },
+  {
+   "sales_agent": "Jonathan Berthelot",
+   "manager": "Melvin Marxen",
+   "regional_office": "Central",
+   "alive": 0,
+   "expected_value_sum": 0.0,
+   "decide_count": 33,
+   "decide_value": 39704.0,
+   "qualify_count": 48,
+   "missing_account_count": 58,
+   "brief": "Bom dia, Jonathan! Sua pauta da semana (base 31/12/2017):\n🧹 *Decidir*: 33 deals passaram de 138 dias (US$ 39.704 parados). Comece por: GTX Pro · conta não cadastrada (cód KBPKLB2X).\n🔎 *Qualificar*: 48 deals sem primeiro contato.\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+  },
+  {
+   "sales_agent": "Kami Bicknell",
+   "manager": "Summer Sewald",
+   "regional_office": "West",
+   "alive": 25,
+   "expected_value_sum": 15643.0,
+   "decide_count": 65,
+   "decide_value": 127743.0,
+   "qualify_count": 0,
+   "missing_account_count": 61,
+   "brief": "Bom dia, Kami! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 25 deals vivos\n1. GTX Plus Pro · conta não cadastrada\n   US$ 2.452 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód P5C842B5\n2. GTX Pro · conta não cadastrada\n   US$ 2.156 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód BZGJ44FH\n3. GTX Pro · conta não cadastrada\n   US$ 2.156 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód OFC7ZTU8\n4. GTX Pro · Kan-code\n   US$ 1.465 esperados (30% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód 7FLPKZN7\n5. GTX Pro · conta não cadastrada\n   US$ 1.465 esperados (30% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód 197EQMY8\n🧹 *Decidir*: 65 deals passaram de 138 dias (US$ 127.743 parados). Comece por: GTX Plus Pro · conta não cadastrada (cód JQA8H6M5).\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+  },
+  {
+   "sales_agent": "Kary Hendrixson",
+   "manager": "Summer Sewald",
+   "regional_office": "West",
+   "alive": 21,
+   "expected_value_sum": 16854.0,
+   "decide_count": 82,
+   "decide_value": 229267.0,
+   "qualify_count": 0,
+   "missing_account_count": 66,
+   "brief": "Bom dia, Kary! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 21 deals vivos\n1. GTX Plus Pro · Rangreen\n   US$ 2.452 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód JJGRAQ2K\n2. GTX Pro · Newex\n   US$ 2.170 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód D55HTKRU\n3. GTX Pro · Zencorporation\n   US$ 2.170 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód SQ71BWHG\n4. GTX Pro · conta não cadastrada\n   US$ 2.156 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód VVE9HGLD\n5. GTX Pro · Conecom\n   US$ 1.838 esperados (38% em 90 dias) → Fase em que mais se perde: qualificar a necessidade e agendar a próxima reunião.\n   cód RTWE19SU\n🧹 *Decidir*: 82 deals passaram de 138 dias (US$ 229.267 parados). Comece por: GTX Plus Pro · Kan-code (cód 5CAP1055).\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+  },
+  {
+   "sales_agent": "Lajuana Vencill",
+   "manager": "Dustin Brinkmann",
+   "regional_office": "Central",
+   "alive": 1,
+   "expected_value_sum": 33.0,
+   "decide_count": 39,
+   "decide_value": 57968.0,
+   "qualify_count": 40,
+   "missing_account_count": 57,
+   "brief": "Bom dia, Lajuana! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 1 de 1 deals vivos\n1. GTX Basic · conta não cadastrada\n   US$ 33 esperados (6% em 90 dias) → Pedir a decisão hoje: o deal chegou ao limite histórico de fechamento.\n   cód XGHMOHYQ\n🧹 *Decidir*: 39 deals passaram de 138 dias (US$ 57.968 parados). Comece por: GTX Plus Pro · conta não cadastrada (cód OD895EQM).\n🔎 *Qualificar*: 40 deals sem primeiro contato.\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+  },
+  {
+   "sales_agent": "Markita Hansen",
+   "manager": "Celia Rouche",
+   "regional_office": "West",
+   "alive": 19,
+   "expected_value_sum": 9348.0,
+   "decide_count": 60,
+   "decide_value": 250651.0,
+   "qualify_count": 0,
+   "missing_account_count": 52,
+   "brief": "Bom dia, Markita! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 19 deals vivos\n1. GTX Pro · conta não cadastrada\n   US$ 2.170 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód ON821ADT\n2. GTX Pro · conta não cadastrada\n   US$ 2.170 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód N2249A7T\n3. GTX Pro · conta não cadastrada\n   US$ 1.465 esperados (30% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód SMP2K39G\n4. MG Advanced · Lexiqvolax\n   US$ 1.386 esperados (41% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód K9KGXL2E\n5. GTX Plus Basic · Zoomit\n   US$ 493 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód XSEG5T4H\n🧹 *Decidir*: 60 deals passaram de 138 dias (US$ 250.651 parados). Comece por: GTK 500 · Rundofase (cód 021Z2J9L).\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+  },
+  {
+   "sales_agent": "Marty Freudenburg",
+   "manager": "Melvin Marxen",
+   "regional_office": "Central",
+   "alive": 0,
+   "expected_value_sum": 0.0,
+   "decide_count": 33,
+   "decide_value": 108803.0,
+   "qualify_count": 54,
+   "missing_account_count": 53,
+   "brief": "Bom dia, Marty! Sua pauta da semana (base 31/12/2017):\n🧹 *Decidir*: 33 deals passaram de 138 dias (US$ 108.803 parados). Comece por: GTK 500 · conta não cadastrada (cód DO6VKC2G).\n🔎 *Qualificar*: 54 deals sem primeiro contato.\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+  },
+  {
+   "sales_agent": "Maureen Marcano",
+   "manager": "Summer Sewald",
+   "regional_office": "West",
+   "alive": 18,
+   "expected_value_sum": 12385.0,
+   "decide_count": 54,
+   "decide_value": 99402.0,
+   "qualify_count": 0,
+   "missing_account_count": 56,
+   "brief": "Bom dia, Maureen! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 18 deals vivos\n1. GTX Plus Pro · conta não cadastrada\n   US$ 2.467 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód T7N0RX05\n2. GTX Plus Pro · conta não cadastrada\n   US$ 1.665 esperados (30% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód NMLTE4CS\n3. GTX Plus Pro · conta não cadastrada\n   US$ 1.665 esperados (30% em 90 dias) → Pedir a decisão: faltam 30 dias para o limite histórico.\n   cód VRWH3YJV\n4. MG Advanced · conta não cadastrada\n   US$ 1.518 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód HXGDBNAV\n5. MG Advanced · conta não cadastrada\n   US$ 1.031 esperados (30% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód WSO3NMK5\n🧹 *Decidir*: 54 deals passaram de 138 dias (US$ 99.402 parados). Comece por: GTX Plus Pro · Sonron (cód MV227O65).\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+  },
+  {
+   "sales_agent": "Moses Frase",
+   "manager": "Dustin Brinkmann",
+   "regional_office": "Central",
+   "alive": 0,
+   "expected_value_sum": 0.0,
+   "decide_count": 34,
+   "decide_value": 50552.0,
+   "qualify_count": 31,
+   "missing_account_count": 44,
+   "brief": "Bom dia, Moses! Sua pauta da semana (base 31/12/2017):\n🧹 *Decidir*: 34 deals passaram de 138 dias (US$ 50.552 parados). Comece por: GTX Plus Pro · Genco Pura Olive Oil Company (cód F3EOBN5A).\n🔎 *Qualificar*: 31 deals sem primeiro contato.\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+  },
+  {
+   "sales_agent": "Niesha Huffines",
+   "manager": "Melvin Marxen",
+   "regional_office": "Central",
+   "alive": 2,
+   "expected_value_sum": 358.0,
+   "decide_count": 28,
+   "decide_value": 51012.0,
+   "qualify_count": 34,
+   "missing_account_count": 39,
+   "brief": "Bom dia, Niesha! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 2 de 2 deals vivos\n1. GTX Pro · conta não cadastrada\n   US$ 292 esperados (6% em 90 dias) → Pedir a decisão hoje: o deal chegou ao limite histórico de fechamento.\n   cód PYQ3VX08\n2. GTX Plus Basic · conta não cadastrada\n   US$ 66 esperados (6% em 90 dias) → Pedir a decisão hoje: o deal chegou ao limite histórico de fechamento.\n   cód 1MQ3015O\n🧹 *Decidir*: 28 deals passaram de 138 dias (US$ 51.012 parados). Comece por: GTX Plus Pro · Blackzim (cód BBOWBQA6).\n🔎 *Qualificar*: 34 deals sem primeiro contato.\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+  },
+  {
+   "sales_agent": "Rosalina Dieter",
+   "manager": "Celia Rouche",
+   "regional_office": "West",
+   "alive": 16,
+   "expected_value_sum": 11849.0,
+   "decide_count": 34,
+   "decide_value": 82431.0,
+   "qualify_count": 0,
+   "missing_account_count": 34,
+   "brief": "Bom dia, Rosalina! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 16 deals vivos\n1. GTK 500 · Betasoloin\n   US$ 8.132 esperados (30% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód 1LY8CAXD\n2. MG Advanced · Zoomit\n   US$ 1.518 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód OHOWVHYX\n3. GTX Pro · conta não cadastrada\n   US$ 1.465 esperados (30% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód P8QXRXMR\n4. GTX Plus Basic · Dalttechnology\n   US$ 333 esperados (30% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód 61IKUAZI\n5. GTX Basic · conta não cadastrada\n   US$ 246 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód GL2FM1RM\n🧹 *Decidir*: 34 deals passaram de 138 dias (US$ 82.431 parados). Comece por: GTK 500 · conta não cadastrada (cód 9SRD5NCR).\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+  },
+  {
+   "sales_agent": "Rosie Papadopoulos",
+   "manager": "Cara Losch",
+   "regional_office": "East",
+   "alive": 6,
+   "expected_value_sum": 8320.0,
+   "decide_count": 33,
+   "decide_value": 93458.0,
+   "qualify_count": 0,
+   "missing_account_count": 24,
+   "brief": "Bom dia, Rosie! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 6 deals vivos\n1. GTX Pro · conta não cadastrada\n   US$ 2.170 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód QD7MU7DD\n2. GTX Pro · Konex\n   US$ 2.156 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód 2DY9U1V7\n3. GTX Pro · conta não cadastrada\n   US$ 1.465 esperados (30% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód NS6JLCZ2\n4. GTX Pro · Sonron\n   US$ 1.465 esperados (30% em 90 dias) → Pedir a decisão: faltam 27 dias para o limite histórico.\n   cód 8XY5IA68\n5. MG Advanced · conta não cadastrada\n   US$ 1.031 esperados (30% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód WVKBXWA9\n🧹 *Decidir*: 33 deals passaram de 138 dias (US$ 93.458 parados). Comece por: GTX Plus Pro · conta não cadastrada (cód 98K99UW9).\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+  },
+  {
+   "sales_agent": "Versie Hillebrand",
+   "manager": "Dustin Brinkmann",
+   "regional_office": "Central",
+   "alive": 1,
+   "expected_value_sum": 3.0,
+   "decide_count": 42,
+   "decide_value": 48603.0,
+   "qualify_count": 54,
+   "missing_account_count": 69,
+   "brief": "Bom dia, Versie! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 1 de 1 deals vivos\n1. MG Special · Finhigh\n   US$ 3 esperados (6% em 90 dias) → Pedir a decisão hoje: o deal chegou ao limite histórico de fechamento.\n   cód W1XRTUT2\n🧹 *Decidir*: 42 deals passaram de 138 dias (US$ 48.603 parados). Comece por: GTX Plus Pro · Hatfan (cód WRKPDK7O).\n🔎 *Qualificar*: 54 deals sem primeiro contato.\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+  },
+  {
+   "sales_agent": "Vicki Laflamme",
+   "manager": "Celia Rouche",
+   "regional_office": "West",
+   "alive": 24,
+   "expected_value_sum": 16333.0,
+   "decide_count": 80,
+   "decide_value": 176304.0,
+   "qualify_count": 0,
+   "missing_account_count": 77,
+   "brief": "Bom dia, Vicki! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 24 deals vivos\n1. GTX Plus Pro · conta não cadastrada\n   US$ 2.452 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód X7MN9ROG\n2. GTX Plus Pro · conta não cadastrada\n   US$ 2.452 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód DYYJW46L\n3. GTX Plus Pro · conta não cadastrada\n   US$ 2.452 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód E2CJIO85\n4. GTX Pro · conta não cadastrada\n   US$ 2.170 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód 6JBM1ZKO\n5. GTX Plus Pro · Treequote\n   US$ 1.665 esperados (30% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód 4SOUOUKH\n🧹 *Decidir*: 80 deals passaram de 138 dias (US$ 176.304 parados). Comece por: GTX Plus Pro · conta não cadastrada (cód 3C6E0D28).\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+  },
+  {
+   "sales_agent": "Violet Mclelland",
+   "manager": "Cara Losch",
+   "regional_office": "East",
+   "alive": 17,
+   "expected_value_sum": 2761.0,
+   "decide_count": 51,
+   "decide_value": 67544.0,
+   "qualify_count": 0,
+   "missing_account_count": 48,
+   "brief": "Bom dia, Violet! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 17 deals vivos\n1. MG Advanced · conta não cadastrada\n   US$ 1.031 esperados (30% em 90 dias) → Pedir a decisão: faltam 28 dias para o limite histórico.\n   cód 3NC5XSDF\n2. GTX Plus Basic · conta não cadastrada\n   US$ 490 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód 5TCGN3GX\n3. GTX Plus Basic · conta não cadastrada\n   US$ 333 esperados (30% em 90 dias) → Pedir a decisão: faltam 20 dias para o limite histórico.\n   cód VKIR68JX\n4. GTX Pro · conta não cadastrada\n   US$ 292 esperados (6% em 90 dias) → Pedir a decisão: faltam 8 dias para o limite histórico.\n   cód QKW7MDJK\n5. GTX Basic · conta não cadastrada\n   US$ 246 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód 4ZKFSG5F\n🧹 *Decidir*: 51 deals passaram de 138 dias (US$ 67.544 parados). Comece por: GTX Plus Pro · conta não cadastrada (cód 8LW65NDL).\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+  },
+  {
+   "sales_agent": "Wilburn Farren",
+   "manager": "Cara Losch",
+   "regional_office": "East",
+   "alive": 9,
+   "expected_value_sum": 10332.0,
+   "decide_count": 22,
+   "decide_value": 51480.0,
+   "qualify_count": 0,
+   "missing_account_count": 28,
+   "brief": "Bom dia, Wilburn! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 9 deals vivos\n1. GTX Plus Pro · conta não cadastrada\n   US$ 2.452 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód HN6TZPAF\n2. GTX Pro · Gogozoom\n   US$ 2.156 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód 1L68AC0E\n3. GTX Plus Pro · conta não cadastrada\n   US$ 1.665 esperados (30% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód QNB3SCN9\n4. GTX Plus Pro · conta não cadastrada\n   US$ 1.665 esperados (30% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód 9JTFD4FZ\n5. MG Advanced · conta não cadastrada\n   US$ 1.031 esperados (30% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód NBBIFIKB\n🧹 *Decidir*: 22 deals passaram de 138 dias (US$ 51.480 parados). Comece por: GTX Plus Pro · conta não cadastrada (cód TV300INP).\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+  },
+  {
+   "sales_agent": "Zane Levy",
+   "manager": "Summer Sewald",
+   "regional_office": "West",
+   "alive": 31,
+   "expected_value_sum": 16167.0,
+   "decide_count": 57,
+   "decide_value": 127517.0,
+   "qualify_count": 0,
+   "missing_account_count": 59,
+   "brief": "Bom dia, Zane! Sua pauta da semana (base 31/12/2017):\n🎯 *Agir*: 5 de 31 deals vivos\n1. GTX Plus Pro · The New York Inquirer\n   US$ 2.239 esperados (41% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód FZWU2I30\n2. GTX Pro · Gogozoom\n   US$ 2.156 esperados (45% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód 4D0K5T7T\n3. GTX Plus Pro · Initech\n   US$ 1.665 esperados (30% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód 01XZ9CRY\n4. GTX Plus Pro · conta não cadastrada\n   US$ 1.665 esperados (30% em 90 dias) → Pedir a decisão: faltam 18 dias para o limite histórico.\n   cód J0G6ZLYZ\n5. GTX Pro · conta não cadastrada\n   US$ 1.465 esperados (30% em 90 dias) → Avançar para proposta e marcar data de decisão.\n   cód 4R4QF0ZU\n🧹 *Decidir*: 57 deals passaram de 138 dias (US$ 127.517 parados). Comece por: GTX Plus Pro · conta não cadastrada (cód 8WB5HXOB).\nResponda: 1 {cód} = avancei · 2 {cód} = perdi · 3 {cód} = adiar"
+  }
+ ],
+ "managers": [
+  {
+   "manager": "Cara Losch",
+   "regional_office": "East",
+   "alive": 50,
+   "expected_value_sum": 36205.0,
+   "decide_count": 169,
+   "decide_value": 372436.0,
+   "qualify_count": 0,
+   "missing_account_count": 154
+  },
+  {
+   "manager": "Celia Rouche",
+   "regional_office": "West",
+   "alive": 77,
+   "expected_value_sum": 45856.0,
+   "decide_count": 257,
+   "decide_value": 853770.0,
+   "qualify_count": 0,
+   "missing_account_count": 232
+  },
+  {
+   "manager": "Dustin Brinkmann",
+   "regional_office": "Central",
+   "alive": 3,
+   "expected_value_sum": 39.0,
+   "decide_count": 190,
+   "decide_value": 282047.0,
+   "qualify_count": 204,
+   "missing_account_count": 272
+  },
+  {
+   "manager": "Melvin Marxen",
+   "regional_office": "Central",
+   "alive": 2,
+   "expected_value_sum": 358.0,
+   "decide_count": 213,
+   "decide_value": 535798.0,
+   "qualify_count": 296,
+   "missing_account_count": 339
+  },
+  {
+   "manager": "Rocco Neubert",
+   "regional_office": "East",
+   "alive": 57,
+   "expected_value_sum": 35755.0,
+   "decide_count": 157,
+   "decide_value": 436492.0,
+   "qualify_count": 0,
+   "missing_account_count": 142
+  },
+  {
+   "manager": "Summer Sewald",
+   "regional_office": "West",
+   "alive": 109,
+   "expected_value_sum": 78799.0,
+   "decide_count": 305,
+   "decide_value": 718121.0,
+   "qualify_count": 0,
+   "missing_account_count": 286
+  }
+ ],
+ "regions": [
+  {
+   "regional_office": "Central",
+   "alive": 5,
+   "expected_value_sum": 397.0,
+   "decide_count": 403,
+   "decide_value": 817845.0,
+   "qualify_count": 500,
+   "missing_account_count": 611
+  },
+  {
+   "regional_office": "East",
+   "alive": 107,
+   "expected_value_sum": 71960.0,
+   "decide_count": 326,
+   "decide_value": 808928.0,
+   "qualify_count": 0,
+   "missing_account_count": 296
+  },
+  {
+   "regional_office": "West",
+   "alive": 186,
+   "expected_value_sum": 124655.0,
+   "decide_count": 562,
+   "decide_value": 1571891.0,
+   "qualify_count": 0,
+   "missing_account_count": 518
+  }
+ ],
+ "totals": {
+  "alive": 298,
+  "expected_value_sum": 197012.0,
+  "decide_count": 1291,
+  "decide_value": 3198664.0,
+  "qualify_count": 500,
+  "missing_account_count": 1425
+ },
  "deals": [
   {
    "opportunity_id": "1LY8CAXD",
